@@ -1,9 +1,9 @@
 # ECAT Prep (HomiLabs) — project notes
 
-Offline Android app for UET Lahore's ECAT, Pre-Engineering group (Maths, Physics, Chemistry, English): practice by
+Offline Android app for UET Lahore's ECAT, Pre-Engineering and ICS groups (Maths, Physics, Chemistry or Computer Science, English): practice by
 chapter and topic with explanations, 20 full mock tests scored like UET (100 MCQs, 400 marks, 100 min), rules and
 merit guide. Same stack and pipeline as MDCAT Prep (`/mnt/storage/projects/mdcat`): plain HTML/JS + JSON content +
-`build/build.js` + Capacitor Android. No login, no server. Scope and open decisions: `docs/scope-v1.md`.
+`build/build.js` + Capacitor Android. No login, no server. Scope (locked 9 Nov 2026): `docs/scope-v1.md`.
 
 ## Locations
 - Code: `/mnt/storage/projects/ecat` · GitHub `AwaizFatima08/ecat` (PUBLIC repo: no secrets, keys in `.secrets/`)

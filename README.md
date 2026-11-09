@@ -1,9 +1,9 @@
 # ECAT Prep
 
-Offline Android app for UET Lahore's ECAT (Engineering College Admission Test), Pre-Engineering group. HomiLabs.
+Offline Android app for UET Lahore's ECAT (Engineering College Admission Test), Pre-Engineering and ICS groups. HomiLabs.
 Built on the MDCAT Prep engine (`/mnt/storage/projects/mdcat`) with Mathematics in place of Biology.
 
-- Scope: [docs/scope-v1.md](docs/scope-v1.md) (draft 9 Nov 2026, decisions open). Research: [docs/ecat-research-raw.md](docs/ecat-research-raw.md), official documents in `docs/sources/`.
+- Scope: [docs/scope-v1.md](docs/scope-v1.md) (locked 9 Nov 2026). Research: [docs/ecat-research-raw.md](docs/ecat-research-raw.md), official documents in `docs/sources/`.
 - Build: `npm run build` → `dist/app.html` (+ `www/index.html` for Capacitor). The build validates every MCQ and fails on any error.
 - Content: `content/syllabus.json` (subject → chapter → topic → learning point), `content/questions/<subject>/<unit>.json`, `content/guide.json`.
 - MCQ pipeline: same as MDCAT (`scripts/check_draft.js` → `merge_parts.js` → `balance_answers.js` → `blind_export.js` → blind re-solve → `blind_compare.js` → Homi spot-check).

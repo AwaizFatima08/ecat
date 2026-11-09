@@ -25,6 +25,13 @@
       "units": []
     },
     {
+      "id": "cs",
+      "name": "Computer Science (ICS)",
+      "mcqsInPaper": 30,
+      "bankTarget": 1000,
+      "units": []
+    },
+    {
       "id": "eng",
       "name": "English",
       "mcqsInPaper": 10,

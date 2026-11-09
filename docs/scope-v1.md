@@ -1,4 +1,4 @@
-# ECAT Prep app — v1 scope (DRAFT 9 Nov 2026, decisions in §7 open)
+# ECAT Prep app — v1 scope (LOCKED 9 Nov 2026)
 
 Built "on the line of" MDCAT Prep (`/mnt/storage/projects/mdcat`): same offline HTML/JS + Capacitor engine, same
 content pipeline (writer → validator → blind re-solve → Homi spot-check), same ad rules. Facts and sources:
@@ -40,6 +40,7 @@ against the textbook PDFs first (the research lists for the old books are from m
 | Mathematics | 1,500 | new; CSCA Maths bank (≈1,200, no-calculator) as a starting pool for overlapping topics |
 | Physics | 1,000 | share with MDCAT Physics (in progress) + CSCA Physics; new items for ECAT-only chapters (optics, oscillations…) |
 | Chemistry | 1,000 | share MDCAT Chemistry (1,250, already blind-checked) + CSCA; new items for ECAT-only chapters |
+| Computer Science (ICS) | 1,000 | new (old ICS books + Python from the new books) |
 | English | 500 | ≈100 short passages × 5 comprehension MCQs (the official 2026 style) |
 
 "Share" means: copy the item into this repo, re-tag it to the ECAT chapter/topic, re-run the validator and the blind
@@ -82,3 +83,12 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
 - **D. English:** comprehension only (official) / also vocabulary and sentence correction (prep-site style)
 - Defaults (change any time): name **"ECAT Prep"**, English only, free with ads between sessions only, mocks use
   2026 marking.
+
+## Locked decisions (Homi, 9 Nov 2026)
+- **A. Groups:** Pre-Engineering **and ICS** in v1. The student picks a group; a mock is Eng 10 + Maths 30 + Physics 30 +
+  Chemistry 30 (Pre-Eng) or Computer Science 30 (ICS). CS adds about 1,000 practice MCQs and 20 × 30 = 600 mock MCQs.
+- **B. Size:** practice ≈ 5,000 (Maths 1,500, Physics 1,000, Chemistry 1,000, CS 1,000, English 500) + mocks
+  20 × 100 per group, sharing English/Maths/Physics → 2,600 separate mock MCQs.
+- **C. Reuse:** share MDCAT and CSCA items after re-tagging, validator and blind re-solve (`from` field kept).
+- **D. English:** mocks are passage-based comprehension (official 2026 style); practice adds vocabulary and
+  sentence-correction sets, labelled as extra practice.
