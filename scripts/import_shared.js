@@ -2,7 +2,7 @@
 /**
  * import_shared.js — turns tagged sibling-app items into ECAT draft files.
  *
- * Usage: node scripts/import_shared.js <app> <targets.json> <outDir> <map.tsv,...> <bank.jsonl> [...]
+ * Usage: node scripts/import_shared.js <app> <targets.json> <outDir> <map.tsv,...> <bank.jsonl|unit.json> [...]
  * e.g.   node scripts/import_shared.js csca docs/pipeline/math-targets.json drafts/math \
  *          drafts/math/map-a.tsv,drafts/math/map-b.tsv ../csca/content/bank/math/*.jsonl
  *
@@ -17,9 +17,13 @@ if (!banks.length) { console.error("usage: import_shared.js <app> <targets.json>
 // Units already written in full by writers: SKIP_UNITS=math-05,math-07 node scripts/import_shared.js ...
 const skipUnits = new Set((process.env.SKIP_UNITS || "").split(",").filter(Boolean));
 const targets = JSON.parse(fs.readFileSync(targetsFile, "utf8"));
-const src = new Map();
-for (const f of banks) for (const line of fs.readFileSync(f, "utf8").split("\n")) if (line.trim()) { const q = JSON.parse(line); src.set(q.id, q); }
 const D = { 1: "E", 2: "M", 3: "D" };
+const src = new Map();
+// CSCA banks are .jsonl (stem/options/answer/explanation/level); MDCAT units are .json arrays in our own format.
+for (const f of banks) {
+  const items = f.endsWith(".jsonl") ? fs.readFileSync(f, "utf8").split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l)) : JSON.parse(fs.readFileSync(f, "utf8"));
+  for (const q of items) src.set(q.id, q.stem != null ? { d: D[q.level], q: q.stem, o: q.options, a: q.answer, x: q.explanation } : q);
+}
 const byUnit = {};
 let skipped = 0;
 for (const m of maps.split(",")) for (const line of fs.readFileSync(m, "utf8").split("\n")) {
@@ -30,7 +34,7 @@ for (const m of maps.split(",")) for (const line of fs.readFileSync(m, "utf8").s
   if (!q) throw new Error(`${m}: unknown source id ${id}`);
   const unit = topic.split("-").slice(0, 2).join("-");
   if (skipUnits.has(unit)) { skipped++; continue; }
-  ((byUnit[unit] ||= {})[topic] ||= []).push({ topic, lo, d: D[q.level], q: q.stem, o: q.options, a: q.answer, x: q.explanation, from: `${app}:${id}` });
+  ((byUnit[unit] ||= {})[topic] ||= []).push({ topic, lo, d: q.d, q: q.q, o: q.o, a: q.a, x: q.x, from: `${app}:${id}` });
 }
 fs.mkdirSync(outDir, { recursive: true });
 let kept = 0;

@@ -1,0 +1,8 @@
+{
+  "note": "Physics practice bank targets (1,000), weighted by ECAT weight and chapter size. Shared MDCAT items count toward a unit's target, capped at half of it.",
+  "phy-01": 40, "phy-02": 40, "phy-03": 70, "phy-04": 45, "phy-05": 50,
+  "phy-06": 30, "phy-07": 40, "phy-08": 55, "phy-09": 45, "phy-10": 30,
+  "phy-11": 60, "phy-12": 70, "phy-13": 60, "phy-14": 50, "phy-15": 45,
+  "phy-16": 35, "phy-17": 30, "phy-18": 40, "phy-19": 20, "phy-20": 40,
+  "phy-21": 30, "phy-22": 40, "phy-23": 15, "phy-24": 10, "phy-25": 10
+}
