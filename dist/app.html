@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3a68">
+<title>ECAT Prep</title>
+<style>
+:root{
+  --bg:#f4f7f8; --card:#ffffff; --ink:#14232a; --muted:#5d6f77; --line:#dde5e8;
+  --brand:#1f3a68; --brand-2:#2c5296; --brand-soft:#e6ecf6;
+  --ok:#1f8a4c; --ok-soft:#e3f5ea; --bad:#c0392b; --bad-soft:#fbe9e7; --warn:#b7791f;
+  --math:#d0621f; --phy:#2c6fbf; --chem:#7b4fb3; --cs:#2e8b57; --eng:#a0367a;
+  --radius:14px; --shadow:0 1px 2px rgba(20,35,42,.06),0 4px 14px rgba(20,35,42,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1719; --card:#172226; --ink:#e7eef0; --muted:#9db0b6; --line:#27363b;
+    --brand:#4fb3c2; --brand-2:#6cc5d2; --brand-soft:#173338;
+    --ok:#4cc27c; --ok-soft:#173a26; --bad:#ef6b5e; --bad-soft:#3d1d1a; --warn:#e2a64b;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
+#app{max-width:620px;margin:0 auto;min-height:100vh;padding:0 16px 40px}
+button{font:inherit;color:inherit}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;
+  margin:0 -16px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:var(--bg);
+  border-bottom:1px solid var(--line)}
+.bar h1{font-size:17px;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{border:0;background:transparent;width:40px;height:40px;border-radius:10px;font-size:20px;cursor:pointer;flex:none}
+.iconbtn:active{background:var(--line)}
+
+/* hero */
+.hero{margin:16px 0;padding:20px;border-radius:var(--radius);color:#fff;
+  background:linear-gradient(135deg,#1f3a68,#2c5296)}
+.hero h2{margin:0 0 4px;font-size:22px}
+.hero p{margin:0;opacity:.9;font-size:14px}
+.hero .stats{display:flex;gap:18px;margin-top:14px}
+.hero .stats b{display:block;font-size:20px}
+.hero .stats span{font-size:12px;opacity:.85}
+
+h3.section{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
+
+/* cards & lists */
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+.list{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;gap:12px;padding:14px;cursor:pointer;text-align:left;width:100%;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.row:active{transform:scale(.99)}
+.row.disabled{opacity:.55;cursor:default}
+.row .main{flex:1;min-width:0}
+.row .title{font-weight:600}
+.row .sub{font-size:13px;color:var(--muted)}
+.badge{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  color:#fff;font-weight:700;font-size:13px;letter-spacing:-.02em}
+.chev{color:var(--muted);flex:none}
+.pbar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:6px}
+.pbar i{display:block;height:100%;background:var(--brand-2);border-radius:6px}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;background:var(--brand-soft);color:var(--brand);font-weight:600}
+.tag.soon{background:var(--line);color:var(--muted)}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{padding:14px;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:var(--shadow)}
+.tile .ic{font-size:22px}
+.tile .title{font-weight:600;margin-top:6px}
+.tile .sub{font-size:12px;color:var(--muted)}
+
+/* buttons */
+.btn{display:block;width:100%;padding:14px;border-radius:12px;border:0;cursor:pointer;
+  background:var(--brand);color:#fff;font-weight:600;font-size:16px;text-align:center}
+.btn.secondary{background:var(--card);color:var(--brand);border:1.5px solid var(--brand)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn+.btn{margin-top:10px}
+.actions{margin-top:18px}
+
+/* unit page */
+.lo{font-size:13px;color:var(--muted);margin:4px 0 0;padding-left:0;list-style:none}
+.lo li{margin:2px 0}
+.lo code{font-size:11px;color:var(--brand);font-weight:700;margin-right:4px}
+
+/* player */
+.qmeta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 8px;font-size:13px;color:var(--muted)}
+.qprog{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:12px}
+.qprog i{display:block;height:100%;background:var(--brand-2)}
+.qtext{font-size:18px;font-weight:500;margin:6px 0 16px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;padding:13px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1.5px solid var(--line);font-size:16px}
+.opt .k{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;
+  background:var(--line);color:var(--muted)}
+.opt.correct{border-color:var(--ok);background:var(--ok-soft)}
+.opt.correct .k{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt.wrong .k{background:var(--bad);color:#fff}
+.opt.locked{cursor:default}
+.explain{margin-top:16px;padding:14px;border-radius:12px;background:var(--brand-soft);font-size:15px}
+.explain b{display:block;margin-bottom:4px}
+.verdict-ok{color:var(--ok)} .verdict-bad{color:var(--bad)}
+
+/* results */
+.score{text-align:center;padding:24px 16px;margin-top:16px}
+.score .big{font-size:44px;font-weight:800;color:var(--brand)}
+.score .of{color:var(--muted)}
+.review{padding:14px;margin-top:10px}
+.review .q{font-weight:600;margin-bottom:6px}
+.review .ans{font-size:14px}
+.review .x{font-size:14px;color:var(--muted);margin-top:6px}
+
+/* rules & guidelines */
+.guide{padding:4px 16px 12px;margin-top:14px;font-size:15px}
+.guide h4{margin:18px 0 6px;font-size:15px;color:var(--brand)}
+.guide ul{padding-left:20px;margin:8px 0}
+.guide li{margin:6px 0}
+.guide table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+.guide th,.guide td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.guide th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.callout{padding:12px;border-radius:10px;margin:12px 0;font-size:14px}
+.callout.tip{background:var(--brand-soft)}
+.callout.warn{background:var(--bad-soft)}
+.srcs{padding-left:20px;font-size:14px}
+.srcs a{color:var(--brand)}
+
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+(function(){
+"use strict";
+
+/* ======================================================================
+   CONTENT — injected by build/build.js from content/syllabus.json and
+   content/questions/<subject>/<unit>.json. Edit the content files, never
+   this block.
+   ====================================================================== */
+const SYLLABUS = {"source":"UET Lahore ECAT 2026 (ecat.uet.edu.pk, admission FAQ Fall 2026). Chapters to be added after checking the textbooks.","paperTotal":100,"paperLine":"UET ECAT 2026 · 100 MCQs · 400 marks · 100 minutes · no negative marking","subjects":[{"id":"math","name":"Mathematics","mcqsInPaper":30,"bankTarget":1500,"units":[]},{"id":"phy","name":"Physics","mcqsInPaper":30,"bankTarget":1000,"units":[]},{"id":"chem","name":"Chemistry","mcqsInPaper":30,"bankTarget":1000,"units":[]},{"id":"eng","name":"English","mcqsInPaper":10,"bankTarget":500,"units":[]}]};
+const QUESTIONS = [];
+const GUIDE = {"updated":"9 Nov 2026","disclaimer":"Facts from UET's official ECAT and admission pages for ECAT 2026. UET can change the format each year: always check ecat.uet.edu.pk and the admission notice before you register.","sources":["UET ECAT — About ECAT (ecat.uet.edu.pk), checked 9 Nov 2026","UET admissions FAQ, Fall 2026 (admission.uet.edu.pk)","UET Undergraduate Prospectus Fall 2026"],"sections":[{"id":"format","icon":"📝","title":"Test format","summary":"100 MCQs, 400 marks, 100 minutes","blocks":[{"type":"table","head":["Item","ECAT 2026"],"rows":[["Questions","100 MCQs"],["Marks","4 per correct answer, 400 in total"],["Negative marking","None (it was −1 per wrong answer in 2025)"],["Time","100 minutes"],["Mode","Computer-based test (CBT), one question per screen"],["Calculator","Not allowed; rough paper is provided"]]},{"type":"tip","text":"With no negative marking, never leave a question blank. Guess if you must."}]},{"id":"groups","icon":"🧮","title":"Subject combinations","summary":"10 English + 30 + 30 + 30","blocks":[{"type":"p","text":"Every paper has 10 English questions and 30 questions in each of three subjects. Your combination must match your intermediate subjects."},{"type":"table","head":["Group","Subjects (30 MCQs each)"],"rows":[["Pre-Engineering","Mathematics, Physics, Chemistry"],["ICS (Physics)","Mathematics, Physics, Computer Science"],["ICS (Statistics)","Statistics, Mathematics, Computer Science"],["Statistics with Physics","Statistics, Mathematics, Physics"],["Pre-Medical","Biology, Physics, Chemistry"]]},{"type":"p","text":"This app covers the Pre-Engineering combination."}]},{"id":"syllabus","icon":"📚","title":"Syllabus","summary":"Whole intermediate course","blocks":[{"type":"p","text":"UET says the test covers the entire Intermediate (FSc), A-Level or DAE syllabus and publishes no shortened chapter list. Questions ask you to solve problems with intermediate-level concepts, not just recall."},{"type":"p","text":"English is reading comprehension: short passages followed by questions."}]},{"id":"attempts","icon":"🔁","title":"Attempts and validity","summary":"Two tries, best score counts","blocks":[{"type":"list","items":["Two ECAT attempts per Fall intake, usually in March and June.","Your better score is used.","A score counts only for that year's Fall admissions.","There is no re-checking of results."]}]},{"id":"merit","icon":"🏁","title":"Merit","summary":"Matric 17 % · FSc 50 % · ECAT 33 %","blocks":[{"type":"table","head":["Part","Weight"],"rows":[["Matric / SSC","17 %"],["FSc Part I / HSSC-I","50 %"],["ECAT","33 %"]]},{"type":"p","text":"There is no ECAT pass mark, but the aggregate must be at least 50 %. In Fall 2026 the first merit lists at UET Lahore closed at roughly 82 to 88 % aggregate for open merit."},{"type":"warn","text":"In 2026 the average Pre-Engineering score was about 203/400 in the first attempt and 238/400 in the second. Every mark matters."}]}]};
+
+
+const SET_SIZE = 10;
+const LETTERS = ["A","B","C","D"];
+const DIFF_LABEL = { E:"Easy", M:"Moderate", D:"Difficult" };
+const SUBJECT_COLOR = { math:"var(--math)", phy:"var(--phy)", chem:"var(--chem)", cs:"var(--cs)", eng:"var(--eng)" };
+const SUBJECT_ABBR = { math:"Math", phy:"Phy", chem:"Chem", cs:"CS", eng:"Eng" };
+
+/* ======================================================================
+   LOOKUPS
+   ====================================================================== */
+const subjectById = {}, unitById = {}, topicById = {};
+for(const s of SYLLABUS.subjects){
+  subjectById[s.id] = s;
+  for(const u of s.units){
+    unitById[u.id] = { ...u, subject:s.id };
+    for(const t of u.topics) topicById[t.id] = { ...t, unit:u.id };
+  }
+}
+const qById = {};
+const qByUnit = {}, qByTopic = {}, qBySubject = {};
+for(const q of QUESTIONS){
+  qById[q.id] = q;
+  (qByUnit[q.unit] = qByUnit[q.unit] || []).push(q);
+  (qByTopic[q.topic] = qByTopic[q.topic] || []).push(q);
+  const s = unitById[q.unit].subject;
+  (qBySubject[s] = qBySubject[s] || []).push(q);
+}
+
+/* ======================================================================
+   PROGRESS — localStorage, per device, no login.
+   progress.q[id] = { n: attempts, c: correct attempts, last: 1|0 }
+   ====================================================================== */
+const STORE_KEY = "ecat-prep-v1";
+function loadProgress(){
+  try{ const raw = localStorage.getItem(STORE_KEY); if(raw) return JSON.parse(raw); }catch(e){}
+  return { q:{}, bm:{} };
+}
+let progress = loadProgress();
+progress.q = progress.q || {}; progress.bm = progress.bm || {};
+function saveProgress(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(progress)); }catch(e){} }
+
+function recordAnswer(id, isCorrect){
+  const p = progress.q[id] || { n:0, c:0, last:0 };
+  p.n++; if(isCorrect) p.c++; p.last = isCorrect ? 1 : 0;
+  progress.q[id] = p;
+  saveProgress();
+}
+// done = questions attempted at least once; right = last attempt correct.
+function stats(list){
+  let done = 0, right = 0;
+  for(const q of list || []){
+    const p = progress.q[q.id];
+    if(p){ done++; if(p.last) right++; }
+  }
+  return { total:(list||[]).length, done, right, pct: done ? Math.round(100*right/done) : 0 };
+}
+function mistakes(){ return QUESTIONS.filter(q => progress.q[q.id] && !progress.q[q.id].last); }
+
+/* ======================================================================
+   SET PICKER — unseen first, then last-wrong, then the rest; shuffled
+   within each group so repeats don't come in the same order.
+   ====================================================================== */
+function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function pickSet(pool, size){
+  const unseen = [], wrong = [], rest = [];
+  for(const q of pool){
+    const p = progress.q[q.id];
+    if(!p) unseen.push(q); else if(!p.last) wrong.push(q); else rest.push(q);
+  }
+  return shuffle(unseen).concat(shuffle(wrong), shuffle(rest)).slice(0, size);
+}
+
+/* ======================================================================
+   ROUTER — hash based so Android back / browser back work.
+   #/  #/s/math  #/u/math-01  #/play  #/results  #/mistakes  #/soon/<name>
+   ====================================================================== */
+const app = document.getElementById("app");
+let session = null;   // current practice set: { title, back, items:[q], i, answers:[idx|null] }
+
+function go(hash){ if(location.hash === hash) render(); else location.hash = hash; }
+window.addEventListener("hashchange", render);
+
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+function bar(title, backHash){
+  return `<div class="bar">${backHash!=null ? `<button class="iconbtn" data-go="${backHash}" aria-label="Back">←</button>` : ""}<h1>${esc(title)}</h1></div>`;
+}
+function pbar(pct){ return `<div class="pbar"><i style="width:${pct}%"></i></div>`; }
+
+function render(){
+  const h = location.hash.replace(/^#/, "") || "/";
+  const parts = h.split("/").filter(Boolean);
+  window.scrollTo(0, 0);
+  if(parts[0] === "s" && subjectById[parts[1]]) return renderSubject(parts[1]);
+  if(parts[0] === "u" && unitById[parts[1]]) return renderUnit(parts[1]);
+  if(parts[0] === "play" && session) return renderPlayer();
+  if(parts[0] === "results" && session) return renderResults();
+  if(parts[0] === "mistakes") return renderMistakes();
+  if(parts[0] === "guide") return parts[1] ? renderGuideSection(parts[1]) : renderGuide();
+  if(parts[0] === "soon") return renderSoon(decodeURIComponent(parts[1] || ""));
+  return renderHome();
+}
+
+/* ----- home ----- */
+function renderHome(){
+  const all = stats(QUESTIONS);
+  const nMistakes = mistakes().length;
+  let html = `<div class="bar"><h1>ECAT Prep</h1></div>
+  <div class="hero">
+    <h2>Prepare for ECAT</h2>
+    <p>${esc(SYLLABUS.paperLine)}</p>
+    <div class="stats">
+      <div><b>${all.done}</b><span>of ${all.total} practised</span></div>
+      <div><b>${all.done ? all.pct + "%" : "–"}</b><span>accuracy</span></div>
+      <div><b>${nMistakes}</b><span>to review</span></div>
+    </div>
+  </div>
+  <h3 class="section">Practice by subject</h3><div class="list">`;
+  for(const s of SYLLABUS.subjects){
+    const st = stats(qBySubject[s.id]);
+    const avail = st.total;
+    html += `<button class="row" data-go="#/s/${s.id}">
+      <span class="badge" style="background:${SUBJECT_COLOR[s.id]}">${SUBJECT_ABBR[s.id]}</span>
+      <span class="main"><span class="title">${esc(s.name)}</span>
+        <div class="sub">${s.mcqsInPaper} MCQs in paper · ${s.units.length} units · ${avail ? `${st.done}/${avail} practised` : "questions coming soon"}</div>
+        ${avail ? pbar(Math.round(100*st.done/avail)) : ""}</span>
+      <span class="chev">›</span></button>`;
+  }
+  html += `</div>
+  <h3 class="section">More</h3>
+  <div class="tiles">
+    <button class="tile" data-go="#/mistakes"><div class="ic">🔁</div><div class="title">Review mistakes</div><div class="sub">${nMistakes} question${nMistakes===1?"":"s"}</div></button>
+    <button class="tile" data-go="#/soon/Mock%20exams"><div class="ic">⏱️</div><div class="title">Mock exams</div><div class="sub">20 full papers · coming soon</div></button>
+    <button class="tile" data-go="#/guide"><div class="ic">📋</div><div class="title">Rules &amp; guidelines</div><div class="sub">format, passing, exam day</div></button>
+    <button class="tile" data-go="#/soon/Memory%20cheats"><div class="ic">🧠</div><div class="title">Memory cheats</div><div class="sub">coming soon</div></button>
+    <button class="tile" data-go="#/soon/Important%20topics"><div class="ic">⭐</div><div class="title">Important topics</div><div class="sub">coming soon</div></button>
+  </div>`;
+  app.innerHTML = html;
+}
+
+/* ----- subject ----- */
+function renderSubject(sid){
+  const s = subjectById[sid];
+  let html = bar(s.name, "#/") + `<p class="note">${s.mcqsInPaper} of ${SYLLABUS.paperTotal} MCQs in the real paper (${Math.round(100*s.mcqsInPaper/SYLLABUS.paperTotal)}%).</p><div class="list">`;
+  for(const u of s.units){
+    const st = stats(qByUnit[u.id]);
+    const has = st.total > 0;
+    html += `<button class="row${has ? "" : " disabled"}" ${has ? `data-go="#/u/${u.id}"` : ""}>
+      <span class="badge" style="background:${SUBJECT_COLOR[sid]}">${u.n}</span>
+      <span class="main"><span class="title">${esc(u.name)}</span>
+        <div class="sub">${has ? `${st.done}/${st.total} practised${st.done ? ` · ${st.pct}% right` : ""}` : `<span class="tag soon">coming soon</span>`}</div>
+        ${has ? pbar(Math.round(100*st.done/st.total)) : ""}</span>
+      ${has ? `<span class="chev">›</span>` : ""}</button>`;
+  }
+  app.innerHTML = html + `</div>`;
+}
+
+/* ----- unit ----- */
+function renderUnit(uid){
+  const u = unitById[uid];
+  const st = stats(qByUnit[uid]);
+  let html = bar(`${u.n}. ${u.name}`, `#/s/${u.subject}`) +
+    `<div class="card" style="padding:16px;margin-top:14px">
+      <div class="sub" style="color:var(--muted);font-size:14px">${st.done}/${st.total} practised${st.done ? ` · ${st.pct}% right` : ""}</div>
+      ${pbar(st.total ? Math.round(100*st.done/st.total) : 0)}
+      <div class="actions"><button class="btn" data-start="unit:${uid}">Practise ${Math.min(SET_SIZE, st.total)} questions</button></div>
+    </div>
+    <h3 class="section">Topics</h3><div class="list">`;
+  for(const t of u.topics){
+    const tq = qByTopic[t.id] || [];
+    const ts = stats(tq);
+    html += `<button class="row${tq.length ? "" : " disabled"}" ${tq.length ? `data-start="topic:${t.id}"` : ""}>
+      <span class="main"><span class="title">${esc(t.name)}</span>
+        <div class="sub">${tq.length ? `${ts.done}/${tq.length} practised${ts.done ? ` · ${ts.pct}% right` : ""}` : "no questions yet"}</div>
+        <ul class="lo">${(t.los||[]).map(lo => `<li><code>${esc(lo.code)}</code>${esc(lo.text)}</li>`).join("")}</ul></span>
+      ${tq.length ? `<span class="chev">▶</span>` : ""}</button>`;
+  }
+  app.innerHTML = html + `</div>`;
+}
+
+/* ----- practice ----- */
+function startSession(kind, id){
+  let pool, title, back;
+  if(kind === "unit"){ const u = unitById[id]; pool = qByUnit[id]; title = u.name; back = `#/u/${id}`; }
+  else if(kind === "topic"){ const t = topicById[id]; pool = qByTopic[id]; title = t.name; back = `#/u/${t.unit}`; }
+  else if(kind === "mistakes"){ pool = mistakes(); title = "Review mistakes"; back = "#/"; }
+  if(!pool || !pool.length) return;
+  session = { kind, id, title, back, items: pickSet(pool, SET_SIZE), i:0, answers:[] };
+  go("#/play");
+}
+
+function renderPlayer(){
+  const s = session, q = s.items[s.i], picked = s.answers[s.i];
+  const answered = picked != null;
+  const u = unitById[q.unit];
+  let html = bar(s.title, s.back) +
+    `<div class="qprog"><i style="width:${Math.round(100*(s.i + (answered?1:0))/s.items.length)}%"></i></div>
+    <div class="qmeta"><span>Question ${s.i+1} of ${s.items.length}</span>
+      <span class="tag">${esc(q.lo)}</span><span class="tag">${DIFF_LABEL[q.d]}</span>
+      <button class="iconbtn" data-bm="${q.id}" aria-label="Bookmark" style="margin-left:auto">${progress.bm[q.id] ? "★" : "☆"}</button></div>
+    <div class="qtext">${esc(q.q)}</div><div class="opts">`;
+  q.o.forEach((opt, i) => {
+    let cls = "opt";
+    if(answered){ cls += " locked"; if(i === q.a) cls += " correct"; else if(i === picked) cls += " wrong"; }
+    html += `<button class="${cls}" ${answered ? "" : `data-pick="${i}"`}><span class="k">${LETTERS[i]}</span><span>${esc(opt)}</span></button>`;
+  });
+  html += `</div>`;
+  if(answered){
+    const ok = picked === q.a;
+    html += `<div class="explain"><b class="${ok ? "verdict-ok" : "verdict-bad"}">${ok ? "✓ Correct" : `✗ Not quite — the answer is ${LETTERS[q.a]}`}</b>${esc(q.x)}</div>
+      <div class="actions"><button class="btn" data-next>${s.i+1 < s.items.length ? "Next question" : "See results"}</button></div>`;
+  }
+  html += `<p class="note">${esc(subjectById[u.subject].name)} · Unit ${u.n}: ${esc(u.name)}</p>`;
+  app.innerHTML = html;
+}
+
+function pick(i){
+  const s = session, q = s.items[s.i];
+  if(s.answers[s.i] != null) return;
+  s.answers[s.i] = i;
+  recordAnswer(q.id, i === q.a);
+  renderPlayer();
+}
+function next(){
+  if(session.i + 1 < session.items.length){ session.i++; renderPlayer(); window.scrollTo(0,0); }
+  else go("#/results");
+}
+
+function renderResults(){
+  const s = session;
+  const right = s.items.filter((q, i) => s.answers[i] === q.a).length;
+  const n = s.items.length;
+  let html = bar("Results", s.back) +
+    `<div class="card score"><div class="big">${right}/${n}</div><div class="of">${Math.round(100*right/n)}% correct · ${esc(s.title)}</div></div>
+    <div class="actions">
+      ${s.kind !== "mistakes" ? `<button class="btn" data-start="${s.kind}:${s.id}">Next ${SET_SIZE} questions</button>` : ""}
+      <button class="btn secondary" data-go="${s.back}">Done</button>
+    </div><h3 class="section">Review</h3>`;
+  s.items.forEach((q, i) => {
+    const ok = s.answers[i] === q.a;
+    html += `<div class="card review"><div class="q">${i+1}. ${esc(q.q)}</div>
+      <div class="ans ${ok ? "verdict-ok" : "verdict-bad"}">${ok ? "✓" : "✗"} ${s.answers[i] != null ? `You: ${LETTERS[s.answers[i]]}. ${esc(q.o[s.answers[i]])}` : "Not answered"}</div>
+      ${ok ? "" : `<div class="ans verdict-ok">Answer: ${LETTERS[q.a]}. ${esc(q.o[q.a])}</div>`}
+      <div class="x">${esc(q.x)}</div></div>`;
+  });
+  app.innerHTML = html;
+}
+
+/* ----- mistakes ----- */
+function renderMistakes(){
+  const list = mistakes();
+  let html = bar("Review mistakes", "#/");
+  if(!list.length){
+    app.innerHTML = html + `<div class="empty">No mistakes to review yet.<br>Questions you get wrong will collect here until you answer them right.</div>`;
+    return;
+  }
+  html += `<div class="card" style="padding:16px;margin-top:14px"><div>${list.length} question${list.length===1?"":"s"} you last got wrong.</div>
+    <div class="actions"><button class="btn" data-start="mistakes:all">Practise ${Math.min(SET_SIZE, list.length)} of them</button></div></div>
+    <h3 class="section">By unit</h3><div class="list">`;
+  const byUnit = {};
+  for(const q of list) byUnit[q.unit] = (byUnit[q.unit] || 0) + 1;
+  for(const [uid, n] of Object.entries(byUnit)){
+    const u = unitById[uid];
+    html += `<button class="row" data-go="#/u/${uid}"><span class="badge" style="background:${SUBJECT_COLOR[u.subject]}">${u.n}</span>
+      <span class="main"><span class="title">${esc(u.name)}</span><div class="sub">${esc(subjectById[u.subject].name)} · ${n} to review</div></span><span class="chev">›</span></button>`;
+  }
+  app.innerHTML = html + `</div>`;
+}
+
+/* ----- rules & guidelines ----- */
+function renderGuide(){
+  let html = bar("Rules & guidelines", "#/") + `<div class="list" style="margin-top:14px">`;
+  for(const s of GUIDE.sections){
+    html += `<button class="row" data-go="#/guide/${s.id}"><span class="badge" style="background:var(--brand-soft);font-size:22px">${s.icon}</span>
+      <span class="main"><span class="title">${esc(s.title)}</span><div class="sub">${esc(s.summary)}</div></span><span class="chev">›</span></button>`;
+  }
+  html += `</div><p class="note">${esc(GUIDE.disclaimer)}</p><p class="note">Last checked: ${esc(GUIDE.updated)}</p>
+    <h3 class="section">Official sources</h3><ul class="srcs">${GUIDE.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></li>`).join("")}</ul>`;
+  app.innerHTML = html;
+}
+
+function guideBlock(b){
+  switch(b.type){
+    case "p": return `<p>${esc(b.text)}</p>`;
+    case "h": return `<h4>${esc(b.text)}</h4>`;
+    case "tip": return `<div class="callout tip">💡 ${esc(b.text)}</div>`;
+    case "warn": return `<div class="callout warn">⚠️ ${esc(b.text)}</div>`;
+    case "list": return `<ul>${b.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>`;
+    case "table": return `<table><thead><tr>${b.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+      <tbody>${b.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  }
+  return "";
+}
+
+function renderGuideSection(id){
+  const i = GUIDE.sections.findIndex(s => s.id === id);
+  if(i < 0) return renderGuide();
+  const s = GUIDE.sections[i], nextS = GUIDE.sections[i+1];
+  app.innerHTML = bar(s.title, "#/guide") +
+    `<article class="card guide">${s.blocks.map(guideBlock).join("")}</article>
+    ${nextS ? `<div class="actions"><button class="btn secondary" data-go="#/guide/${nextS.id}">Next: ${esc(nextS.title)} ›</button></div>` : ""}
+    <p class="note">${esc(GUIDE.disclaimer)}</p>`;
+}
+
+function renderSoon(name){
+  app.innerHTML = bar(name || "Coming soon", "#/") + `<div class="empty">${esc(name)} is being built and will arrive in an update.</div>`;
+}
+
+/* ======================================================================
+   EVENTS — one delegated listener for the whole app.
+   ====================================================================== */
+app.addEventListener("click", e => {
+  const el = e.target.closest("[data-go],[data-start],[data-pick],[data-next],[data-bm]");
+  if(!el) return;
+  if(el.dataset.go != null) return go(el.dataset.go);
+  if(el.dataset.start){ const [k, id] = el.dataset.start.split(":"); return startSession(k, id); }
+  if(el.dataset.pick != null) return pick(Number(el.dataset.pick));
+  if(el.dataset.next != null) return next();
+  if(el.dataset.bm){ const id = el.dataset.bm; if(progress.bm[id]) delete progress.bm[id]; else progress.bm[id] = 1; saveProgress(); renderPlayer(); }
+});
+
+render();
+})();
+
+</script>
+</body>
+</html>

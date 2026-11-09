@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions - UET Admissions Portal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --uet-primary: #003366;
+            --uet-secondary: #0066cc;
+            --uet-accent: #ff6600;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Styles */
+        .header-top {
+            background-color: var(--uet-primary);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 12px 0;
+            width: 100%;
+            margin: 0;
+        }
+
+        .navbar-brand {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: bold;
+            color: var(--uet-primary) !important;
+            display: flex;
+            align-items: center;
+            min-width: 0;
+            white-space: nowrap;
+        }
+
+        .navbar-brand img {
+            height: 48px;
+            margin-right: 10px;
+            flex: 0 0 auto;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--uet-primary);
+            font-weight: 500;
+            margin: 0 4px;
+            padding-left: 0.45rem;
+            padding-right: 0.45rem;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--uet-secondary);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            max-height: min(70vh, 420px);
+            overflow-y: auto;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: var(--uet-secondary);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--uet-primary);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--uet-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--uet-accent);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .social-links .bi {
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .social-links .utility-link {
+            width: auto;
+            padding: 0 0.65rem;
+            gap: 0.35rem;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .social-links .utility-link .bi {
+            font-size: 1rem;
+        }
+
+        .header-top .social-links a {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .header-top .social-links .utility-link {
+            width: auto;
+            height: 2rem;
+        }
+
+        .header-top .social-links .bi {
+            font-size: 1.15rem;
+        }
+
+        /* Utility Classes */
+        .btn-uet-primary {
+            background-color: var(--uet-primary);
+            border-color: var(--uet-primary);
+            color: white;
+        }
+
+        .btn-uet-primary:hover {
+            background-color: var(--uet-secondary);
+            border-color: var(--uet-secondary);
+            color: white;
+        }
+
+        .btn-uet-accent {
+            background-color: var(--uet-accent);
+            border-color: var(--uet-accent);
+            color: white;
+        }
+
+        .btn-uet-accent:hover {
+            background-color: #ff8533;
+            border-color: #ff8533;
+            color: white;
+        }
+
+        /* Quick Info Sidebar */
+        .quick-info-sidebar {
+            position: fixed;
+            top: 200px;
+            right: 20px;
+            width: 320px;
+            z-index: 1000;
+            display: none;
+        }
+
+        @media (min-width: 1400px) {
+            .quick-info-sidebar {
+                display: block;
+            }
+        }
+
+        .upcoming-date-card {
+            background: linear-gradient(135deg, var(--uet-primary) 0%, var(--uet-secondary) 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            }
+            50% {
+                box-shadow: 0 8px 25px rgba(0,102,204,0.3);
+            }
+        }
+
+        .upcoming-date-card .date-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .upcoming-date-card .date-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .upcoming-date-card .event-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .upcoming-date-card .countdown {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .quick-links-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .quick-links-card h6 {
+            color: var(--uet-primary);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .quick-link-btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            color: var(--uet-primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .quick-link-btn:hover {
+            background: linear-gradient(135deg, var(--uet-secondary) 0%, var(--uet-primary) 100%);
+            color: white;
+            border-color: var(--uet-secondary);
+            transform: translateX(-5px);
+            box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+        }
+
+        .quick-link-btn i {
+            font-size: 1.3rem;
+            margin-right: 12px;
+        }
+
+        .view-all-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: var(--uet-accent);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .view-all-btn:hover {
+            background: #ff8533;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,102,0,0.3);
+        }
+
+        .view-all-btn i {
+            margin-left: 8px;
+        }
+
+        @media (max-width: 1199.98px) {
+            .header-top {
+                font-size: 13px;
+                padding: 8px 0;
+            }
+
+            .header-top .row {
+                row-gap: 6px;
+            }
+
+            .header-top .col-md-6 {
+                width: 100%;
+                text-align: center !important;
+            }
+
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .navbar-brand {
+                max-width: calc(100vw - 96px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .navbar-brand img {
+                height: 42px;
+            }
+
+            .navbar-toggler {
+                border-color: rgba(0, 51, 102, 0.24);
+                padding: 0.35rem 0.55rem;
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: 0 0 0 0.18rem rgba(0, 102, 204, 0.2);
+            }
+
+            .navbar-collapse {
+                margin-top: 12px;
+                padding: 14px;
+                background: #fff;
+                border: 1px solid rgba(0, 51, 102, 0.08);
+                border-radius: 10px;
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+                max-height: calc(100vh - 120px);
+                overflow-y: auto;
+            }
+
+            .navbar-nav {
+                gap: 2px;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 0;
+                padding: 10px 12px;
+                border-radius: 8px;
+                white-space: normal;
+            }
+
+            .navbar-nav .nav-link:hover,
+            .navbar-nav .nav-link:focus {
+                background: #f4f8fc;
+            }
+
+            .dropdown-menu {
+                margin: 0 0 8px 12px;
+                padding: 4px 0;
+                border: 1px solid rgba(0, 51, 102, 0.08);
+                box-shadow: none;
+                max-height: 300px;
+            }
+
+            .dropdown-item {
+                white-space: normal;
+                line-height: 1.25;
+            }
+
+            .navbar .btn-uet-accent {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin: 10px 0 0 !important;
+                padding: 11px 14px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .navbar-nav {
+                align-items: center;
+            }
+
+            .navbar .btn-uet-accent {
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .container-fluid.px-4 {
+                padding-left: 14px !important;
+                padding-right: 14px !important;
+            }
+
+            .navbar-brand {
+                font-size: 0.95rem;
+            }
+
+            .navbar-brand img {
+                height: 38px;
+                margin-right: 8px;
+            }
+        }
+    </style>
+
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--uet-primary) 0%, var(--uet-secondary) 100%);
+            color: white;
+            padding: 60px 0 40px;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .page-header .breadcrumb-item,
+        .page-header .breadcrumb-item a {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .page-header .breadcrumb-item.active {
+            color: white;
+        }
+
+        .filter-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .filter-section .form-control,
+        .filter-section .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 10px 15px;
+        }
+
+        .filter-section .form-control:focus,
+        .filter-section .form-select:focus {
+            border-color: var(--uet-secondary);
+            box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--uet-primary);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--uet-accent);
+            display: inline-block;
+        }
+
+        .category-title i {
+            margin-right: 12px;
+            color: var(--uet-accent);
+        }
+
+        .faq-accordion .accordion-item {
+            border: 1px solid #e9ecef;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-accordion .accordion-button {
+            background: white;
+            color: var(--uet-primary);
+            font-weight: 600;
+            padding: 20px 25px;
+            font-size: 1.05rem;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background: var(--uet-primary);
+            color: white;
+            box-shadow: none;
+        }
+
+        .faq-accordion .accordion-button:focus {
+            border-color: var(--uet-secondary);
+            box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+        }
+
+        .faq-accordion .accordion-body {
+            padding: 25px;
+            background: #f8f9fa;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .stat-box {
+            display: inline-block;
+            margin: 0 30px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--uet-secondary);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .program-badge {
+            background: var(--uet-secondary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .category-link {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-link:hover {
+            background-color: rgba(0, 102, 204, 0.05) !important;
+        }
+
+        .category-link.active {
+            background-color: rgba(0, 102, 204, 0.1) !important;
+            border-left: 4px solid var(--uet-secondary);
+            font-weight: 600;
+        }
+
+        .category-link i {
+            color: var(--uet-secondary);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="bi bi-telephone-fill me-2"></i> +92-42-99029216
+                    <i class="bi bi-envelope-fill ms-3 me-2"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d0d5dcd8c2c2d8dedfc2f1c4d4c59fd4d5c49fc1da">[email&#160;protected]</a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links justify-content-end">
+                        <a class="utility-link" href="https://ecat.uet.edu.pk" target="_blank" rel="noopener noreferrer" aria-label="ECAT" title="ECAT"><i class="bi bi-mortarboard"></i><span>ECAT</span></a>
+                        <a class="utility-link" href="https://ecat.uet.edu.pk/General/Complaints" target="_blank" rel="noopener noreferrer" aria-label="Complaints" title="Complaints"><i class="bi bi-chat-left-text"></i><span>Complaints</span></a>
+                        <a class="utility-link" href="https://uet.edu.pk" target="_blank" rel="noopener noreferrer" aria-label="UET" title="UET"><i class="bi bi-building"></i><span>UET</span></a>
+                        <a href="https://www.facebook.com/share/18X3SX3ViH/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/admission_cell_uet_lahore?igsh=aGxmaXY5MGE4N3J1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/admission-cell-uet-lahore/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://youtube.com/@admission.uet.lahore?si=Gomexhacc9pg05tD" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb7xA347tkj2RdKqVD1c" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel" title="WhatsApp Channel"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-xl sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="/">
+                <img src="/images/uetnewlogo.png" alt="UET Logo" />
+                UET Admissions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/program/1">Bachelors in Sciences</a></li>
+                                    <li><a class="dropdown-item" href="/program/3">Master</a></li>
+                                    <li><a class="dropdown-item" href="/program/4">Ph.D</a></li>
+                                    <li><a class="dropdown-item" href="/program/2">Associate Degree Program</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/#programs">All Programs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/downloads">Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/foreign-students">
+                            <i class="bi bi-globe2 me-1"></i>Foreign Students
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faqs"><i class="bi bi-question-circle me-1"></i>FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-uet-accent ms-3" href="/#programs">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Apply Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding: 0; margin: 0;">
+        
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container-fluid px-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">FAQs</li>
+            </ol>
+        </nav>
+        <h1><i class="bi bi-question-circle me-3"></i>Frequently Asked Questions</h1>
+        <p class="lead mb-0">Find answers to common questions about admissions, programs, and procedures</p>
+    </div>
+</div>
+
+<div class="container-fluid px-4 mb-5">
+    <!-- Stats Section -->
+   
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" id="searchInput" class="form-control" placeholder="🔍 Search FAQs...">
+            </div>
+            <div class="col-md-3">
+                <select id="categoryFilter" class="form-select">
+                    <option value="">All Categories</option>
+                        <option value="General">General</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="programFilter" class="form-select">
+                    <option value="">All Programs</option>
+                    <option value="general">General FAQs</option>
+                        <option value="1">Bachelors in Sciences</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-uet-primary w-100" onclick="clearFilters()">
+                    <i class="bi bi-arrow-clockwise"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Sidebar with Categories -->
+        <div class="col-lg-3">
+            <div class="card border-0 shadow-sm mb-4 position-sticky" style="top: 20px;">
+                <div class="card-header bg-gradient text-white" style="background: linear-gradient(135deg, var(--uet-primary) 0%, var(--uet-secondary) 100%);">
+                    <h5 class="mb-0"><i class="bi bi-funnel-fill me-2"></i>Quick Navigation</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action category-link active" data-category="">
+                        <i class="bi bi-grid-fill me-2"></i>All FAQs
+                        <span class="badge bg-primary rounded-pill float-end">42</span>
+                    </a>
+                        <a href="#" class="list-group-item list-group-item-action category-link" data-category="General">
+                            <i class="bi bi-folder me-2"></i>General
+                            <span class="badge bg-secondary rounded-pill float-end">42</span>
+                        </a>
+                </div>
+                <div class="card-footer bg-light">
+                    <small class="text-muted">Click to filter by category</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs Content -->
+        <div class="col-lg-9">
+                <div id="faqsContainer">
+                        <div class="category-section" data-category="General">
+                            <h2 class="category-title">
+                                <i class="bi bi-folder"></i>General
+                            </h2>
+                            <div class="accordion faq-accordion" id="accordion-General">
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="when will the undergraduate admission process start?"
+                                         data-answer="the online submission of undergraduate admission applications will start on monday, june 08, 2026, and continue until wednesday, july 15, 2026. ">
+                                        <h2 class="accordion-header" id="heading24">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse24" aria-expanded="false" 
+                                                    aria-controls="collapse24">
+                                                When will the undergraduate admission process start?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse24" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading24">
+                                            <div class="accordion-body">
+                                                The online submission of undergraduate admission applications will start on Monday, June 08, 2026, and continue until Wednesday, July 15, 2026. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what is the last date to apply?"
+                                         data-answer="the last date and time for submission of online applications is wednesday, july 15, 2026.">
+                                        <h2 class="accordion-header" id="heading25">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse25" aria-expanded="false" 
+                                                    aria-controls="collapse25">
+                                                What is the last date to apply?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse25" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading25">
+                                            <div class="accordion-body">
+                                                The last date and time for submission of online applications is Wednesday, July 15, 2026.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="who is eligible to apply for open merit seats?"
+                                         data-answer="only punjab domiciled (including ict) applicants are eligible to apply on open merit seats unless otherwise specified against a program. ">
+                                        <h2 class="accordion-header" id="heading26">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse26" aria-expanded="false" 
+                                                    aria-controls="collapse26">
+                                                Who is eligible to apply for open merit seats?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse26" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading26">
+                                            <div class="accordion-body">
+                                                Only Punjab domiciled (including ICT) applicants are eligible to apply on open merit seats unless otherwise specified against a program. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is ecat compulsory for all programs?"
+                                         data-answer="no. ecat 2026 is compulsory for engineering, computing, architecture, and related disciplines. business and science programs categorized as non-ecat based do not require ecat. ">
+                                        <h2 class="accordion-header" id="heading27">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse27" aria-expanded="false" 
+                                                    aria-controls="collapse27">
+                                                Is ECAT compulsory for all programs?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse27" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading27">
+                                            <div class="accordion-body">
+                                                No. ECAT 2026 is compulsory for Engineering, Computing, Architecture, and related disciplines. Business and Science programs categorized as Non-ECAT Based do not require ECAT. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what is the minimum academic requirement?"
+                                         data-answer="&#x2022;&#x9;engineering, architecture, and computer engineering (nceac): minimum 60% marks in intermediate/equivalent. &#xD;&#xA;&#x2022;&#x9;science, technology, and business programs: minimum 50% marks in intermediate/equivalent. &#xD;&#xA;">
+                                        <h2 class="accordion-header" id="heading28">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse28" aria-expanded="false" 
+                                                    aria-controls="collapse28">
+                                                What is the minimum academic requirement?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse28" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading28">
+                                            <div class="accordion-body">
+                                                •	Engineering, Architecture, and Computer Engineering (NCEAC): Minimum 60% marks in Intermediate/equivalent. 
+•	Science, Technology, and Business Programs: Minimum 50% marks in Intermediate/equivalent. 
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="can pre-medical students apply for computing programs?"
+                                         data-answer="yes. f.sc. pre-medical students are eligible to apply for computing programs. ">
+                                        <h2 class="accordion-header" id="heading29">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse29" aria-expanded="false" 
+                                                    aria-controls="collapse29">
+                                                Can Pre-Medical students apply for Computing programs?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse29" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading29">
+                                            <div class="accordion-body">
+                                                Yes. F.Sc. Pre-Medical students are eligible to apply for Computing programs. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="are equivalent qualification holders eligible to apply?"
+                                         data-answer="yes. candidates having qualifications other than pakistani boards must submit an ibcc equivalence certificate if selected.">
+                                        <h2 class="accordion-header" id="heading30">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse30" aria-expanded="false" 
+                                                    aria-controls="collapse30">
+                                                Are equivalent qualification holders eligible to apply?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse30" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading30">
+                                            <div class="accordion-body">
+                                                Yes. Candidates having qualifications other than Pakistani Boards must submit an IBCC equivalence certificate if selected.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is the application process fully online?"
+                                         data-answer="yes. applications will only be received online. applications submitted through post, courier, or by hand will not be entertained. ">
+                                        <h2 class="accordion-header" id="heading31">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse31" aria-expanded="false" 
+                                                    aria-controls="collapse31">
+                                                Is the application process fully online?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse31" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading31">
+                                            <div class="accordion-body">
+                                                Yes. Applications will only be received online. Applications submitted through post, courier, or by hand will not be entertained. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what is the application fee?"
+                                         data-answer="the application fee is rs. 3000/-. candidates can apply for multiple programs through a single application fee. ">
+                                        <h2 class="accordion-header" id="heading32">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse32" aria-expanded="false" 
+                                                    aria-controls="collapse32">
+                                                What is the application fee?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse32" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading32">
+                                            <div class="accordion-body">
+                                                The application fee is Rs. 3000/-. Candidates can apply for multiple programs through a single application fee. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is the application fee refundable?"
+                                         data-answer="no. admission challan/token once purchased is non-refundable and non-transferable at any stage. ">
+                                        <h2 class="accordion-header" id="heading33">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse33" aria-expanded="false" 
+                                                    aria-controls="collapse33">
+                                                Is the application fee refundable?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse33" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading33">
+                                            <div class="accordion-body">
+                                                No. Admission challan/token once purchased is non-refundable and non-transferable at any stage. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="can program preferences be changed after submission?"
+                                         data-answer="yes. the option to edit/change program preferences will remain available from sunday, july 12, 2026, to tuesday, july 14, 2026, on payment of rs. 1,500/-. ">
+                                        <h2 class="accordion-header" id="heading34">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse34" aria-expanded="false" 
+                                                    aria-controls="collapse34">
+                                                Can program preferences be changed after submission?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse34" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading34">
+                                            <div class="accordion-body">
+                                                Yes. The option to edit/change program preferences will remain available from Sunday, July 12, 2026, to Tuesday, July 14, 2026, on payment of Rs. 1,500/-. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="are hostel and transport facilities available?"
+                                         data-answer="yes. hostel accommodation subject to availability and transport facilities are available.  ">
+                                        <h2 class="accordion-header" id="heading35">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse35" aria-expanded="false" 
+                                                    aria-controls="collapse35">
+                                                Are hostel and transport facilities available?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse35" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading35">
+                                            <div class="accordion-body">
+                                                Yes. Hostel accommodation subject to availability and transport facilities are available.  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is financial assistance available?"
+                                         data-answer="yes. financial assistance and scholarships are available in different programs for eligible students.">
+                                        <h2 class="accordion-header" id="heading36">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse36" aria-expanded="false" 
+                                                    aria-controls="collapse36">
+                                                Is financial assistance available?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse36" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading36">
+                                            <div class="accordion-body">
+                                                Yes. Financial assistance and scholarships are available in different programs for eligible students.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="are some programs offered on an all pakistan basis?"
+                                         data-answer="yes. certain programs including geological engineering, metallurgical &amp; materials engineering, mining engineering, textile engineering, biomedical engineering, city &amp; regional planning, and product &amp; industrial design are offered on all pakistan basis. ">
+                                        <h2 class="accordion-header" id="heading37">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse37" aria-expanded="false" 
+                                                    aria-controls="collapse37">
+                                                Are some programs offered on an All Pakistan basis?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse37" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading37">
+                                            <div class="accordion-body">
+                                                Yes. Certain programs including Geological Engineering, Metallurgical & Materials Engineering, Mining Engineering, Textile Engineering, Biomedical Engineering, City & Regional Planning, and Product & Industrial Design are offered on All Pakistan basis. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="does the university provide scholarships?"
+                                         data-answer="yes. scholarships worth more than pkr 1.45 billion were awarded during the financial year 2025&#x2013;26. ">
+                                        <h2 class="accordion-header" id="heading38">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse38" aria-expanded="false" 
+                                                    aria-controls="collapse38">
+                                                Does the university provide scholarships?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse38" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading38">
+                                            <div class="accordion-body">
+                                                Yes. Scholarships worth more than PKR 1.45 billion were awarded during the financial year 2025–26. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="general"
+                                         data-question="does the university reserve the right to amend policies?"
+                                         data-answer="yes. the university holds the right to make changes in relevant policies whenever deemed necessary. ">
+                                        <h2 class="accordion-header" id="heading39">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse39" aria-expanded="false" 
+                                                    aria-controls="collapse39">
+                                                Does the university reserve the right to amend policies?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse39" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading39">
+                                            <div class="accordion-body">
+                                                Yes. The university holds the right to make changes in relevant policies whenever deemed necessary. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is children of overseas pakistani can apply?"
+                                         data-answer="yes. children of overseas pakistanis possessing the requisite qualification can apply under the overseas category seats, subject to eligibility and admission requirements of the respective program.">
+                                        <h2 class="accordion-header" id="heading40">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse40" aria-expanded="false" 
+                                                    aria-controls="collapse40">
+                                                Is children of overseas Pakistani can apply?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse40" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading40">
+                                            <div class="accordion-body">
+                                                Yes. Children of Overseas Pakistanis possessing the requisite qualification can apply under the Overseas category seats, subject to eligibility and admission requirements of the respective program.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is there any separate fee for applying in additional programs?"
+                                         data-answer="no. no extra fee will be charged for applying in different programs. ">
+                                        <h2 class="accordion-header" id="heading41">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse41" aria-expanded="false" 
+                                                    aria-controls="collapse41">
+                                                Is there any separate fee for applying in additional programs?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse41" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading41">
+                                            <div class="accordion-body">
+                                                No. No extra fee will be charged for applying in different programs. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is there any minimum aggregate requirement for admission?"
+                                         data-answer="yes. applicants must secure a minimum aggregate score of 50% for consideration of admission. ">
+                                        <h2 class="accordion-header" id="heading42">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse42" aria-expanded="false" 
+                                                    aria-controls="collapse42">
+                                                Is there any minimum aggregate requirement for admission?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse42" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading42">
+                                            <div class="accordion-body">
+                                                Yes. Applicants must secure a minimum aggregate score of 50% for consideration of admission. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="where can applicants check the merit score calculation formula?"
+                                         data-answer="the merit score calculation formula is available on the admission portal.">
+                                        <h2 class="accordion-header" id="heading43">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse43" aria-expanded="false" 
+                                                    aria-controls="collapse43">
+                                                Where can applicants check the merit score calculation formula?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse43" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading43">
+                                            <div class="accordion-body">
+                                                The merit score calculation formula is available on the admission portal.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what should candidates do after submitting the application?"
+                                         data-answer="candidates are advised to regularly check their application status for any deficiency or discrepancy in documents and information. ">
+                                        <h2 class="accordion-header" id="heading44">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse44" aria-expanded="false" 
+                                                    aria-controls="collapse44">
+                                                What should candidates do after submitting the application?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse44" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading44">
+                                            <div class="accordion-body">
+                                                Candidates are advised to regularly check their application status for any deficiency or discrepancy in documents and information. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what should candidates do after submitting the application?"
+                                         data-answer="candidates are advised to regularly check their application status for any deficiency or discrepancy in documents and information. ">
+                                        <h2 class="accordion-header" id="heading45">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse45" aria-expanded="false" 
+                                                    aria-controls="collapse45">
+                                                What should candidates do after submitting the application?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse45" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading45">
+                                            <div class="accordion-body">
+                                                Candidates are advised to regularly check their application status for any deficiency or discrepancy in documents and information. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="can the university reject an application after submission?"
+                                         data-answer="yes. the university may reject an application in case of any discrepancy in documents or information provided by the applicant. ">
+                                        <h2 class="accordion-header" id="heading46">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse46" aria-expanded="false" 
+                                                    aria-controls="collapse46">
+                                                Can the university reject an application after submission?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse46" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading46">
+                                            <div class="accordion-body">
+                                                Yes. The university may reject an application in case of any discrepancy in documents or information provided by the applicant. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is admission available at multiple campuses?"
+                                         data-answer="yes. admissions are offered at:&#xD;&#xA;&#x2022;&#x9;main campus lahore (lhr) &#xD;&#xA;&#x2022;&#x9;faisalabad campus (fsd) &#xD;&#xA;&#x2022;&#x9;narowal campus (nwl) &#xD;&#xA;&#x2022;&#x9;rcet gujranwala (rcet) &#xD;&#xA;&#x2022;&#x9;kala shah kaku campus (new campus at ksk) &#xD;&#xA;">
+                                        <h2 class="accordion-header" id="heading47">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse47" aria-expanded="false" 
+                                                    aria-controls="collapse47">
+                                                Is admission available at multiple campuses?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse47" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading47">
+                                            <div class="accordion-body">
+                                                Yes. Admissions are offered at:
+•	Main Campus Lahore (LHR) 
+•	Faisalabad Campus (FSD) 
+•	Narowal Campus (NWL) 
+•	RCET Gujranwala (RCET) 
+•	Kala Shah Kaku Campus (NEW Campus at KSK) 
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="mock test link"
+                                         data-answer="mock test video demo&#xD;&#xA;https://www.youtube.com/watch?v=da9ojxeatke&#xD;&#xA;">
+                                        <h2 class="accordion-header" id="heading3">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse3" aria-expanded="false" 
+                                                    aria-controls="collapse3">
+                                                Mock Test Link
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse3" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading3">
+                                            <div class="accordion-body">
+                                                Mock Test Video Demo
+https://www.youtube.com/watch?v=dA9OjXeAtkE
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what is the fee for registration in the entry test for fall 2026?"
+                                         data-answer="candidates interested and eligible only in non ecat based programs are required to generate and pay the challan of rs. 3,000/- per that covers the admission application processing fee.">
+                                        <h2 class="accordion-header" id="heading2">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse2" aria-expanded="false" 
+                                                    aria-controls="collapse2">
+                                                What is the fee for registration in the Entry Test for Fall 2026?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse2" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading2">
+                                            <div class="accordion-body">
+                                                Candidates interested and eligible only in Non ECAT based programs are required to Generate and Pay the Challan of Rs. 3,000/- per that covers the Admission Application processing Fee.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="how can we pay the registration fee and get the token number?"
+                                         data-answer="for hbl:&#xD;&#xA;this fee can be paid on-line through hbl on-line banking facility for hbl account holders and the challan number generated will be used as token number for registering in the entry test.&#xD;&#xA;for ubl:&#xD;&#xA;fee payment through all ubl branches pan pakistan&#xD;&#xA;fee payment via ubl mobile app&#xD;&#xA;fee payment via ubl omni dukan / agent">
+                                        <h2 class="accordion-header" id="heading4">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse4" aria-expanded="false" 
+                                                    aria-controls="collapse4">
+                                                How can we pay the registration fee and get the token number?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse4" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading4">
+                                            <div class="accordion-body">
+                                                For HBL:
+This fee can be paid on-line through HBL on-line banking facility for HBL account holders and the challan number generated will be used as token number for registering in the Entry Test.
+For UBL:
+Fee Payment through all UBL Branches Pan Pakistan
+Fee Payment VIA UBL Mobile APP
+Fee Payment VIA UBL Omni Dukan / Agent
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="will a center for entry test (fall 2026) be established for gilgit baltistan students?"
+                                         data-answer="no">
+                                        <h2 class="accordion-header" id="heading5">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse5" aria-expanded="false" 
+                                                    aria-controls="collapse5">
+                                                Will a center for Entry Test (Fall 2026) be established for Gilgit Baltistan students?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse5" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading5">
+                                            <div class="accordion-body">
+                                                No
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what are the timings of the entry test sessions each day?"
+                                         data-answer="the timing will be displayed on the admit card.&#xD;&#xA;candidates are required to print the admit card on wednesday, june 10, 2026, which will mention the date, time, and venue of the test.">
+                                        <h2 class="accordion-header" id="heading10">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse10" aria-expanded="false" 
+                                                    aria-controls="collapse10">
+                                                What are the timings of the Entry Test Sessions each day?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse10" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading10">
+                                            <div class="accordion-body">
+                                                The timing will be displayed on the ADMIT CARD.
+Candidates are required to print the admit card on Wednesday, June 10, 2026, which will mention the date, time, and venue of the test.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what is the duration of the entry test?"
+                                         data-answer="the duration of the entry test is 100 minutes.">
+                                        <h2 class="accordion-header" id="heading11">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse11" aria-expanded="false" 
+                                                    aria-controls="collapse11">
+                                                What is the duration of the Entry Test?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse11" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading11">
+                                            <div class="accordion-body">
+                                                The duration of the Entry Test is 100 minutes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="are the entry sessions planned according to some scheme?"
+                                         data-answer="the entry sessions are planned, and details will be provided on the admit card.">
+                                        <h2 class="accordion-header" id="heading12">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse12" aria-expanded="false" 
+                                                    aria-controls="collapse12">
+                                                Are the Entry Sessions planned according to some scheme?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse12" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading12">
+                                            <div class="accordion-body">
+                                                The Entry Sessions are planned, and details will be provided on the ADMIT CARD.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what are the subject combinations of the entry test?"
+                                         data-answer="the entry test will be of four combinations:&#xD;&#xA;1. english, physics, mathematics, chemistry&#xD;&#xA;2. english, physics, mathematics, computer science&#xD;&#xA;3. english, physics, mathematics, statistics&#xD;&#xA;4.english, physics, biology, chemistry&#xD;&#xA;5. english, mathematics, statistics, computer science">
+                                        <h2 class="accordion-header" id="heading13">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse13" aria-expanded="false" 
+                                                    aria-controls="collapse13">
+                                                What are the subject combinations of the Entry Test?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse13" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading13">
+                                            <div class="accordion-body">
+                                                The Entry Test will be of four combinations:
+1. English, Physics, Mathematics, Chemistry
+2. English, Physics, Mathematics, Computer Science
+3. English, Physics, Mathematics, Statistics
+4.English, Physics, Biology, Chemistry
+5. English, Mathematics, Statistics, Computer Science
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="how should i choose a subject combination for the entry test?"
+                                         data-answer="the candidate should select the combination, listed in response to question 8, depending on his subjects in intermediate (or equivalent) examination.&#xD;&#xA;dae qualified candidate can only choose from the following two options -physics, mathematics, english and chemistry or physics, mathematics, english and computer science">
+                                        <h2 class="accordion-header" id="heading14">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse14" aria-expanded="false" 
+                                                    aria-controls="collapse14">
+                                                How should I choose a subject combination for the Entry Test?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse14" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading14">
+                                            <div class="accordion-body">
+                                                The candidate should select the combination, listed in response to question 8, depending on his subjects in Intermediate (or equivalent) examination.
+DAE qualified candidate can only choose from the following two options -Physics, Mathematics, English and Chemistry or Physics, Mathematics, English and Computer Science
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="some information about the type of entry test"
+                                         data-answer="information about each subject being examined in the entry test is given as under:&#xD;&#xA;&#xD;&#xA;1. english: 10 questions. it will be comprehension type. a paragraph would be given and candidates would be required to answer multiple choice questions related to the paragraph.&#xD;&#xA;&#xD;&#xA;2. physics: 30 questions. all questions would be on topics covered in intermediate / &quot;a&quot; level/ dae. questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies. for example, candidates would certainly be asked questions on mechanics, electricity &amp; magnetism, work and energy, etc.&#xD;&#xA;&#xD;&#xA;3. mathematics: 30 questions. all questions would be on topics covered in intermediate / &quot;a&quot; level/ dae. questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies. for example, candidates would certainly be asked questions requiring knowledge of differentiation, integration, linear algebra, trigonometry, etc.&#xD;&#xA;&#xD;&#xA;4. chemistry/ computer science/ statistics: 30 questions. all questions would be on topics covered in intermediate/ &quot;a&quot; level/ dae. questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies.&#xD;&#xA;&#xD;&#xA;5. biology (in lieu of mathematics for pre-medical candidates): 30 questions. all questions would be on topics covered in intermediate / &quot;a&quot; level/ dae. questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies.">
+                                        <h2 class="accordion-header" id="heading15">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse15" aria-expanded="false" 
+                                                    aria-controls="collapse15">
+                                                Some information about the type of Entry Test
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse15" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading15">
+                                            <div class="accordion-body">
+                                                Information about each subject being examined in the Entry Test is given as under:
+
+1. English: 10 questions. It will be comprehension type. A paragraph would be given and candidates would be required to answer multiple choice questions related to the paragraph.
+
+2. Physics: 30 questions. All questions would be on topics covered in Intermediate / "A" Level/ DAE. Questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies. For example, candidates would certainly be asked questions on Mechanics, Electricity & Magnetism, Work and Energy, etc.
+
+3. Mathematics: 30 questions. All questions would be on topics covered in Intermediate / "A" Level/ DAE. Questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies. For example, candidates would certainly be asked questions requiring knowledge of Differentiation, Integration, Linear Algebra, Trigonometry, etc.
+
+4. Chemistry/ Computer Science/ Statistics: 30 questions. All questions would be on topics covered in Intermediate/ "A" Level/ DAE. Questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies.
+
+5. Biology (in lieu of Mathematics for Pre-medical candidates): 30 questions. All questions would be on topics covered in Intermediate / "A" Level/ DAE. Questions would require the candidate to solve problems by using the skills and concepts learnt during the intermediate level studies.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="marking of the entry test answers?"
+                                         data-answer="marking of entry test answer sheet:&#xD;&#xA;&#xD;&#xA;correct answer: 4 marks&#xD;&#xA;no answer: 0 marks.&#xD;&#xA;this means that if a candidate has 40 correct answers, 40 wrong answers and 20 blanks (no answers), he/she would earn the following marks: 40 x 4 &#x2B; 60 x (0) = 160 &#x2B; 0= 160 marks out of maximum 400.">
+                                        <h2 class="accordion-header" id="heading16">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse16" aria-expanded="false" 
+                                                    aria-controls="collapse16">
+                                                Marking of the Entry Test answers?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse16" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading16">
+                                            <div class="accordion-body">
+                                                Marking of Entry Test Answer Sheet:
+
+Correct Answer: 4 marks
+No answer: 0 marks.
+This means that if a candidate has 40 correct answers, 40 wrong answers and 20 blanks (no answers), he/she would earn the following marks: 40 x 4 + 60 x (0) = 160 + 0= 160 marks out of maximum 400.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="what are maximum marks of the entry test?"
+                                         data-answer="maximum marks are 400.">
+                                        <h2 class="accordion-header" id="heading17">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse17" aria-expanded="false" 
+                                                    aria-controls="collapse17">
+                                                What are maximum marks of the Entry Test?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse17" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading17">
+                                            <div class="accordion-body">
+                                                Maximum marks are 400.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question=" what are the qualifying marks in the entry test?"
+                                         data-answer="there is no minimum threshold for passing marks.">
+                                        <h2 class="accordion-header" id="heading18">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse18" aria-expanded="false" 
+                                                    aria-controls="collapse18">
+                                                 What are the qualifying marks in the Entry Test?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse18" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading18">
+                                            <div class="accordion-body">
+                                                There is no minimum threshold for passing marks.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="is the syllabus, being examined in the entry test, shortened?"
+                                         data-answer="no. entry test covers the entire syllabus of intermediate/ &quot;a&quot; level/ dae.">
+                                        <h2 class="accordion-header" id="heading19">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse19" aria-expanded="false" 
+                                                    aria-controls="collapse19">
+                                                Is the syllabus, being examined in the Entry Test, shortened?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse19" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading19">
+                                            <div class="accordion-body">
+                                                No. Entry Test covers the entire syllabus of Intermediate/ "A" Level/ DAE.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="some marks were given as a bonus to all candidates appearing in entry test 2021. will same be done this year?"
+                                         data-answer="no.">
+                                        <h2 class="accordion-header" id="heading20">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse20" aria-expanded="false" 
+                                                    aria-controls="collapse20">
+                                                Some marks were given as a bonus to all candidates appearing in Entry Test 2021. Will same be done this year?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse20" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading20">
+                                            <div class="accordion-body">
+                                                No.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="will the entry test be organized in the gulf region of the middle east?"
+                                         data-answer="no.">
+                                        <h2 class="accordion-header" id="heading21">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse21" aria-expanded="false" 
+                                                    aria-controls="collapse21">
+                                                Will the Entry Test be organized in the Gulf region of the middle east?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse21" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading21">
+                                            <div class="accordion-body">
+                                                No.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="who can apply in ecat?"
+                                         data-answer="who can appear in ecat&#xD;&#xA;&#xD;&#xA;&#x201C;anyone can take the entrance test, however, appearance in the test does not confer the right to apply for admission in the engineering institutions of the punjab.&#x201D;&#xD;&#xA;&#xD;&#xA;eligible academic backgrounds&#xD;&#xA;&#xD;&#xA;candidates having the following intermediate / equivalent subject combinations can appear in ecat:&#xD;&#xA;&#xD;&#xA;mathematics, physics, chemistry&#xD;&#xA;mathematics, physics, computer science&#xD;&#xA;mathematics, statistics, computer science&#xD;&#xA;biology, physics, chemistry&#xD;&#xA;mathematics, statistics, physics&#xD;&#xA;dae candidates&#xD;&#xA;&#xD;&#xA;dae-qualified candidates can appear only in these combinations:&#xD;&#xA;&#xD;&#xA;physics, mathematics, english, chemistry&#xD;&#xA;physics, mathematics, english, computer science&#xD;&#xA;students awaiting result&#xD;&#xA;&#xD;&#xA;students appearing in intermediate part-ii / a-level final exams may also appear in ecat for fall admissions, subject to fulfilling admission requirements later. this is reflected in uet&#x2019;s ongoing ecat registration and admission process.&#xD;&#xA;&#xD;&#xA;important clarification&#xD;&#xA;&#xD;&#xA;appearing in ecat does not automatically mean admission eligibility. candidates must separately fulfill:&#xD;&#xA;&#xD;&#xA;minimum academic requirements,&#xD;&#xA;domicile/category conditions,&#xD;&#xA;and submit admission applications through the uet admission portal.">
+                                        <h2 class="accordion-header" id="heading22">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse22" aria-expanded="false" 
+                                                    aria-controls="collapse22">
+                                                Who can apply in ECAT?
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse22" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading22">
+                                            <div class="accordion-body">
+                                                Who Can Appear in ECAT
+
+“Anyone can take the Entrance Test, however, appearance in the Test does not confer the right to apply for admission in the Engineering institutions of the Punjab.”
+
+Eligible Academic Backgrounds
+
+Candidates having the following Intermediate / equivalent subject combinations can appear in ECAT:
+
+Mathematics, Physics, Chemistry
+Mathematics, Physics, Computer Science
+Mathematics, Statistics, Computer Science
+Biology, Physics, Chemistry
+Mathematics, Statistics, Physics
+DAE Candidates
+
+DAE-qualified candidates can appear only in these combinations:
+
+Physics, Mathematics, English, Chemistry
+Physics, Mathematics, English, Computer Science
+Students Awaiting Result
+
+Students appearing in Intermediate Part-II / A-Level final exams may also appear in ECAT for Fall admissions, subject to fulfilling admission requirements later. This is reflected in UET’s ongoing ECAT registration and admission process.
+
+Important Clarification
+
+Appearing in ECAT does not automatically mean admission eligibility. Candidates must separately fulfill:
+
+minimum academic requirements,
+domicile/category conditions,
+and submit admission applications through the UET admission portal.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item faq-item" 
+                                         data-category="General"
+                                         data-program="1"
+                                         data-question="does the merit calculator include total intermediate marks"
+                                         data-answer="merit calculation is based on first year / part-i intermediate or equivalent marks along with the ecat score. however, candidates must possess complete intermediate or equivalent qualification with at least 50% or 60% marks, as applicable under the respective program eligibility criteria.">
+                                        <h2 class="accordion-header" id="heading23">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target="#collapse23" aria-expanded="false" 
+                                                    aria-controls="collapse23">
+                                                Does the merit calculator include total intermediate marks
+                                                    <span class="program-badge">Bachelors in Sciences</span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse23" class="accordion-collapse collapse" 
+                                             aria-labelledby="heading23">
+                                            <div class="accordion-body">
+                                                Merit calculation is based on First Year / Part-I Intermediate or equivalent marks along with the ECAT score. However, candidates must possess complete Intermediate or equivalent qualification with at least 50% or 60% marks, as applicable under the respective program eligibility criteria.
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="card border-0 shadow-sm mt-5">
+        <div class="card-body text-center p-5">
+            <h3 class="mb-3">Didn't Find Your Answer?</h3>
+            <p class="text-muted mb-4">Contact our admissions team for personalized assistance</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="bi bi-telephone-fill text-primary" style="font-size: 2rem;"></i>
+                    <p class="mt-2 mb-0"><strong>+92-42-99029216</strong></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-envelope-fill text-primary" style="font-size: 2rem;"></i>
+                    <p class="mt-2 mb-0"><strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="39585d54504a4a5056574a794c5c4d175c5d4c174952">[email&#160;protected]</a></strong></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-clock-fill text-primary" style="font-size: 2rem;"></i>
+                    <p class="mt-2 mb-0"><strong>Mon-Fri: 8 AM - 4 PM</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3"><i class="bi bi-mortarboard-fill me-2"></i>UET Admissions</h5>
+                    <p>University of Engineering and Technology, Lahore - Your gateway to excellence in engineering and technology education.</p>
+                    <div class="mt-3 social-links">
+                        <a href="https://www.facebook.com/share/18X3SX3ViH/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/admission_cell_uet_lahore?igsh=aGxmaXY5MGE4N3J1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/admission-cell-uet-lahore/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://youtube.com/@admission.uet.lahore?si=Gomexhacc9pg05tD" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb7xA347tkj2RdKqVD1c" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel" title="WhatsApp Channel"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i>About UET</a></li>
+                        <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i>Admissions</a></li>
+                        <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i>Programs</a></li>
+                        <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i>Campus Life</a></li>
+                        <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i>News & Events</a></li>
+                        <li class="mb-2">
+                            <a href="https://ecat.uet.edu.pk/General/Complaints" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-chevron-right me-2"></i>Register Complaint
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            G.T. Road, Lahore, Pakistan
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            +92-42-99029216
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9dfcf9f0f4eeeef4f2f3eedde8f8e9b3f8f9e8b3edf6">[email&#160;protected]</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-clock-fill me-2"></i>
+                            Mon - Fri: 8:00 AM - 4:00 PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 University of Engineering and Technology, Lahore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/pakistan-time.js?v=kiVXIAIHKUOMtf9yJh7a-PjJUHydCZxkd_e73j30nVQ"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Countdown timer for next important date
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the target date (example: March 15, 2024)
+            const targetDate = new Date('2024-03-15T23:59:59').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                    const countdownElement = document.querySelector('.countdown');
+                    if (countdownElement) {
+                        if (days > 0) {
+                            countdownElement.innerHTML = '<i class="bi bi-clock me-2"></i>' + days + ' day' + (days !== 1 ? 's' : '') + ' remaining';
+                        } else if (hours > 0) {
+                            countdownElement.innerHTML = '<i class="bi bi-clock me-2"></i>' + hours + ' hour' + (hours !== 1 ? 's' : '') + ' remaining';
+                        } else {
+                            countdownElement.innerHTML = '<i class="bi bi-clock me-2"></i>Ending soon!';
+                        }
+                    }
+                } else {
+                    const countdownElement = document.querySelector('.countdown');
+                    if (countdownElement) {
+                        countdownElement.innerHTML = '<i class="bi bi-check-circle me-2"></i>Date passed';
+                    }
+                }
+            }
+
+            // Update countdown immediately and then every minute
+            updateCountdown();
+            setInterval(updateCountdown, 60000);
+        });
+    </script>
+
+    
+    <script>
+        // Category sidebar click handler
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.dataset.category;
+
+                // Update active state
+                document.querySelectorAll('.category-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update dropdown and filter
+                document.getElementById('categoryFilter').value = category;
+                filterFaqs();
+            });
+        });
+
+        function filterFaqs() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const programFilter = document.getElementById('programFilter').value;
+            const faqItems = document.querySelectorAll('.faq-item');
+            const categorySections = document.querySelectorAll('.category-section');
+
+            faqItems.forEach(item => {
+                const question = item.dataset.question;
+                const answer = item.dataset.answer;
+                const category = item.dataset.category;
+                const program = item.dataset.program;
+
+                const matchesSearch = !searchTerm || question.includes(searchTerm) || answer.includes(searchTerm);
+                const matchesCategory = !categoryFilter || category === categoryFilter;
+                const matchesProgram = !programFilter || program === programFilter;
+
+                if (matchesSearch && matchesCategory && matchesProgram) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Hide empty category sections
+            categorySections.forEach(section => {
+                const visibleItems = section.querySelectorAll('.faq-item:not([style*="display: none"])');
+                if (visibleItems.length === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = '';
+                }
+            });
+        }
+
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('programFilter').value = '';
+
+            // Reset sidebar active state
+            document.querySelectorAll('.category-link').forEach(l => l.classList.remove('active'));
+            document.querySelector('.category-link[data-category=""]').classList.add('active');
+
+            filterFaqs();
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', filterFaqs);
+        document.getElementById('categoryFilter').addEventListener('change', filterFaqs);
+        document.getElementById('programFilter').addEventListener('change', filterFaqs);
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a57bc8b63e7c907a',t:'MTc5NDIxNjQ3Mg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a57bc8b63e7c907a',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

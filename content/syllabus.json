@@ -1,0 +1,35 @@
+{
+  "source": "UET Lahore ECAT 2026 (ecat.uet.edu.pk, admission FAQ Fall 2026). Chapters to be added after checking the textbooks.",
+  "paperTotal": 100,
+  "paperLine": "UET ECAT 2026 · 100 MCQs · 400 marks · 100 minutes · no negative marking",
+  "subjects": [
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "mcqsInPaper": 30,
+      "bankTarget": 1500,
+      "units": []
+    },
+    {
+      "id": "phy",
+      "name": "Physics",
+      "mcqsInPaper": 30,
+      "bankTarget": 1000,
+      "units": []
+    },
+    {
+      "id": "chem",
+      "name": "Chemistry",
+      "mcqsInPaper": 30,
+      "bankTarget": 1000,
+      "units": []
+    },
+    {
+      "id": "eng",
+      "name": "English",
+      "mcqsInPaper": 10,
+      "bankTarget": 500,
+      "units": []
+    }
+  ]
+}

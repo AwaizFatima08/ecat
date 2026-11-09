@@ -1,0 +1,9 @@
+node_modules/
+www/
+.secrets/
+releases/
+.~lock.*#
+android/app/build/
+android/.gradle/
+scripts/backup.log
+drafts/

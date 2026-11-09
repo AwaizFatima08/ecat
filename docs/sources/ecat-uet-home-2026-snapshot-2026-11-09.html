@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - ECAT</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=6xZW311ralAXOB75Cec4eVR7ln-mAyECk3bXPNIjQ2Q" />
+    <link href="/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/lib/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="/images/logo.webp" rel="icon">
+
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+    <header b-5qeumcuvuj id="header" class="header fixed-top d-flex align-items-center">
+
+        <div b-5qeumcuvuj class="d-flex align-items-center justify-content-between">
+            <a class="logo d-flex align-items-center" href="/">
+                <img src="/images/logo.webp" alt="">
+                <span b-5qeumcuvuj class="d-none d-lg-block">Admissions UET</span>
+            </a>
+            <i b-5qeumcuvuj class="bi bi-list toggle-sidebar-btn"></i>
+
+
+        </div><!-- End Logo -->
+
+        <nav b-5qeumcuvuj class="header-nav ms-auto">
+            <ul b-5qeumcuvuj class="d-flex align-items-center">
+                <li b-5qeumcuvuj class="nav-item dropdown pe-3">
+
+
+                </li>
+
+                <!-- End Profile Nav -->
+            </ul>
+        </nav><!-- End Icons Navigation -->
+    </header>
+
+    <!-- End Header -->
+    <!-- ======= Sidebar ======= -->
+    <aside b-5qeumcuvuj id="sidebar" class="sidebar d-flex flex-column">
+
+        <ul b-5qeumcuvuj class="sidebar-nav d-flex flex-column flex-grow-1" id="sidebar-nav">
+
+
+
+
+            <li b-5qeumcuvuj class="nav-item">
+                <a class="nav-link active" href="/">
+                    <i b-5qeumcuvuj class="bi bi-house"></i>
+                    <span b-5qeumcuvuj>Home</span>
+                </a>
+            </li><!-- End Home Nav -->
+           
+
+
+
+
+            <li b-5qeumcuvuj class="nav-item">
+                <a b-5qeumcuvuj class="nav-link collapsed" data-bs-target="#candidate-configurator-nav" data-bs-toggle="collapse" href="#">
+                    <i b-5qeumcuvuj class="bi bi-person-check "></i><span b-5qeumcuvuj>Candidate</span><i b-5qeumcuvuj class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul b-5qeumcuvuj id="candidate-configurator-nav" 
+                class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li b-5qeumcuvuj class="nav-item">
+                        <a class="nav-link collapsed disabled" href="/Candidates/ChallanGeneration">
+                            <i b-5qeumcuvuj class="bi bi-card-list"></i> Generate Challan
+                        </a>
+                    </li><!-- End Challan Nav -->
+
+                    <li b-5qeumcuvuj class="nav-item">
+                        <a class="nav-link collapsed disabled" href="/Candidates/CnicVerification">
+                            <i b-5qeumcuvuj class="bi bi-person-lines-fill"></i> Application Form
+                        </a>
+                    </li>
+                    <li b-5qeumcuvuj class="nav-item">
+                        <a class="nav-link collapsed disabled" href="/Candidates/AdmitCard">
+                            <i b-5qeumcuvuj class="bi bi-card-heading"></i> Admit Card
+                        </a>
+                    </li>
+                    <li b-5qeumcuvuj class="nav-item">
+                        <a class="nav-link collapsed" href="/Candidates/ResultFall">
+
+                            <i b-5qeumcuvuj class="bi bi-clipboard-check"></i> Check Result
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+           
+                <li b-5qeumcuvuj class="nav-heading">General</li>
+
+                <li b-5qeumcuvuj class="nav-item">
+                    <a class="nav-link collapsed" href="/General/Ecat">
+                        <i b-5qeumcuvuj class="bi bi-question-octagon"></i> About Ecat
+                    </a>
+                </li>
+                <li b-5qeumcuvuj class="nav-item">
+                    <a class="nav-link collapsed" href="/General/Programs">
+                        <i b-5qeumcuvuj class="bi bi-stars"></i> Programs
+                    </a>
+                </li>
+                <li b-5qeumcuvuj class="nav-item">
+                    <a class="nav-link collapsed" href="/General/Partners">
+                        <i b-5qeumcuvuj class="bi bi-people"></i> Partners
+                    </a>
+                </li>
+
+                <li b-5qeumcuvuj>
+                <a class="nav-link collapsed" href="/General/Complaints">
+                    <i b-5qeumcuvuj class="bi bi-bug"></i> Register Complaint
+                    </a>
+                </li>
+                
+                 <li b-5qeumcuvuj>
+                <a b-5qeumcuvuj class="nav-link collapsed" href="/statsECATFirst.pdf" download>
+
+                    <i b-5qeumcuvuj class="bi bi-list-ol"></i> ECAT - I Statistics
+                    </a>
+                </li>
+                 <li b-5qeumcuvuj>
+                <a b-5qeumcuvuj class="nav-link collapsed" href="/statsECATsecond_26.pdf" download>
+
+                    <i b-5qeumcuvuj class="bi bi-bar-chart-steps"></i> ECAT - II Statistics <i b-5qeumcuvuj class="bi bi-stars ms-auto text-primary"></i>
+                    </a>
+                </li>
+
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+    <main b-5qeumcuvuj id="main" class="main pb-3 min-vh-100">
+        
+<!-- Error message -->
+
+
+
+<style>
+
+
+    .container {
+        max-width: 700px;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: slideUp 1s ease-in-out;
+    }
+
+    h1 {
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #0077b5;
+    }
+
+    .buttons {
+        margin-top: 30px;
+    }
+
+        .buttons a {
+            display: inline-block;
+            margin: 10px 15px;
+            text-decoration: none;
+            padding: 12px 24px;
+            font-weight: bold;
+            color: white;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            .buttons a:hover {
+                transform: scale(1.05);
+            }
+
+    .facebook {
+        background-color: #3b5998;
+    }
+
+    .linkedin {
+        background-color: #0077b5;
+    }
+
+    .link {
+        color: #004080;
+        text-decoration: underline;
+    }
+</style>
+
+<!-- Dynamic header to show messages-->
+        <div class="alert alert-message d-flex justify-content-center align-items-center text-center">
+
+            <i class="bi bi-exclamation-octagon me-1" id="test"></i>
+            <style>
+    .social-icon i {
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover i {
+        transform: scale(1.25);
+        opacity: 0.8;
+    }
+
+    /* Optional: platform-specific hover colors */
+    .fb:hover i {
+        color: #1877f2;
+    }
+
+    .instagram:hover i {
+        color: #ca17ad;
+    }
+
+    .whatsapp:hover i {
+        color: #15a923;
+    }
+</style>
+
+Follow us for latest updates 
+<a href="https://www.facebook.com/share/1C1d73Tcyx/" 
+   class="fw-semibold fs-3 ms-1 social-icon fb" target="_blank">
+    <i class="bi bi-facebook"></i>
+</a>
+
+<a href="https://www.instagram.com/admission_cell_uet_lahore?igsh=dHAzZzdhdDNiOWNu"
+   class="fw-semibold fs-3 ms-2 social-icon instagram" target="_blank">
+    <i class="bi bi-instagram" style="color: #db4dc4;"></i>
+</a>
+
+<a href="https://whatsapp.com/channel/0029Vb7xA347tkj2RdKqVD1c"
+   class="fw-semibold fs-3 ms-2 social-icon whatsapp" target="_blank">
+    <i class="bi bi-whatsapp" style="color: #0cb51c;"></i>
+</a>
+        </div>
+        <hr />
+
+<section class="section dashboard">
+    <div class="pagetitle text-center">
+
+        <h1>Apply for <span class="text-danger" style="text-decoration: underline; text-decoration-color: #012970; text-underline-offset: 4px;"> ECAT</span>  - <span class="text-danger">Fall 2026</span> (Second)</h1>
+
+
+        <hr />
+        <h5 class="my-2 pb-2">Your ECAT Journey in <span style="color: #ff771d; font-weight: bold;">  Five Easy Steps </span>  </h5>
+    </div><!-- End Admissions Title -->
+
+    <div class="row g-3">
+
+        <!-- Card 1 -->
+        <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="card info-card sales-card h-100 w-100">
+                <div class="card-body-custom">
+                    <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            1
+                        </div>
+                        <div class="ps-3">
+                            <h6>Generate Challan/Token</h6>
+                            <span class="text-muted small pt-2">
+                                Step 1: Pay Challan online to enroll<br />
+                                <span class="badge mt-2 fs-6" style="background: #f6f6fe; color: #4154f1; font-weight: 600;"><i class="bi bi-cash-stack me-1"></i>  Fee - Rs. 3000 /-</span>
+                                <span class="badge mt-2 fs-6" style="background: #f6f6fe; color: #dc3545; font-weight: 600;"><i class="bi bi-calendar4-event me-1"></i>  Last Date - Jun 13, 2026</span>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="text-center pt-3">
+                        <a class="btn btn-sec disabled" href="/Candidates/ChallanGeneration">Generate Fee Challan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="card info-card revenue-card h-100 w-100">
+                <div class="card-body-custom">
+                    <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            2
+                        </div>
+                        <div class="ps-3">
+                            <h6>Fill Application</h6>
+                            <span class="text-muted small pt-2">Step 2: Fill out your Application Form</span>
+
+                            <span class="badge mt-2 fs-6" style="background: #e0f8e9; color: #2eca6a; font-weight: 600;"><i class="bi bi-calendar4-event me-1"></i>  Last Date - Jun 13, 2026</span>
+
+                        </div>
+                    </div>
+                    <div class="text-center pt-3">
+                        <a class="btn btn-sec disabled" href="/Candidates/CnicVerification">Fill Application</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="card info-card customers-card h-100 w-100">
+                <div class="card-body-custom">
+                    <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            3
+                        </div>
+                        <div class="ps-3">
+                            <h6>Print Admit Card</h6>
+                            <span>
+                                <span class="text-muted small pt-2">Step 3: Print your Admit Card at</span>
+                            </span>
+                            <span class="badge mt-2 fs-6" style="background: #ffecdf; color: #ff771d; font-weight: 600;"><i class="bi bi-calendar4-event me-1"></i>  Jun 24, 2026 - Evening</span>
+                        </div>
+                    </div>
+                    <div class="text-center pt-3">
+                        <a class="btn btn-sec disabled" href="/Candidates/AdmitCard">Print Roll Slip</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="card info-card teacher-card h-100 w-100">
+                <div class="card-body-custom">
+                    <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            4
+                        </div>
+                        <div class="ps-3">
+                            <h6>Appear in Exam</h6>
+                            <span class="text-muted small pt-2">
+                                Step 4: Appear for the ECAT exam according to the date, time and venue as mentioned on your Admit Card.
+                            </span>
+                            <a href="https://www.youtube.com/watch?v=4oiHUHa6Lm8" target="_blank">
+                                <span class="badge mt-2 fs-6" style="background: #e2e3e5; color: #6c757d; font-weight: 600;">
+                                    <i class="bi bi-play-btn me-1"></i> Watch Video
+                                </span>
+                                <span class="badge mt-2 fs-6" style="background: #e2e3e5; color: #6c757d; font-weight: 600;"><i class="bi bi-calendar4-event me-1"></i>  Jun 16, 2026 -- Jun 21, 2026</span>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center pt-3">
+                        <button class="btn btn-sec disabled" data-bs-toggle="modal" data-bs-target="#examGuideModal">View Exam Guide</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-xxl-4 col-md-6 d-flex">
+            <div class="card info-card student-card h-100 w-100">
+                <div class="card-body-custom">
+                    <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            5
+                        </div>
+                        <div class="ps-3">
+                            <h6>Result - ECAT</h6>
+                            <span>
+                                <span class="text-muted small pt-2">Step 5: Get your ECAT Result at</span> <br />
+                                <span class="badge mt-2 fs-6" style="background: #f8d7da; color: #dc3545; font-weight: 600;"><i class="bi bi-calendar4-event me-1"></i> Jun 30, 2026</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center pt-3">
+                        <a class="btn btn-sec" href="/Candidates/ResultFall">Check Result</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="modal fade" id="examGuideModal" tabindex="-1" aria-labelledby="examGuideModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="examGuideModalLabel">Exam Instructions</h5>
+                <button type="button" class="btn-close text-red" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ol>
+
+                    <li>
+                        <strong>
+                            Please download and bring Admit Card with you in the Test Hall along with an original Photo ID
+                            Reporting time for candidates is at least 30 minutes before commencement of the test
+                        </strong>
+                    </li>
+
+                    <li>Original Photo ID may be CNIC or Passport or Matric/First Year Certificate or Domicile.</li>
+                    <li>Calculators, Books, Notes, Mobile Phones and hand bags are not allowed in the Test Hall.</li>
+                    <li>Superdient will provide a paper for rough work.</li>
+                    <li>Student can only bring a simple ballpoint pen.</li>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="welcomeModalLabel"><i class="bi bi-exclamation-diamond" style="color: #f18a41; font-weight: 600;"></i> Important</h5>
+                <button type="button" class="btn-close text-red" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <img src="/images/dateExtended1.jpeg" class="img-fluid" />
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    </main>
+
+
+    <!-- ======= Footer ======= -->
+    <footer b-5qeumcuvuj id="footer" class="footer">
+        <div b-5qeumcuvuj class="credits">
+            UET Admissions - 2026
+        </div>
+    </footer><!-- End Footer -->
+
+    <a b-5qeumcuvuj href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i b-5qeumcuvuj class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/simple-datatables/simple-datatables.js"></script>
+    <script src="/js/site.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="/lib/apexcharts/apexcharts.min.js"></script>
+    <script>
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a57bc7ff8fcf35d4',t:'MTc5NDIxNjQ0Mg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a57bc7ff8fcf35d4',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
