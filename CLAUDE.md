@@ -23,6 +23,12 @@ Re-check ecat.uet.edu.pk and the admission notice before each release.
 - Items shared from MDCAT Prep or CSCA Prep are re-tagged, re-validated and blind re-solved here, with a `from` field.
 - Mock questions are separate from practice questions.
 - Numericals solvable by hand in about a minute.
+- Chapters: `tool/make_syllabus.py` writes Maths/Physics/Chemistry/CS units of `content/syllabus.json` (English is
+  edited there by hand). Units are topic-based and map to old PTB and new PECTAA chapters (`docs/textbook-chapters.md`).
+  Unit and topic ids are permanent once questions use them: append, never renumber.
+- Mocks: `content/mocks/mock-NN.json`, 130 items each (Eng 10, Maths 30, Physics 30, Chemistry 30, CS 30; the
+  student's group picks Chemistry or CS). English items carry `p` = a passage id in `content/passages.json`.
+  `npm run build:test` adds a gitignored placeholder paper for testing the engine; never ship it.
 
 ## Ads
 Interstitial only between sessions (after practice-set or mock results), never during a question, set or mock.

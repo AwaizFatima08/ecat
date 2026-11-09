@@ -1,9 +1,10 @@
 {
   "name": "ecat-prep",
   "version": "0.1.0",
-  "description": "ECAT Prep - offline ECAT practice app (UET Lahore, Pre-Engineering)",
+  "description": "ECAT Prep - offline ECAT practice app (UET Lahore, Pre-Engineering and ICS)",
   "private": true,
   "scripts": {
-    "build": "node build/build.js && mkdir -p www && cp dist/app.html www/index.html"
+    "build": "node build/build.js && mkdir -p www && cp dist/app.html www/index.html",
+    "build:test": "node scripts/make_test_mock.js && ECAT_TEST_MOCKS=1 node build/build.js && mkdir -p www && cp dist/app.html www/index.html"
   }
 }

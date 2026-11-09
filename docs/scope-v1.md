@@ -64,9 +64,11 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
 ## 4. Pieces (each verified before the next)
 1. App shell rebranded (done 9 Nov 2026), site live at ecat.homilabs.org, AdMob app created
 2. Guide section (ECAT 2026 facts)
-3. Syllabus file (chapters/topics) checked against textbooks
-4. Mock engine (CBT screen, timer, scoring, review, aggregate calculator) — before the banks, so mocks can be
-   tested early
+3. Syllabus file (chapters/topics) checked against textbooks — done 9 Nov 2026: 97 topic-based chapters
+   (Maths 25, Physics 25, Chemistry 30, CS 14, English 3) mapped to old PTB and new PECTAA chapters
+   (`docs/textbook-chapters.md`, `tool/make_syllabus.py`)
+4. Mock engine (CBT screen, timer, scoring, review, aggregate calculator) — done 9 Nov 2026, tested with a
+   placeholder paper (`npm run build:test`)
 5. Maths bank · 6. Physics bank · 7. Chemistry bank · 8. English bank
 9. 20 mocks' content · 10. Cheats + important topics · 11. Release (AdMob SDK + consent, icon, store listing)
 

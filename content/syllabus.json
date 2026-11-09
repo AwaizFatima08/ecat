@@ -1,5 +1,5 @@
 {
-  "source": "UET Lahore ECAT 2026 (ecat.uet.edu.pk, admission FAQ Fall 2026). Chapters to be added after checking the textbooks.",
+  "source": "UET Lahore ECAT 2026 (ecat.uet.edu.pk; admission FAQ Fall 2026): 'entire Intermediate syllabus'. Chapters follow the Punjab textbooks, old PTB (2002 curriculum) and new PECTAA (National Curriculum 2023), checked 9 Nov 2026 (docs/textbook-chapters.md).",
   "paperTotal": 100,
   "paperLine": "UET ECAT 2026 · 100 MCQs · 400 marks · 100 minutes · no negative marking",
   "subjects": [
@@ -8,35 +8,4396 @@
       "name": "Mathematics",
       "mcqsInPaper": 30,
       "bankTarget": 1500,
-      "units": []
+      "units": [
+        {
+          "id": "math-01",
+          "n": 1,
+          "name": "Number Systems and Complex Numbers",
+          "books": "old Part I ch 1 · new Class 11 ch 1",
+          "topics": [
+            {
+              "id": "math-01-real",
+              "name": "Real numbers",
+              "los": [
+                {
+                  "code": "MATH-1.1",
+                  "text": "Rational and irrational numbers and the properties of real numbers."
+                }
+              ]
+            },
+            {
+              "id": "math-01-complex",
+              "name": "Complex numbers",
+              "los": [
+                {
+                  "code": "MATH-1.2",
+                  "text": "Operations, conjugate, modulus and properties of complex numbers."
+                }
+              ]
+            },
+            {
+              "id": "math-01-argand",
+              "name": "Argand diagram and polar form",
+              "los": [
+                {
+                  "code": "MATH-1.3",
+                  "text": "Complex numbers as ordered pairs, the Argand diagram and polar form."
+                }
+              ]
+            },
+            {
+              "id": "math-01-roots",
+              "name": "Square roots and equations",
+              "los": [
+                {
+                  "code": "MATH-1.4",
+                  "text": "Square roots of a complex number and equations with complex roots."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-02",
+          "n": 2,
+          "name": "Sets, Logic and Groups",
+          "books": "old Part I ch 2",
+          "topics": [
+            {
+              "id": "math-02-sets",
+              "name": "Sets and Venn diagrams",
+              "los": [
+                {
+                  "code": "MATH-2.1",
+                  "text": "Sets, set operations and Venn diagrams."
+                }
+              ]
+            },
+            {
+              "id": "math-02-logic",
+              "name": "Logic",
+              "los": [
+                {
+                  "code": "MATH-2.2",
+                  "text": "Statements, truth tables and quantifiers."
+                }
+              ]
+            },
+            {
+              "id": "math-02-relations",
+              "name": "Relations and functions",
+              "los": [
+                {
+                  "code": "MATH-2.3",
+                  "text": "Relations; into, onto, one-one and inverse functions."
+                }
+              ]
+            },
+            {
+              "id": "math-02-groups",
+              "name": "Binary operations and groups",
+              "los": [
+                {
+                  "code": "MATH-2.4",
+                  "text": "Binary operations and their properties; groups."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-03",
+          "n": 3,
+          "name": "Functions and Graphs",
+          "books": "old Part II ch 1 · new Class 11 ch 2 · new Class 12 ch 1",
+          "topics": [
+            {
+              "id": "math-03-types",
+              "name": "Types of functions",
+              "los": [
+                {
+                  "code": "MATH-3.1",
+                  "text": "Domain, co-domain, range; one-one, onto and bijective functions; algebraic and transcendental functions."
+                }
+              ]
+            },
+            {
+              "id": "math-03-composition",
+              "name": "Composition and inverse",
+              "los": [
+                {
+                  "code": "MATH-3.2",
+                  "text": "Composition of functions and inverse functions and their graphs."
+                }
+              ]
+            },
+            {
+              "id": "math-03-graphs",
+              "name": "Graphs of functions",
+              "los": [
+                {
+                  "code": "MATH-3.3",
+                  "text": "Graphs of linear, quadratic, root, trigonometric, exponential and logarithmic functions; transformations."
+                }
+              ]
+            },
+            {
+              "id": "math-03-explog",
+              "name": "Exponential and logarithmic functions",
+              "los": [
+                {
+                  "code": "MATH-3.4",
+                  "text": "Laws of logarithms, exponential and logarithmic equations and their applications."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-04",
+          "n": 4,
+          "name": "Limits and Continuity",
+          "books": "old Part II ch 1 · new Class 11 ch 12",
+          "topics": [
+            {
+              "id": "math-04-limits",
+              "name": "Limits and limit theorems",
+              "los": [
+                {
+                  "code": "MATH-4.1",
+                  "text": "Limit of a sequence and a function; the limit theorems."
+                }
+              ]
+            },
+            {
+              "id": "math-04-important",
+              "name": "Important limits",
+              "los": [
+                {
+                  "code": "MATH-4.2",
+                  "text": "Standard limits such as (sin x)/x and (1 + 1/n)^n."
+                }
+              ]
+            },
+            {
+              "id": "math-04-continuity",
+              "name": "Continuity",
+              "los": [
+                {
+                  "code": "MATH-4.3",
+                  "text": "Continuous and discontinuous functions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-05",
+          "n": 5,
+          "name": "Matrices and Determinants",
+          "books": "old Part I ch 3 · new Class 11 ch 4",
+          "topics": [
+            {
+              "id": "math-05-algebra",
+              "name": "Matrices and their algebra",
+              "los": [
+                {
+                  "code": "MATH-5.1",
+                  "text": "Types of matrices and matrix operations, with real and complex entries."
+                }
+              ]
+            },
+            {
+              "id": "math-05-det",
+              "name": "Determinants",
+              "los": [
+                {
+                  "code": "MATH-5.2",
+                  "text": "Determinants by cofactors and their properties."
+                }
+              ]
+            },
+            {
+              "id": "math-05-inverse",
+              "name": "Inverse and rank",
+              "los": [
+                {
+                  "code": "MATH-5.3",
+                  "text": "Adjoint and inverse of a matrix, row operations, echelon form and rank."
+                }
+              ]
+            },
+            {
+              "id": "math-05-systems",
+              "name": "Systems of linear equations",
+              "los": [
+                {
+                  "code": "MATH-5.4",
+                  "text": "Cramer's rule, inverse-matrix method, Gaussian elimination; consistent, inconsistent and homogeneous systems."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-06",
+          "n": 6,
+          "name": "Quadratic Equations and Polynomials",
+          "books": "old Part I ch 4 · new Class 11 ch 3 · new Class 11 ch 9",
+          "topics": [
+            {
+              "id": "math-06-solve",
+              "name": "Solving quadratic equations",
+              "los": [
+                {
+                  "code": "MATH-6.1",
+                  "text": "Factorisation, completing the square, the quadratic formula; equations reducible to quadratic form."
+                }
+              ]
+            },
+            {
+              "id": "math-06-nature",
+              "name": "Roots and coefficients",
+              "los": [
+                {
+                  "code": "MATH-6.2",
+                  "text": "Nature of roots (discriminant), sum and product of roots, forming equations."
+                }
+              ]
+            },
+            {
+              "id": "math-06-unity",
+              "name": "Cube and fourth roots of unity",
+              "los": [
+                {
+                  "code": "MATH-6.3",
+                  "text": "Cube roots and fourth roots of unity and their properties."
+                }
+              ]
+            },
+            {
+              "id": "math-06-poly",
+              "name": "Polynomial division",
+              "los": [
+                {
+                  "code": "MATH-6.4",
+                  "text": "Remainder and factor theorems, synthetic division, factorising cubics."
+                }
+              ]
+            },
+            {
+              "id": "math-06-qfunc",
+              "name": "Quadratic functions",
+              "los": [
+                {
+                  "code": "MATH-6.5",
+                  "text": "Maximum and minimum of a quadratic, its graph, and quadratic inequalities."
+                }
+              ]
+            },
+            {
+              "id": "math-06-simul",
+              "name": "Simultaneous equations",
+              "los": [
+                {
+                  "code": "MATH-6.6",
+                  "text": "Systems with one linear and one quadratic equation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-07",
+          "n": 7,
+          "name": "Partial Fractions",
+          "books": "old Part I ch 5 · new Class 11 ch 5",
+          "topics": [
+            {
+              "id": "math-07-linear",
+              "name": "Linear factors",
+              "los": [
+                {
+                  "code": "MATH-7.1",
+                  "text": "Partial fractions with distinct and repeated linear factors."
+                }
+              ]
+            },
+            {
+              "id": "math-07-quadratic",
+              "name": "Quadratic factors",
+              "los": [
+                {
+                  "code": "MATH-7.2",
+                  "text": "Partial fractions with irreducible and repeated quadratic factors."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-08",
+          "n": 8,
+          "name": "Sequences and Series",
+          "books": "old Part I ch 6 · new Class 11 ch 6",
+          "topics": [
+            {
+              "id": "math-08-ap",
+              "name": "Arithmetic progressions",
+              "los": [
+                {
+                  "code": "MATH-8.1",
+                  "text": "A.P., nth term, sum and arithmetic means."
+                }
+              ]
+            },
+            {
+              "id": "math-08-gp",
+              "name": "Geometric progressions",
+              "los": [
+                {
+                  "code": "MATH-8.2",
+                  "text": "G.P., nth term, sums, infinite geometric series and geometric means."
+                }
+              ]
+            },
+            {
+              "id": "math-08-hp",
+              "name": "Harmonic progressions",
+              "los": [
+                {
+                  "code": "MATH-8.3",
+                  "text": "H.P., harmonic means and the relation between A, G and H."
+                }
+              ]
+            },
+            {
+              "id": "math-08-sigma",
+              "name": "Sigma notation and special sums",
+              "los": [
+                {
+                  "code": "MATH-8.4",
+                  "text": "Sums of n, n² and n³ and arithmetico-geometric series."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-09",
+          "n": 9,
+          "name": "Permutations, Combinations and Probability",
+          "books": "old Part I ch 7 · new Class 11 ch 7",
+          "topics": [
+            {
+              "id": "math-09-counting",
+              "name": "Counting and factorials",
+              "los": [
+                {
+                  "code": "MATH-9.1",
+                  "text": "Fundamental counting principles and factorial notation."
+                }
+              ]
+            },
+            {
+              "id": "math-09-perm",
+              "name": "Permutations",
+              "los": [
+                {
+                  "code": "MATH-9.2",
+                  "text": "Permutations, with repetition and circular arrangements."
+                }
+              ]
+            },
+            {
+              "id": "math-09-comb",
+              "name": "Combinations",
+              "los": [
+                {
+                  "code": "MATH-9.3",
+                  "text": "Combinations and their properties."
+                }
+              ]
+            },
+            {
+              "id": "math-09-prob",
+              "name": "Probability",
+              "los": [
+                {
+                  "code": "MATH-9.4",
+                  "text": "Sample space, events, addition and multiplication rules of probability."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-10",
+          "n": 10,
+          "name": "Mathematical Induction and Binomial Theorem",
+          "books": "old Part I ch 8 · new Class 11 ch 8",
+          "topics": [
+            {
+              "id": "math-10-induction",
+              "name": "Mathematical induction",
+              "los": [
+                {
+                  "code": "MATH-10.1",
+                  "text": "Principle of induction and proofs by induction."
+                }
+              ]
+            },
+            {
+              "id": "math-10-binomial",
+              "name": "Binomial theorem",
+              "los": [
+                {
+                  "code": "MATH-10.2",
+                  "text": "Expansion, general term and middle term for a positive integral index."
+                }
+              ]
+            },
+            {
+              "id": "math-10-series",
+              "name": "Binomial series",
+              "los": [
+                {
+                  "code": "MATH-10.3",
+                  "text": "Binomial series for negative or fractional index and approximations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-11",
+          "n": 11,
+          "name": "Fundamentals of Trigonometry",
+          "books": "old Part I ch 9",
+          "topics": [
+            {
+              "id": "math-11-angles",
+              "name": "Angles and radian measure",
+              "los": [
+                {
+                  "code": "MATH-11.1",
+                  "text": "Degrees and radians and arc length l = rθ."
+                }
+              ]
+            },
+            {
+              "id": "math-11-ratios",
+              "name": "Trigonometric ratios",
+              "los": [
+                {
+                  "code": "MATH-11.2",
+                  "text": "Ratios, signs in quadrants and values of standard angles."
+                }
+              ]
+            },
+            {
+              "id": "math-11-basic",
+              "name": "Basic identities",
+              "los": [
+                {
+                  "code": "MATH-11.3",
+                  "text": "Fundamental identities such as sin²θ + cos²θ = 1."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-12",
+          "n": 12,
+          "name": "Trigonometric Identities",
+          "books": "old Part I ch 10 · new Class 11 ch 10",
+          "topics": [
+            {
+              "id": "math-12-compound",
+              "name": "Sum and difference of angles",
+              "los": [
+                {
+                  "code": "MATH-12.1",
+                  "text": "Fundamental law of trigonometry and compound-angle formulas."
+                }
+              ]
+            },
+            {
+              "id": "math-12-multiple",
+              "name": "Double, half and triple angles",
+              "los": [
+                {
+                  "code": "MATH-12.2",
+                  "text": "Double-, half- and triple-angle identities."
+                }
+              ]
+            },
+            {
+              "id": "math-12-sumprod",
+              "name": "Sum and product formulas",
+              "los": [
+                {
+                  "code": "MATH-12.3",
+                  "text": "Sum-to-product and product-to-sum formulas."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-13",
+          "n": 13,
+          "name": "Trigonometric Functions and their Graphs",
+          "books": "old Part I ch 11 · new Class 11 ch 11",
+          "topics": [
+            {
+              "id": "math-13-domain",
+              "name": "Domain, range and period",
+              "los": [
+                {
+                  "code": "MATH-13.1",
+                  "text": "Domain, range, period, even and odd trigonometric functions."
+                }
+              ]
+            },
+            {
+              "id": "math-13-graphs",
+              "name": "Graphs",
+              "los": [
+                {
+                  "code": "MATH-13.2",
+                  "text": "Graphs of sin, cos, tan and the others; amplitude, frequency and phase shift."
+                }
+              ]
+            },
+            {
+              "id": "math-13-maxmin",
+              "name": "Maximum and minimum values",
+              "los": [
+                {
+                  "code": "MATH-13.3",
+                  "text": "Maximum and minimum values of trigonometric expressions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-14",
+          "n": 14,
+          "name": "Application of Trigonometry",
+          "books": "old Part I ch 12",
+          "topics": [
+            {
+              "id": "math-14-triangles",
+              "name": "Solving triangles",
+              "los": [
+                {
+                  "code": "MATH-14.1",
+                  "text": "Right and oblique triangles; heights and distances."
+                }
+              ]
+            },
+            {
+              "id": "math-14-laws",
+              "name": "Laws of sines, cosines and tangents",
+              "los": [
+                {
+                  "code": "MATH-14.2",
+                  "text": "The laws of sines, cosines and tangents and half-angle formulas."
+                }
+              ]
+            },
+            {
+              "id": "math-14-area",
+              "name": "Area of a triangle",
+              "los": [
+                {
+                  "code": "MATH-14.3",
+                  "text": "Area formulas including Hero's formula."
+                }
+              ]
+            },
+            {
+              "id": "math-14-circles",
+              "name": "Circumcircle, incircle and escribed circles",
+              "los": [
+                {
+                  "code": "MATH-14.4",
+                  "text": "Radii R, r and r1, r2, r3."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-15",
+          "n": 15,
+          "name": "Inverse Trigonometric Functions",
+          "books": "old Part I ch 13 · new Class 12 ch 9",
+          "topics": [
+            {
+              "id": "math-15-defs",
+              "name": "Definitions and principal values",
+              "los": [
+                {
+                  "code": "MATH-15.1",
+                  "text": "Domains, ranges and principal values of inverse trigonometric functions."
+                }
+              ]
+            },
+            {
+              "id": "math-15-graphs",
+              "name": "Graphs",
+              "los": [
+                {
+                  "code": "MATH-15.2",
+                  "text": "Graphs of inverse trigonometric functions."
+                }
+              ]
+            },
+            {
+              "id": "math-15-formulas",
+              "name": "Addition formulas",
+              "los": [
+                {
+                  "code": "MATH-15.3",
+                  "text": "Addition and other formulas for inverse trigonometric functions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-16",
+          "n": 16,
+          "name": "Trigonometric Equations",
+          "books": "old Part I ch 14 · new Class 12 ch 10",
+          "topics": [
+            {
+              "id": "math-16-general",
+              "name": "General solutions",
+              "los": [
+                {
+                  "code": "MATH-16.1",
+                  "text": "General solutions of sin θ = k, cos θ = k and tan θ = k."
+                }
+              ]
+            },
+            {
+              "id": "math-16-reducible",
+              "name": "Equations reducible to quadratic form",
+              "los": [
+                {
+                  "code": "MATH-16.2",
+                  "text": "Trigonometric equations solved as quadratics or with several functions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-17",
+          "n": 17,
+          "name": "Differentiation",
+          "books": "old Part II ch 2 · new Class 11 ch 13 · new Class 12 ch 2",
+          "topics": [
+            {
+              "id": "math-17-first",
+              "name": "Derivative from first principles",
+              "los": [
+                {
+                  "code": "MATH-17.1",
+                  "text": "The derivative as a limit and its geometrical meaning."
+                }
+              ]
+            },
+            {
+              "id": "math-17-rules",
+              "name": "Rules of differentiation",
+              "los": [
+                {
+                  "code": "MATH-17.2",
+                  "text": "Sum, product, quotient and chain rules."
+                }
+              ]
+            },
+            {
+              "id": "math-17-trans",
+              "name": "Derivatives of special functions",
+              "los": [
+                {
+                  "code": "MATH-17.3",
+                  "text": "Trigonometric, inverse trigonometric, exponential, logarithmic and hyperbolic derivatives."
+                }
+              ]
+            },
+            {
+              "id": "math-17-implicit",
+              "name": "Implicit and parametric differentiation",
+              "los": [
+                {
+                  "code": "MATH-17.4",
+                  "text": "Implicit, parametric and logarithmic differentiation; higher derivatives."
+                }
+              ]
+            },
+            {
+              "id": "math-17-series",
+              "name": "Series expansions",
+              "los": [
+                {
+                  "code": "MATH-17.5",
+                  "text": "Maclaurin and Taylor series."
+                }
+              ]
+            },
+            {
+              "id": "math-17-apps",
+              "name": "Applications of derivatives",
+              "los": [
+                {
+                  "code": "MATH-17.6",
+                  "text": "Tangents and normals, increasing and decreasing functions, maxima and minima, differentials."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-18",
+          "n": 18,
+          "name": "Integration",
+          "books": "old Part II ch 3 · new Class 12 ch 3",
+          "topics": [
+            {
+              "id": "math-18-anti",
+              "name": "Antiderivatives",
+              "los": [
+                {
+                  "code": "MATH-18.1",
+                  "text": "Integration as anti-derivative and standard integrals."
+                }
+              ]
+            },
+            {
+              "id": "math-18-subst",
+              "name": "Integration by substitution",
+              "los": [
+                {
+                  "code": "MATH-18.2",
+                  "text": "Substitution, including trigonometric substitution."
+                }
+              ]
+            },
+            {
+              "id": "math-18-parts",
+              "name": "Integration by parts",
+              "los": [
+                {
+                  "code": "MATH-18.3",
+                  "text": "Integration by parts."
+                }
+              ]
+            },
+            {
+              "id": "math-18-pfrac",
+              "name": "Integration using partial fractions",
+              "los": [
+                {
+                  "code": "MATH-18.4",
+                  "text": "Integrating rational functions with partial fractions."
+                }
+              ]
+            },
+            {
+              "id": "math-18-definite",
+              "name": "Definite integrals",
+              "los": [
+                {
+                  "code": "MATH-18.5",
+                  "text": "Definite integrals, their properties and the Fundamental Theorem of Calculus."
+                }
+              ]
+            },
+            {
+              "id": "math-18-area",
+              "name": "Area and volume",
+              "los": [
+                {
+                  "code": "MATH-18.6",
+                  "text": "Area under and between curves; volumes of solids of revolution."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-19",
+          "n": 19,
+          "name": "Differential Equations",
+          "books": "old Part II ch 3 · new Class 12 ch 4",
+          "topics": [
+            {
+              "id": "math-19-basics",
+              "name": "Order, degree and formation",
+              "los": [
+                {
+                  "code": "MATH-19.1",
+                  "text": "Order and degree of a differential equation and how it is formed."
+                }
+              ]
+            },
+            {
+              "id": "math-19-separable",
+              "name": "Separable equations",
+              "los": [
+                {
+                  "code": "MATH-19.2",
+                  "text": "First-order equations with separable variables."
+                }
+              ]
+            },
+            {
+              "id": "math-19-apps",
+              "name": "Applications",
+              "los": [
+                {
+                  "code": "MATH-19.3",
+                  "text": "Growth, decay and motion problems."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-20",
+          "n": 20,
+          "name": "Straight Lines (Analytic Geometry)",
+          "books": "old Part II ch 4 · new Class 12 ch 5",
+          "topics": [
+            {
+              "id": "math-20-coords",
+              "name": "Coordinates and formulas",
+              "los": [
+                {
+                  "code": "MATH-20.1",
+                  "text": "Distance, midpoint and section formulas; translation and rotation of axes."
+                }
+              ]
+            },
+            {
+              "id": "math-20-lines",
+              "name": "Equations of a line",
+              "los": [
+                {
+                  "code": "MATH-20.2",
+                  "text": "Slope and the standard forms of the equation of a line."
+                }
+              ]
+            },
+            {
+              "id": "math-20-two",
+              "name": "Two or more lines",
+              "los": [
+                {
+                  "code": "MATH-20.3",
+                  "text": "Intersection, concurrency, parallel and perpendicular lines, angle between lines."
+                }
+              ]
+            },
+            {
+              "id": "math-20-distance",
+              "name": "Distance from a point to a line",
+              "los": [
+                {
+                  "code": "MATH-20.4",
+                  "text": "Distance of a point from a line and between parallel lines."
+                }
+              ]
+            },
+            {
+              "id": "math-20-pair",
+              "name": "Pair of lines",
+              "los": [
+                {
+                  "code": "MATH-20.5",
+                  "text": "Homogeneous second-degree equations representing a pair of lines."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-21",
+          "n": 21,
+          "name": "Linear Inequalities and Linear Programming",
+          "books": "old Part II ch 5",
+          "topics": [
+            {
+              "id": "math-21-ineq",
+              "name": "Linear inequalities",
+              "los": [
+                {
+                  "code": "MATH-21.1",
+                  "text": "Graphs of linear inequalities and regions they bound."
+                }
+              ]
+            },
+            {
+              "id": "math-21-lp",
+              "name": "Linear programming",
+              "los": [
+                {
+                  "code": "MATH-21.2",
+                  "text": "Constraints, feasible region, corner points and optimising an objective function."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-22",
+          "n": 22,
+          "name": "Conic Sections",
+          "books": "old Part II ch 6 · new Class 12 ch 6",
+          "topics": [
+            {
+              "id": "math-22-circle",
+              "name": "Circle",
+              "los": [
+                {
+                  "code": "MATH-22.1",
+                  "text": "Equations of a circle, tangents and normals."
+                }
+              ]
+            },
+            {
+              "id": "math-22-parabola",
+              "name": "Parabola",
+              "los": [
+                {
+                  "code": "MATH-22.2",
+                  "text": "Parabola and its elements."
+                }
+              ]
+            },
+            {
+              "id": "math-22-ellipse",
+              "name": "Ellipse",
+              "los": [
+                {
+                  "code": "MATH-22.3",
+                  "text": "Ellipse and its elements."
+                }
+              ]
+            },
+            {
+              "id": "math-22-hyperbola",
+              "name": "Hyperbola",
+              "los": [
+                {
+                  "code": "MATH-22.4",
+                  "text": "Hyperbola and its elements."
+                }
+              ]
+            },
+            {
+              "id": "math-22-tangents",
+              "name": "Tangents and the general conic",
+              "los": [
+                {
+                  "code": "MATH-22.5",
+                  "text": "Tangents and normals to conics; general second-degree equation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-23",
+          "n": 23,
+          "name": "Vectors",
+          "books": "old Part II ch 7 · new Class 11 ch 14 · new Class 12 ch 11",
+          "topics": [
+            {
+              "id": "math-23-plane",
+              "name": "Vectors in plane and space",
+              "los": [
+                {
+                  "code": "MATH-23.1",
+                  "text": "Components, unit vectors, magnitude and direction cosines."
+                }
+              ]
+            },
+            {
+              "id": "math-23-dot",
+              "name": "Dot product",
+              "los": [
+                {
+                  "code": "MATH-23.2",
+                  "text": "Scalar product, angle between vectors, projection and work."
+                }
+              ]
+            },
+            {
+              "id": "math-23-cross",
+              "name": "Cross product",
+              "los": [
+                {
+                  "code": "MATH-23.3",
+                  "text": "Vector product and areas of triangles and parallelograms."
+                }
+              ]
+            },
+            {
+              "id": "math-23-triple",
+              "name": "Scalar triple product",
+              "los": [
+                {
+                  "code": "MATH-23.4",
+                  "text": "Scalar triple product and volumes; coplanarity."
+                }
+              ]
+            },
+            {
+              "id": "math-23-vfunc",
+              "name": "Vector-valued functions",
+              "los": [
+                {
+                  "code": "MATH-23.5",
+                  "text": "Vector-valued functions and their derivatives; velocity and acceleration."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-24",
+          "n": 24,
+          "name": "Numerical Methods",
+          "books": "new Class 12 ch 8",
+          "topics": [
+            {
+              "id": "math-24-roots",
+              "name": "Solving equations numerically",
+              "los": [
+                {
+                  "code": "MATH-24.1",
+                  "text": "Bisection, regula-falsi and Newton–Raphson methods."
+                }
+              ]
+            },
+            {
+              "id": "math-24-trapezium",
+              "name": "Numerical integration",
+              "los": [
+                {
+                  "code": "MATH-24.2",
+                  "text": "The trapezium rule."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "math-25",
+          "n": 25,
+          "name": "Kinematics with Calculus",
+          "books": "new Class 12 ch 7",
+          "topics": [
+            {
+              "id": "math-25-motion",
+              "name": "Motion in a line",
+              "los": [
+                {
+                  "code": "MATH-25.1",
+                  "text": "Displacement, velocity and acceleration as derivatives and integrals."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "phy",
       "name": "Physics",
       "mcqsInPaper": 30,
       "bankTarget": 1000,
-      "units": []
+      "units": [
+        {
+          "id": "phy-01",
+          "n": 1,
+          "name": "Measurements",
+          "books": "old Part I ch 1 · new Class 11 ch 1",
+          "topics": [
+            {
+              "id": "phy-01-units",
+              "name": "SI units",
+              "los": [
+                {
+                  "code": "PHY-1.1",
+                  "text": "Base, supplementary and derived units; prefixes and scientific notation."
+                }
+              ]
+            },
+            {
+              "id": "phy-01-errors",
+              "name": "Errors and uncertainty",
+              "los": [
+                {
+                  "code": "PHY-1.2",
+                  "text": "Systematic and random errors, uncertainty and its propagation."
+                }
+              ]
+            },
+            {
+              "id": "phy-01-sigfig",
+              "name": "Significant figures, precision and accuracy",
+              "los": [
+                {
+                  "code": "PHY-1.3",
+                  "text": "Significant figures, precision and accuracy."
+                }
+              ]
+            },
+            {
+              "id": "phy-01-dim",
+              "name": "Dimensional analysis",
+              "los": [
+                {
+                  "code": "PHY-1.4",
+                  "text": "Dimensions, homogeneity of equations and deriving relations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-02",
+          "n": 2,
+          "name": "Vectors and Equilibrium",
+          "books": "old Part I ch 2 · new Class 11 ch 2",
+          "topics": [
+            {
+              "id": "phy-02-basics",
+              "name": "Vectors and components",
+              "los": [
+                {
+                  "code": "PHY-2.1",
+                  "text": "Unit, null and position vectors; rectangular components; addition by components."
+                }
+              ]
+            },
+            {
+              "id": "phy-02-products",
+              "name": "Scalar and vector products",
+              "los": [
+                {
+                  "code": "PHY-2.2",
+                  "text": "Dot and cross products and their uses."
+                }
+              ]
+            },
+            {
+              "id": "phy-02-torque",
+              "name": "Torque",
+              "los": [
+                {
+                  "code": "PHY-2.3",
+                  "text": "Torque and its calculation."
+                }
+              ]
+            },
+            {
+              "id": "phy-02-equil",
+              "name": "Equilibrium",
+              "los": [
+                {
+                  "code": "PHY-2.4",
+                  "text": "First and second conditions of equilibrium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-03",
+          "n": 3,
+          "name": "Motion and Force",
+          "books": "old Part I ch 3 · new Class 11 ch 2",
+          "topics": [
+            {
+              "id": "phy-03-kinematics",
+              "name": "Kinematics",
+              "los": [
+                {
+                  "code": "PHY-3.1",
+                  "text": "Displacement, velocity, acceleration and velocity–time graphs."
+                }
+              ]
+            },
+            {
+              "id": "phy-03-eqns",
+              "name": "Equations of motion",
+              "los": [
+                {
+                  "code": "PHY-3.2",
+                  "text": "Equations of uniformly accelerated motion and free fall."
+                }
+              ]
+            },
+            {
+              "id": "phy-03-newton",
+              "name": "Newton's laws, momentum and impulse",
+              "los": [
+                {
+                  "code": "PHY-3.3",
+                  "text": "Newton's laws, momentum and impulse."
+                }
+              ]
+            },
+            {
+              "id": "phy-03-collisions",
+              "name": "Conservation of momentum and collisions",
+              "los": [
+                {
+                  "code": "PHY-3.4",
+                  "text": "Elastic and inelastic collisions."
+                }
+              ]
+            },
+            {
+              "id": "phy-03-projectile",
+              "name": "Projectile motion",
+              "los": [
+                {
+                  "code": "PHY-3.5",
+                  "text": "Range, height and time of flight of a projectile."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-04",
+          "n": 4,
+          "name": "Work, Energy and Power",
+          "books": "old Part I ch 4 · new Class 11 ch 4",
+          "topics": [
+            {
+              "id": "phy-04-work",
+              "name": "Work",
+              "los": [
+                {
+                  "code": "PHY-4.1",
+                  "text": "Work by constant and variable forces; force–displacement graphs."
+                }
+              ]
+            },
+            {
+              "id": "phy-04-energy",
+              "name": "Kinetic and potential energy",
+              "los": [
+                {
+                  "code": "PHY-4.2",
+                  "text": "Kinetic and potential energy; work–energy principle."
+                }
+              ]
+            },
+            {
+              "id": "phy-04-escape",
+              "name": "Absolute potential energy and escape velocity",
+              "los": [
+                {
+                  "code": "PHY-4.3",
+                  "text": "Gravitational potential energy and escape velocity."
+                }
+              ]
+            },
+            {
+              "id": "phy-04-power",
+              "name": "Power and conservation of energy",
+              "los": [
+                {
+                  "code": "PHY-4.4",
+                  "text": "Power, conservative fields and conservation of energy."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-05",
+          "n": 5,
+          "name": "Circular and Rotational Motion",
+          "books": "old Part I ch 5 · new Class 11 ch 3",
+          "topics": [
+            {
+              "id": "phy-05-angular",
+              "name": "Angular motion",
+              "los": [
+                {
+                  "code": "PHY-5.1",
+                  "text": "Radian measure, angular displacement, velocity and acceleration."
+                }
+              ]
+            },
+            {
+              "id": "phy-05-centripetal",
+              "name": "Centripetal force",
+              "los": [
+                {
+                  "code": "PHY-5.2",
+                  "text": "Centripetal force and acceleration."
+                }
+              ]
+            },
+            {
+              "id": "phy-05-inertia",
+              "name": "Moment of inertia and angular momentum",
+              "los": [
+                {
+                  "code": "PHY-5.3",
+                  "text": "Moment of inertia, angular momentum and its conservation, rotational kinetic energy."
+                }
+              ]
+            },
+            {
+              "id": "phy-05-satellites",
+              "name": "Satellites and weightlessness",
+              "los": [
+                {
+                  "code": "PHY-5.4",
+                  "text": "Orbital velocity, artificial satellites, weightlessness and artificial gravity."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-06",
+          "n": 6,
+          "name": "Fluid Dynamics",
+          "books": "old Part I ch 6 · new Class 11 ch 5",
+          "topics": [
+            {
+              "id": "phy-06-viscous",
+              "name": "Viscosity and Stokes' law",
+              "los": [
+                {
+                  "code": "PHY-6.1",
+                  "text": "Viscous drag, Stokes' law and terminal velocity."
+                }
+              ]
+            },
+            {
+              "id": "phy-06-flow",
+              "name": "Flow and continuity",
+              "los": [
+                {
+                  "code": "PHY-6.2",
+                  "text": "Laminar and turbulent flow; equation of continuity."
+                }
+              ]
+            },
+            {
+              "id": "phy-06-bernoulli",
+              "name": "Bernoulli's equation",
+              "los": [
+                {
+                  "code": "PHY-6.3",
+                  "text": "Bernoulli's equation and its applications (Torricelli, Venturi meter)."
+                }
+              ]
+            },
+            {
+              "id": "phy-06-archimedes",
+              "name": "Archimedes' principle",
+              "los": [
+                {
+                  "code": "PHY-6.4",
+                  "text": "Upthrust and flotation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-07",
+          "n": 7,
+          "name": "Oscillations",
+          "books": "old Part I ch 7 · new Class 12 ch 14",
+          "topics": [
+            {
+              "id": "phy-07-shm",
+              "name": "Simple harmonic motion",
+              "los": [
+                {
+                  "code": "PHY-7.1",
+                  "text": "SHM, its equations, amplitude, period, frequency and phase."
+                }
+              ]
+            },
+            {
+              "id": "phy-07-systems",
+              "name": "Spring–mass and pendulum",
+              "los": [
+                {
+                  "code": "PHY-7.2",
+                  "text": "Spring–mass system and simple pendulum."
+                }
+              ]
+            },
+            {
+              "id": "phy-07-energy",
+              "name": "Energy in SHM",
+              "los": [
+                {
+                  "code": "PHY-7.3",
+                  "text": "Kinetic and potential energy in SHM."
+                }
+              ]
+            },
+            {
+              "id": "phy-07-resonance",
+              "name": "Damping and resonance",
+              "los": [
+                {
+                  "code": "PHY-7.4",
+                  "text": "Free, forced and damped oscillations and resonance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-08",
+          "n": 8,
+          "name": "Waves and Sound",
+          "books": "old Part I ch 8 · new Class 11 ch 7",
+          "topics": [
+            {
+              "id": "phy-08-waves",
+              "name": "Progressive waves",
+              "los": [
+                {
+                  "code": "PHY-8.1",
+                  "text": "Transverse and longitudinal waves, v = fλ, intensity."
+                }
+              ]
+            },
+            {
+              "id": "phy-08-sound",
+              "name": "Speed of sound",
+              "los": [
+                {
+                  "code": "PHY-8.2",
+                  "text": "Newton's formula, Laplace correction and factors affecting the speed of sound."
+                }
+              ]
+            },
+            {
+              "id": "phy-08-superpos",
+              "name": "Superposition and beats",
+              "los": [
+                {
+                  "code": "PHY-8.3",
+                  "text": "Superposition, interference and beats."
+                }
+              ]
+            },
+            {
+              "id": "phy-08-stationary",
+              "name": "Stationary waves",
+              "los": [
+                {
+                  "code": "PHY-8.4",
+                  "text": "Stationary waves in strings and air columns; harmonics."
+                }
+              ]
+            },
+            {
+              "id": "phy-08-doppler",
+              "name": "Doppler effect",
+              "los": [
+                {
+                  "code": "PHY-8.5",
+                  "text": "Doppler effect and its uses."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-09",
+          "n": 9,
+          "name": "Physical Optics",
+          "books": "old Part I ch 9 · new Class 11 ch 8 · new Class 12 ch 15",
+          "topics": [
+            {
+              "id": "phy-09-huygens",
+              "name": "Wavefronts and Huygens' principle",
+              "los": [
+                {
+                  "code": "PHY-9.1",
+                  "text": "Wavefronts and Huygens' principle."
+                }
+              ]
+            },
+            {
+              "id": "phy-09-interference",
+              "name": "Interference",
+              "los": [
+                {
+                  "code": "PHY-9.2",
+                  "text": "Young's double slit, thin films, Newton's rings and Michelson's interferometer."
+                }
+              ]
+            },
+            {
+              "id": "phy-09-diffraction",
+              "name": "Diffraction",
+              "los": [
+                {
+                  "code": "PHY-9.3",
+                  "text": "Single slit, diffraction grating and X-ray diffraction by crystals."
+                }
+              ]
+            },
+            {
+              "id": "phy-09-polarisation",
+              "name": "Polarisation",
+              "los": [
+                {
+                  "code": "PHY-9.4",
+                  "text": "Polarisation and Malus's law."
+                }
+              ]
+            },
+            {
+              "id": "phy-09-gravwaves",
+              "name": "Gravitational waves",
+              "los": [
+                {
+                  "code": "PHY-9.5",
+                  "text": "Gravitational waves and their detection by interferometers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-10",
+          "n": 10,
+          "name": "Optical Instruments",
+          "books": "old Part I ch 10",
+          "topics": [
+            {
+              "id": "phy-10-magnify",
+              "name": "Magnifying and resolving power",
+              "los": [
+                {
+                  "code": "PHY-10.1",
+                  "text": "Least distance of distinct vision, magnifying and resolving power."
+                }
+              ]
+            },
+            {
+              "id": "phy-10-instruments",
+              "name": "Microscopes and telescopes",
+              "los": [
+                {
+                  "code": "PHY-10.2",
+                  "text": "Simple and compound microscope, astronomical telescope and spectrometer."
+                }
+              ]
+            },
+            {
+              "id": "phy-10-light",
+              "name": "Speed of light and optical fibres",
+              "los": [
+                {
+                  "code": "PHY-10.3",
+                  "text": "Michelson's method and optical fibres."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-11",
+          "n": 11,
+          "name": "Heat and Thermodynamics",
+          "books": "old Part I ch 11 · new Class 11 ch 6 · new Class 12 ch 13",
+          "topics": [
+            {
+              "id": "phy-11-kinetic",
+              "name": "Kinetic theory of gases",
+              "los": [
+                {
+                  "code": "PHY-11.1",
+                  "text": "Pressure of a gas, temperature, rms speed and the ideal gas equation."
+                }
+              ]
+            },
+            {
+              "id": "phy-11-firstlaw",
+              "name": "First law of thermodynamics",
+              "los": [
+                {
+                  "code": "PHY-11.2",
+                  "text": "Internal energy, work and heat; isothermal and adiabatic processes."
+                }
+              ]
+            },
+            {
+              "id": "phy-11-specific",
+              "name": "Molar specific heats",
+              "los": [
+                {
+                  "code": "PHY-11.3",
+                  "text": "Molar specific heats of gases."
+                }
+              ]
+            },
+            {
+              "id": "phy-11-engines",
+              "name": "Heat engines and the second law",
+              "los": [
+                {
+                  "code": "PHY-11.4",
+                  "text": "Carnot engine, efficiency, refrigerators and the second law."
+                }
+              ]
+            },
+            {
+              "id": "phy-11-entropy",
+              "name": "Entropy",
+              "los": [
+                {
+                  "code": "PHY-11.5",
+                  "text": "Entropy and reversible and irreversible processes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-12",
+          "n": 12,
+          "name": "Electrostatics",
+          "books": "old Part II ch 12 · new Class 11 ch 9 · new Class 12 ch 16",
+          "topics": [
+            {
+              "id": "phy-12-coulomb",
+              "name": "Coulomb's law",
+              "los": [
+                {
+                  "code": "PHY-12.1",
+                  "text": "Coulomb's law and forces between charges."
+                }
+              ]
+            },
+            {
+              "id": "phy-12-field",
+              "name": "Electric field and Gauss's law",
+              "los": [
+                {
+                  "code": "PHY-12.2",
+                  "text": "Electric field, field lines, flux and Gauss's law."
+                }
+              ]
+            },
+            {
+              "id": "phy-12-potential",
+              "name": "Electric potential",
+              "los": [
+                {
+                  "code": "PHY-12.3",
+                  "text": "Potential, potential difference, potential gradient and potential energy."
+                }
+              ]
+            },
+            {
+              "id": "phy-12-millikan",
+              "name": "Millikan's method",
+              "los": [
+                {
+                  "code": "PHY-12.4",
+                  "text": "Charge on an electron by Millikan's method."
+                }
+              ]
+            },
+            {
+              "id": "phy-12-capacitors",
+              "name": "Capacitors",
+              "los": [
+                {
+                  "code": "PHY-12.5",
+                  "text": "Capacitance, dielectrics, combinations, energy stored, RC charging and discharging."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-13",
+          "n": 13,
+          "name": "Current Electricity",
+          "books": "old Part II ch 13 · new Class 11 ch 9",
+          "topics": [
+            {
+              "id": "phy-13-ohm",
+              "name": "Current and Ohm's law",
+              "los": [
+                {
+                  "code": "PHY-13.1",
+                  "text": "Current, I = nAvq, Ohm's law and resistance."
+                }
+              ]
+            },
+            {
+              "id": "phy-13-resistivity",
+              "name": "Resistivity",
+              "los": [
+                {
+                  "code": "PHY-13.2",
+                  "text": "Resistivity and its temperature dependence; colour code, thermistor, LDR."
+                }
+              ]
+            },
+            {
+              "id": "phy-13-power",
+              "name": "Power, EMF and internal resistance",
+              "los": [
+                {
+                  "code": "PHY-13.3",
+                  "text": "Electrical power, EMF and internal resistance."
+                }
+              ]
+            },
+            {
+              "id": "phy-13-kirchhoff",
+              "name": "Kirchhoff's rules",
+              "los": [
+                {
+                  "code": "PHY-13.4",
+                  "text": "Kirchhoff's rules and circuit analysis."
+                }
+              ]
+            },
+            {
+              "id": "phy-13-bridge",
+              "name": "Wheatstone bridge and potentiometer",
+              "los": [
+                {
+                  "code": "PHY-13.5",
+                  "text": "Wheatstone bridge, potentiometer and potential dividers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-14",
+          "n": 14,
+          "name": "Electromagnetism",
+          "books": "old Part II ch 14 · new Class 11 ch 10",
+          "topics": [
+            {
+              "id": "phy-14-force",
+              "name": "Force on a conductor",
+              "los": [
+                {
+                  "code": "PHY-14.1",
+                  "text": "F = BIL sin θ, flux density and magnetic flux."
+                }
+              ]
+            },
+            {
+              "id": "phy-14-ampere",
+              "name": "Ampère's law",
+              "los": [
+                {
+                  "code": "PHY-14.2",
+                  "text": "Ampère's law and the field of a solenoid."
+                }
+              ]
+            },
+            {
+              "id": "phy-14-charge",
+              "name": "Force on a moving charge",
+              "los": [
+                {
+                  "code": "PHY-14.3",
+                  "text": "F = qvB sin θ, motion in a field, e/m and velocity selector."
+                }
+              ]
+            },
+            {
+              "id": "phy-14-meters",
+              "name": "Galvanometer, ammeter and voltmeter",
+              "los": [
+                {
+                  "code": "PHY-14.4",
+                  "text": "Torque on a coil and conversion of a galvanometer."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-15",
+          "n": 15,
+          "name": "Electromagnetic Induction",
+          "books": "old Part II ch 15 · new Class 11 ch 10",
+          "topics": [
+            {
+              "id": "phy-15-faraday",
+              "name": "Faraday's and Lenz's laws",
+              "los": [
+                {
+                  "code": "PHY-15.1",
+                  "text": "Induced and motional EMF, Faraday's and Lenz's laws."
+                }
+              ]
+            },
+            {
+              "id": "phy-15-inductance",
+              "name": "Self and mutual induction",
+              "los": [
+                {
+                  "code": "PHY-15.2",
+                  "text": "Self and mutual inductance and energy stored in an inductor."
+                }
+              ]
+            },
+            {
+              "id": "phy-15-machines",
+              "name": "Generators, motors and transformers",
+              "los": [
+                {
+                  "code": "PHY-15.3",
+                  "text": "AC and DC generators, back EMF and transformers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-16",
+          "n": 16,
+          "name": "Alternating Current",
+          "books": "old Part II ch 16 · new Class 12 ch 17",
+          "topics": [
+            {
+              "id": "phy-16-rms",
+              "name": "AC values and phase",
+              "los": [
+                {
+                  "code": "PHY-16.1",
+                  "text": "Peak and rms values and phase."
+                }
+              ]
+            },
+            {
+              "id": "phy-16-circuits",
+              "name": "Resistor, inductor and capacitor in AC",
+              "los": [
+                {
+                  "code": "PHY-16.2",
+                  "text": "Reactance, impedance and phase in R, L and C circuits."
+                }
+              ]
+            },
+            {
+              "id": "phy-16-rlc",
+              "name": "RLC circuits and resonance",
+              "los": [
+                {
+                  "code": "PHY-16.3",
+                  "text": "Series and parallel RLC circuits, power and resonance."
+                }
+              ]
+            },
+            {
+              "id": "phy-16-em",
+              "name": "Electromagnetic waves and modulation",
+              "los": [
+                {
+                  "code": "PHY-16.4",
+                  "text": "Electromagnetic waves, three-phase supply and modulation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-17",
+          "n": 17,
+          "name": "Physics of Solids",
+          "books": "old Part II ch 17 · new Class 11 ch 5",
+          "topics": [
+            {
+              "id": "phy-17-types",
+              "name": "Types of solids",
+              "los": [
+                {
+                  "code": "PHY-17.1",
+                  "text": "Crystalline, amorphous, glassy and polymeric solids."
+                }
+              ]
+            },
+            {
+              "id": "phy-17-elastic",
+              "name": "Stress, strain and moduli",
+              "los": [
+                {
+                  "code": "PHY-17.2",
+                  "text": "Young's, bulk and shear moduli, elastic limit and strain energy."
+                }
+              ]
+            },
+            {
+              "id": "phy-17-bands",
+              "name": "Energy bands and semiconductors",
+              "los": [
+                {
+                  "code": "PHY-17.3",
+                  "text": "Conductors, insulators and semiconductors; doping."
+                }
+              ]
+            },
+            {
+              "id": "phy-17-magnetic",
+              "name": "Superconductors and magnetic materials",
+              "los": [
+                {
+                  "code": "PHY-17.4",
+                  "text": "Superconductors, dia-, para- and ferromagnetism, hysteresis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-18",
+          "n": 18,
+          "name": "Electronics",
+          "books": "old Part II ch 18 · new Class 12 ch 17",
+          "topics": [
+            {
+              "id": "phy-18-diode",
+              "name": "p-n junction and rectification",
+              "los": [
+                {
+                  "code": "PHY-18.1",
+                  "text": "Biasing of a diode and half- and full-wave rectification."
+                }
+              ]
+            },
+            {
+              "id": "phy-18-devices",
+              "name": "LED, photodiode and solar cell",
+              "los": [
+                {
+                  "code": "PHY-18.2",
+                  "text": "LED, photodiode and photovoltaic cell."
+                }
+              ]
+            },
+            {
+              "id": "phy-18-transistor",
+              "name": "Transistor",
+              "los": [
+                {
+                  "code": "PHY-18.3",
+                  "text": "Transistor currents, amplifier and switch."
+                }
+              ]
+            },
+            {
+              "id": "phy-18-opamp",
+              "name": "Operational amplifier",
+              "los": [
+                {
+                  "code": "PHY-18.4",
+                  "text": "Inverting and non-inverting amplifiers and comparators."
+                }
+              ]
+            },
+            {
+              "id": "phy-18-gates",
+              "name": "Logic gates",
+              "los": [
+                {
+                  "code": "PHY-18.5",
+                  "text": "Logic gates and truth tables."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-19",
+          "n": 19,
+          "name": "Special Theory of Relativity",
+          "books": "old Part II ch 19 · new Class 11 ch 11",
+          "topics": [
+            {
+              "id": "phy-19-frames",
+              "name": "Frames and postulates",
+              "los": [
+                {
+                  "code": "PHY-19.1",
+                  "text": "Inertial and non-inertial frames and the postulates."
+                }
+              ]
+            },
+            {
+              "id": "phy-19-effects",
+              "name": "Time dilation and length contraction",
+              "los": [
+                {
+                  "code": "PHY-19.2",
+                  "text": "Simultaneity, time dilation, length contraction and mass increase."
+                }
+              ]
+            },
+            {
+              "id": "phy-19-massenergy",
+              "name": "Mass–energy equivalence",
+              "los": [
+                {
+                  "code": "PHY-19.3",
+                  "text": "E = mc² and its uses."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-20",
+          "n": 20,
+          "name": "Quantum Physics",
+          "books": "old Part II ch 19 · new Class 12 ch 18",
+          "topics": [
+            {
+              "id": "phy-20-blackbody",
+              "name": "Black-body radiation",
+              "los": [
+                {
+                  "code": "PHY-20.1",
+                  "text": "Black-body radiation and Planck's hypothesis."
+                }
+              ]
+            },
+            {
+              "id": "phy-20-photo",
+              "name": "Photoelectric effect",
+              "los": [
+                {
+                  "code": "PHY-20.2",
+                  "text": "Photoelectric effect, work function and the photocell."
+                }
+              ]
+            },
+            {
+              "id": "phy-20-compton",
+              "name": "Compton effect and pair production",
+              "los": [
+                {
+                  "code": "PHY-20.3",
+                  "text": "Compton effect, pair production and annihilation."
+                }
+              ]
+            },
+            {
+              "id": "phy-20-debroglie",
+              "name": "Wave nature of particles",
+              "los": [
+                {
+                  "code": "PHY-20.4",
+                  "text": "de Broglie waves, electron diffraction and the electron microscope."
+                }
+              ]
+            },
+            {
+              "id": "phy-20-uncertainty",
+              "name": "Uncertainty principle",
+              "los": [
+                {
+                  "code": "PHY-20.5",
+                  "text": "Heisenberg's uncertainty principle."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-21",
+          "n": 21,
+          "name": "Atomic Spectra",
+          "books": "old Part II ch 20 · new Class 12 ch 18",
+          "topics": [
+            {
+              "id": "phy-21-hydrogen",
+              "name": "Hydrogen spectrum and Bohr model",
+              "los": [
+                {
+                  "code": "PHY-21.1",
+                  "text": "Spectral series, Bohr's model and energy levels."
+                }
+              ]
+            },
+            {
+              "id": "phy-21-xrays",
+              "name": "X-rays",
+              "los": [
+                {
+                  "code": "PHY-21.2",
+                  "text": "Production, properties and uses of X-rays."
+                }
+              ]
+            },
+            {
+              "id": "phy-21-lasers",
+              "name": "Lasers",
+              "los": [
+                {
+                  "code": "PHY-21.3",
+                  "text": "Excitation, ionisation and lasers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-22",
+          "n": 22,
+          "name": "Nuclear Physics",
+          "books": "old Part II ch 21 · new Class 11 ch 12 · new Class 12 ch 19",
+          "topics": [
+            {
+              "id": "phy-22-nucleus",
+              "name": "The nucleus",
+              "los": [
+                {
+                  "code": "PHY-22.1",
+                  "text": "Rutherford scattering, isotopes and the mass spectrograph."
+                }
+              ]
+            },
+            {
+              "id": "phy-22-binding",
+              "name": "Mass defect and binding energy",
+              "los": [
+                {
+                  "code": "PHY-22.2",
+                  "text": "Mass defect and binding energy per nucleon."
+                }
+              ]
+            },
+            {
+              "id": "phy-22-decay",
+              "name": "Radioactivity and half-life",
+              "los": [
+                {
+                  "code": "PHY-22.3",
+                  "text": "α, β, γ radiation, decay law, activity and half-life."
+                }
+              ]
+            },
+            {
+              "id": "phy-22-detectors",
+              "name": "Radiation and detectors",
+              "los": [
+                {
+                  "code": "PHY-22.4",
+                  "text": "Interaction of radiation with matter, detectors, dosimetry and biological effects."
+                }
+              ]
+            },
+            {
+              "id": "phy-22-reactions",
+              "name": "Fission, fusion and reactors",
+              "los": [
+                {
+                  "code": "PHY-22.5",
+                  "text": "Nuclear reactions, fission, fusion and reactors."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-23",
+          "n": 23,
+          "name": "Particle Physics",
+          "books": "new Class 11 ch 12 · new Class 12 ch 19",
+          "topics": [
+            {
+              "id": "phy-23-quarks",
+              "name": "Quarks, hadrons and leptons",
+              "los": [
+                {
+                  "code": "PHY-23.1",
+                  "text": "Quarks, baryons, mesons and leptons; antiparticles."
+                }
+              ]
+            },
+            {
+              "id": "phy-23-forces",
+              "name": "Force carriers",
+              "los": [
+                {
+                  "code": "PHY-23.2",
+                  "text": "Fundamental forces, W and Z bosons, gluons, photons and the Higgs boson."
+                }
+              ]
+            },
+            {
+              "id": "phy-23-beta",
+              "name": "β-decay at the quark level",
+              "los": [
+                {
+                  "code": "PHY-23.3",
+                  "text": "β-decay explained with quarks and neutrinos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-24",
+          "n": 24,
+          "name": "Medical Physics",
+          "books": "new Class 12 ch 20",
+          "topics": [
+            {
+              "id": "phy-24-ultrasound",
+              "name": "Ultrasound",
+              "los": [
+                {
+                  "code": "PHY-24.1",
+                  "text": "Piezoelectric effect and diagnostic ultrasound."
+                }
+              ]
+            },
+            {
+              "id": "phy-24-imaging",
+              "name": "Medical imaging",
+              "los": [
+                {
+                  "code": "PHY-24.2",
+                  "text": "X-ray imaging, CT and PET scanning."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "phy-25",
+          "n": 25,
+          "name": "Space and Environment",
+          "books": "new Class 12 ch 21",
+          "topics": [
+            {
+              "id": "phy-25-stars",
+              "name": "Stars and standard candles",
+              "los": [
+                {
+                  "code": "PHY-25.1",
+                  "text": "Luminosity, radiant flux, standard candles, Wien's law and stellar radius."
+                }
+              ]
+            },
+            {
+              "id": "phy-25-universe",
+              "name": "Expanding universe",
+              "los": [
+                {
+                  "code": "PHY-25.2",
+                  "text": "Hubble's law and the expanding universe."
+                }
+              ]
+            },
+            {
+              "id": "phy-25-climate",
+              "name": "Earth's climate system",
+              "los": [
+                {
+                  "code": "PHY-25.3",
+                  "text": "Climate system, ocean currents and atmospheric circulation."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "chem",
       "name": "Chemistry",
       "mcqsInPaper": 30,
       "bankTarget": 1000,
-      "units": []
+      "units": [
+        {
+          "id": "chem-01",
+          "n": 1,
+          "name": "Basic Concepts and Stoichiometry",
+          "books": "old Part I ch 1 · new Class 11 ch 4",
+          "topics": [
+            {
+              "id": "chem-01-atoms",
+              "name": "Atoms, ions and isotopes",
+              "los": [
+                {
+                  "code": "CHEM-1.1",
+                  "text": "Relative atomic mass, isotopes and the mass spectrometer."
+                }
+              ]
+            },
+            {
+              "id": "chem-01-mole",
+              "name": "Mole and Avogadro's number",
+              "los": [
+                {
+                  "code": "CHEM-1.2",
+                  "text": "Mole, molar mass, Avogadro's number and molar volume."
+                }
+              ]
+            },
+            {
+              "id": "chem-01-formula",
+              "name": "Empirical and molecular formula",
+              "los": [
+                {
+                  "code": "CHEM-1.3",
+                  "text": "Combustion analysis and empirical and molecular formulas."
+                }
+              ]
+            },
+            {
+              "id": "chem-01-stoich",
+              "name": "Stoichiometric calculations",
+              "los": [
+                {
+                  "code": "CHEM-1.4",
+                  "text": "Mass and volume calculations from equations."
+                }
+              ]
+            },
+            {
+              "id": "chem-01-limiting",
+              "name": "Limiting reactant and yield",
+              "los": [
+                {
+                  "code": "CHEM-1.5",
+                  "text": "Limiting and excess reactants; theoretical, actual and percentage yield."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-02",
+          "n": 2,
+          "name": "Experimental and Separation Techniques",
+          "books": "old Part I ch 2 · new Class 11 ch 15 · new Class 11 ch 16 · new Class 12 ch 28",
+          "topics": [
+            {
+              "id": "chem-02-filtration",
+              "name": "Filtration and crystallisation",
+              "los": [
+                {
+                  "code": "CHEM-2.1",
+                  "text": "Filtration, crystallisation and sublimation."
+                }
+              ]
+            },
+            {
+              "id": "chem-02-extraction",
+              "name": "Solvent extraction and distillation",
+              "los": [
+                {
+                  "code": "CHEM-2.2",
+                  "text": "Solvent extraction and distillation."
+                }
+              ]
+            },
+            {
+              "id": "chem-02-chroma",
+              "name": "Chromatography",
+              "los": [
+                {
+                  "code": "CHEM-2.3",
+                  "text": "Paper, thin-layer and gas chromatography; Rf values."
+                }
+              ]
+            },
+            {
+              "id": "chem-02-lab",
+              "name": "Lab safety and analysis",
+              "los": [
+                {
+                  "code": "CHEM-2.4",
+                  "text": "Lab safety, titration and tests for ions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-03",
+          "n": 3,
+          "name": "Gases",
+          "books": "old Part I ch 3 · new Class 11 ch 5",
+          "topics": [
+            {
+              "id": "chem-03-laws",
+              "name": "Gas laws",
+              "los": [
+                {
+                  "code": "CHEM-3.1",
+                  "text": "Boyle's, Charles's, Avogadro's, Dalton's and Graham's laws; absolute zero."
+                }
+              ]
+            },
+            {
+              "id": "chem-03-ideal",
+              "name": "Ideal gas equation",
+              "los": [
+                {
+                  "code": "CHEM-3.2",
+                  "text": "pV = nRT and gas density."
+                }
+              ]
+            },
+            {
+              "id": "chem-03-kmt",
+              "name": "Kinetic molecular theory",
+              "los": [
+                {
+                  "code": "CHEM-3.3",
+                  "text": "Postulates of kinetic molecular theory."
+                }
+              ]
+            },
+            {
+              "id": "chem-03-real",
+              "name": "Real gases",
+              "los": [
+                {
+                  "code": "CHEM-3.4",
+                  "text": "Non-ideal behaviour, van der Waals equation, liquefaction and plasma."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-04",
+          "n": 4,
+          "name": "Liquids and Solids",
+          "books": "old Part I ch 4 · new Class 11 ch 5",
+          "topics": [
+            {
+              "id": "chem-04-imf",
+              "name": "Intermolecular forces",
+              "los": [
+                {
+                  "code": "CHEM-4.1",
+                  "text": "Dipole–dipole, London forces and hydrogen bonding."
+                }
+              ]
+            },
+            {
+              "id": "chem-04-liquids",
+              "name": "Properties of liquids",
+              "los": [
+                {
+                  "code": "CHEM-4.2",
+                  "text": "Evaporation, vapour pressure, boiling point, surface tension and viscosity; liquid crystals."
+                }
+              ]
+            },
+            {
+              "id": "chem-04-solids",
+              "name": "Types of solids",
+              "los": [
+                {
+                  "code": "CHEM-4.3",
+                  "text": "Ionic, covalent, molecular and metallic solids."
+                }
+              ]
+            },
+            {
+              "id": "chem-04-lattice",
+              "name": "Crystal lattice",
+              "los": [
+                {
+                  "code": "CHEM-4.4",
+                  "text": "Unit cell, crystal systems and lattice energy."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-05",
+          "n": 5,
+          "name": "Atomic Structure",
+          "books": "old Part I ch 5 · new Class 11 ch 2",
+          "topics": [
+            {
+              "id": "chem-05-particles",
+              "name": "Subatomic particles",
+              "los": [
+                {
+                  "code": "CHEM-5.1",
+                  "text": "Discovery and properties of the electron, proton and neutron."
+                }
+              ]
+            },
+            {
+              "id": "chem-05-bohr",
+              "name": "Bohr's model and spectra",
+              "los": [
+                {
+                  "code": "CHEM-5.2",
+                  "text": "Rutherford and Bohr models, radius and energy of orbits, spectra."
+                }
+              ]
+            },
+            {
+              "id": "chem-05-quantum",
+              "name": "Quantum numbers and orbitals",
+              "los": [
+                {
+                  "code": "CHEM-5.3",
+                  "text": "Quantum numbers and shapes of orbitals."
+                }
+              ]
+            },
+            {
+              "id": "chem-05-config",
+              "name": "Electronic configuration",
+              "los": [
+                {
+                  "code": "CHEM-5.4",
+                  "text": "Aufbau principle, Pauli exclusion principle and Hund's rule."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-06",
+          "n": 6,
+          "name": "Chemical Bonding",
+          "books": "old Part I ch 6 · new Class 11 ch 3",
+          "topics": [
+            {
+              "id": "chem-06-types",
+              "name": "Types of bonds",
+              "los": [
+                {
+                  "code": "CHEM-6.1",
+                  "text": "Ionic, covalent, coordinate and metallic bonds."
+                }
+              ]
+            },
+            {
+              "id": "chem-06-trends",
+              "name": "Atomic properties and bonding",
+              "los": [
+                {
+                  "code": "CHEM-6.2",
+                  "text": "Ionisation energy, electron affinity, electronegativity and polarity."
+                }
+              ]
+            },
+            {
+              "id": "chem-06-vsepr",
+              "name": "VSEPR theory",
+              "los": [
+                {
+                  "code": "CHEM-6.3",
+                  "text": "Shapes of molecules by VSEPR."
+                }
+              ]
+            },
+            {
+              "id": "chem-06-vbt",
+              "name": "Hybridisation",
+              "los": [
+                {
+                  "code": "CHEM-6.4",
+                  "text": "Valence bond theory and hybridisation."
+                }
+              ]
+            },
+            {
+              "id": "chem-06-mot",
+              "name": "Molecular orbital theory",
+              "los": [
+                {
+                  "code": "CHEM-6.5",
+                  "text": "Molecular orbitals and bond order."
+                }
+              ]
+            },
+            {
+              "id": "chem-06-props",
+              "name": "Bond energy, length and dipole moment",
+              "los": [
+                {
+                  "code": "CHEM-6.6",
+                  "text": "Bond energy, bond length and dipole moment."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-07",
+          "n": 7,
+          "name": "Thermochemistry",
+          "books": "old Part I ch 7 · new Class 11 ch 6",
+          "topics": [
+            {
+              "id": "chem-07-basics",
+              "name": "Enthalpy change",
+              "los": [
+                {
+                  "code": "CHEM-7.1",
+                  "text": "System, surroundings, state functions, exothermic and endothermic reactions."
+                }
+              ]
+            },
+            {
+              "id": "chem-07-standard",
+              "name": "Standard enthalpies",
+              "los": [
+                {
+                  "code": "CHEM-7.2",
+                  "text": "Standard enthalpies of formation, combustion, neutralisation and others."
+                }
+              ]
+            },
+            {
+              "id": "chem-07-calorimetry",
+              "name": "Calorimetry",
+              "los": [
+                {
+                  "code": "CHEM-7.3",
+                  "text": "Measuring enthalpy changes."
+                }
+              ]
+            },
+            {
+              "id": "chem-07-hess",
+              "name": "Hess's law and Born–Haber cycle",
+              "los": [
+                {
+                  "code": "CHEM-7.4",
+                  "text": "Hess's law, Born–Haber cycle and lattice energy."
+                }
+              ]
+            },
+            {
+              "id": "chem-07-entropy",
+              "name": "Entropy",
+              "los": [
+                {
+                  "code": "CHEM-7.5",
+                  "text": "Entropy and the energetics of solution."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-08",
+          "n": 8,
+          "name": "Chemical Equilibrium",
+          "books": "old Part I ch 8 · new Class 11 ch 8",
+          "topics": [
+            {
+              "id": "chem-08-dynamic",
+              "name": "Reversible reactions",
+              "los": [
+                {
+                  "code": "CHEM-8.1",
+                  "text": "Reversible reactions and dynamic equilibrium."
+                }
+              ]
+            },
+            {
+              "id": "chem-08-constants",
+              "name": "Kc and Kp",
+              "los": [
+                {
+                  "code": "CHEM-8.2",
+                  "text": "Law of mass action, Kc and Kp."
+                }
+              ]
+            },
+            {
+              "id": "chem-08-lechatelier",
+              "name": "Le Chatelier's principle",
+              "los": [
+                {
+                  "code": "CHEM-8.3",
+                  "text": "Effect of concentration, pressure, temperature and catalyst."
+                }
+              ]
+            },
+            {
+              "id": "chem-08-industry",
+              "name": "Industrial applications",
+              "los": [
+                {
+                  "code": "CHEM-8.4",
+                  "text": "Haber and contact processes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-09",
+          "n": 9,
+          "name": "Acids, Bases and Ionic Equilibria",
+          "books": "old Part I ch 8 · new Class 11 ch 9",
+          "topics": [
+            {
+              "id": "chem-09-concepts",
+              "name": "Acid–base concepts",
+              "los": [
+                {
+                  "code": "CHEM-9.1",
+                  "text": "Arrhenius, Brønsted–Lowry and Lewis concepts."
+                }
+              ]
+            },
+            {
+              "id": "chem-09-ph",
+              "name": "pH and the ionic product of water",
+              "los": [
+                {
+                  "code": "CHEM-9.2",
+                  "text": "Kw, pH and pOH."
+                }
+              ]
+            },
+            {
+              "id": "chem-09-ka",
+              "name": "Ka, Kb and buffers",
+              "los": [
+                {
+                  "code": "CHEM-9.3",
+                  "text": "Ionisation constants, buffers and salt hydrolysis."
+                }
+              ]
+            },
+            {
+              "id": "chem-09-ksp",
+              "name": "Solubility product and common ion effect",
+              "los": [
+                {
+                  "code": "CHEM-9.4",
+                  "text": "Ksp and the common ion effect; indicators."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-10",
+          "n": 10,
+          "name": "Solutions and Colloids",
+          "books": "old Part I ch 9",
+          "topics": [
+            {
+              "id": "chem-10-conc",
+              "name": "Concentration units",
+              "los": [
+                {
+                  "code": "CHEM-10.1",
+                  "text": "Percentage, molarity, molality, mole fraction and ppm."
+                }
+              ]
+            },
+            {
+              "id": "chem-10-raoult",
+              "name": "Raoult's law",
+              "los": [
+                {
+                  "code": "CHEM-10.2",
+                  "text": "Ideal and non-ideal solutions."
+                }
+              ]
+            },
+            {
+              "id": "chem-10-colligative",
+              "name": "Colligative properties",
+              "los": [
+                {
+                  "code": "CHEM-10.3",
+                  "text": "Vapour-pressure lowering, boiling-point elevation, freezing-point depression, osmotic pressure."
+                }
+              ]
+            },
+            {
+              "id": "chem-10-colloids",
+              "name": "Hydration, hydrolysis and colloids",
+              "los": [
+                {
+                  "code": "CHEM-10.4",
+                  "text": "Hydration, hydrolysis and colloids."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-11",
+          "n": 11,
+          "name": "Electrochemistry",
+          "books": "old Part I ch 10 · new Class 11 ch 10",
+          "topics": [
+            {
+              "id": "chem-11-redox",
+              "name": "Oxidation numbers and redox",
+              "los": [
+                {
+                  "code": "CHEM-11.1",
+                  "text": "Oxidation numbers, redox and balancing redox equations."
+                }
+              ]
+            },
+            {
+              "id": "chem-11-electrolysis",
+              "name": "Electrolysis",
+              "los": [
+                {
+                  "code": "CHEM-11.2",
+                  "text": "Electrolytic cells and Faraday's laws."
+                }
+              ]
+            },
+            {
+              "id": "chem-11-cells",
+              "name": "Galvanic cells and electrode potentials",
+              "los": [
+                {
+                  "code": "CHEM-11.3",
+                  "text": "Electrode potentials, SHE, E° cell and the electrochemical series."
+                }
+              ]
+            },
+            {
+              "id": "chem-11-batteries",
+              "name": "Batteries and fuel cells",
+              "los": [
+                {
+                  "code": "CHEM-11.4",
+                  "text": "Batteries, fuel cells and the Nernst equation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-12",
+          "n": 12,
+          "name": "Reaction Kinetics",
+          "books": "old Part I ch 11 · new Class 11 ch 7",
+          "topics": [
+            {
+              "id": "chem-12-rate",
+              "name": "Rate of reaction",
+              "los": [
+                {
+                  "code": "CHEM-12.1",
+                  "text": "Rate, rate constant and collision theory."
+                }
+              ]
+            },
+            {
+              "id": "chem-12-order",
+              "name": "Order and half-life",
+              "los": [
+                {
+                  "code": "CHEM-12.2",
+                  "text": "Order of reaction, rate law and half-life."
+                }
+              ]
+            },
+            {
+              "id": "chem-12-arrhenius",
+              "name": "Activation energy",
+              "los": [
+                {
+                  "code": "CHEM-12.3",
+                  "text": "Activation energy and the Arrhenius equation."
+                }
+              ]
+            },
+            {
+              "id": "chem-12-factors",
+              "name": "Factors affecting rate and catalysis",
+              "los": [
+                {
+                  "code": "CHEM-12.4",
+                  "text": "Factors affecting rate and catalysis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-13",
+          "n": 13,
+          "name": "Periodic Table and Periodicity",
+          "books": "old Part II ch 1 · new Class 11 ch 1",
+          "topics": [
+            {
+              "id": "chem-13-table",
+              "name": "Modern periodic table",
+              "los": [
+                {
+                  "code": "CHEM-13.1",
+                  "text": "History, blocks, groups and periods."
+                }
+              ]
+            },
+            {
+              "id": "chem-13-trends",
+              "name": "Periodic trends",
+              "los": [
+                {
+                  "code": "CHEM-13.2",
+                  "text": "Atomic radius, ionisation energy, electron affinity, electronegativity, metallic character."
+                }
+              ]
+            },
+            {
+              "id": "chem-13-compounds",
+              "name": "Oxides, chlorides and hydrides",
+              "los": [
+                {
+                  "code": "CHEM-13.3",
+                  "text": "Trends in oxides, chlorides and hydrides across a period."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-14",
+          "n": 14,
+          "name": "s-Block Elements",
+          "books": "old Part II ch 2 · new Class 12 ch 17",
+          "topics": [
+            {
+              "id": "chem-14-trends",
+              "name": "Alkali and alkaline earth metals",
+              "los": [
+                {
+                  "code": "CHEM-14.1",
+                  "text": "Properties and trends of groups 1 and 2."
+                }
+              ]
+            },
+            {
+              "id": "chem-14-compounds",
+              "name": "Compounds and their stability",
+              "los": [
+                {
+                  "code": "CHEM-14.2",
+                  "text": "Thermal decomposition of carbonates and nitrates, solubility of sulphates and hydroxides."
+                }
+              ]
+            },
+            {
+              "id": "chem-14-industry",
+              "name": "Industrial compounds",
+              "los": [
+                {
+                  "code": "CHEM-14.3",
+                  "text": "NaOH (Nelson cell), Downs cell, lime and gypsum."
+                }
+              ]
+            },
+            {
+              "id": "chem-14-anomalous",
+              "name": "Peculiar behaviour of Li and Be",
+              "los": [
+                {
+                  "code": "CHEM-14.4",
+                  "text": "Anomalous behaviour of lithium and beryllium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-15",
+          "n": 15,
+          "name": "Group IIIA and IVA Elements",
+          "books": "old Part II ch 3",
+          "topics": [
+            {
+              "id": "chem-15-boron",
+              "name": "Boron and aluminium",
+              "los": [
+                {
+                  "code": "CHEM-15.1",
+                  "text": "Borax, boric acid and alums."
+                }
+              ]
+            },
+            {
+              "id": "chem-15-carbon",
+              "name": "Carbon, silicon and lead",
+              "los": [
+                {
+                  "code": "CHEM-15.2",
+                  "text": "Silicates, silicones and lead compounds."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-16",
+          "n": 16,
+          "name": "Nitrogen, Oxygen and Sulphur",
+          "books": "old Part II ch 4 · new Class 11 ch 12",
+          "topics": [
+            {
+              "id": "chem-16-nitrogen",
+              "name": "Nitrogen and its compounds",
+              "los": [
+                {
+                  "code": "CHEM-16.1",
+                  "text": "Ammonia, nitrogen oxides, nitric acid and the nitrogen cycle."
+                }
+              ]
+            },
+            {
+              "id": "chem-16-phosphorus",
+              "name": "Phosphorus",
+              "los": [
+                {
+                  "code": "CHEM-16.2",
+                  "text": "Phosphorus and its acids."
+                }
+              ]
+            },
+            {
+              "id": "chem-16-sulphur",
+              "name": "Sulphur and sulphuric acid",
+              "los": [
+                {
+                  "code": "CHEM-16.3",
+                  "text": "Sulphur, its compounds and the contact process."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-17",
+          "n": 17,
+          "name": "Halogens and Noble Gases",
+          "books": "old Part II ch 5 · new Class 11 ch 13",
+          "topics": [
+            {
+              "id": "chem-17-trends",
+              "name": "Halogen trends",
+              "los": [
+                {
+                  "code": "CHEM-17.1",
+                  "text": "Volatility, bond strength, oxidising power and HX stability."
+                }
+              ]
+            },
+            {
+              "id": "chem-17-reactions",
+              "name": "Reactions of halogens",
+              "los": [
+                {
+                  "code": "CHEM-17.2",
+                  "text": "Reactions with hydrogen and alkali; halide ion tests; bleaching powder."
+                }
+              ]
+            },
+            {
+              "id": "chem-17-noble",
+              "name": "Noble gases",
+              "los": [
+                {
+                  "code": "CHEM-17.3",
+                  "text": "Noble gas compounds."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-18",
+          "n": 18,
+          "name": "Transition Elements",
+          "books": "old Part II ch 6 · new Class 12 ch 18",
+          "topics": [
+            {
+              "id": "chem-18-props",
+              "name": "Properties",
+              "los": [
+                {
+                  "code": "CHEM-18.1",
+                  "text": "Variable oxidation states, colour, magnetism and catalysis."
+                }
+              ]
+            },
+            {
+              "id": "chem-18-complexes",
+              "name": "Complexes",
+              "los": [
+                {
+                  "code": "CHEM-18.2",
+                  "text": "Ligands, coordination number, geometry, nomenclature and isomerism."
+                }
+              ]
+            },
+            {
+              "id": "chem-18-compounds",
+              "name": "Important compounds",
+              "los": [
+                {
+                  "code": "CHEM-18.3",
+                  "text": "Iron and steel, chromate, dichromate and KMnO4."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-19",
+          "n": 19,
+          "name": "Fundamentals of Organic Chemistry",
+          "books": "old Part II ch 7 · new Class 12 ch 19",
+          "topics": [
+            {
+              "id": "chem-19-sources",
+              "name": "Sources and classification",
+              "los": [
+                {
+                  "code": "CHEM-19.1",
+                  "text": "Coal, petroleum, cracking and classification of organic compounds."
+                }
+              ]
+            },
+            {
+              "id": "chem-19-groups",
+              "name": "Functional groups and nomenclature",
+              "los": [
+                {
+                  "code": "CHEM-19.2",
+                  "text": "Functional groups and IUPAC naming."
+                }
+              ]
+            },
+            {
+              "id": "chem-19-isomerism",
+              "name": "Isomerism",
+              "los": [
+                {
+                  "code": "CHEM-19.3",
+                  "text": "Structural and stereoisomerism."
+                }
+              ]
+            },
+            {
+              "id": "chem-19-mechanisms",
+              "name": "Reactions and mechanisms",
+              "los": [
+                {
+                  "code": "CHEM-19.4",
+                  "text": "Bond fission, reactive intermediates and types of reactions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-20",
+          "n": 20,
+          "name": "Aliphatic Hydrocarbons",
+          "books": "old Part II ch 8 · new Class 11 ch 11",
+          "topics": [
+            {
+              "id": "chem-20-alkanes",
+              "name": "Alkanes",
+              "los": [
+                {
+                  "code": "CHEM-20.1",
+                  "text": "Preparation and free-radical substitution."
+                }
+              ]
+            },
+            {
+              "id": "chem-20-alkenes",
+              "name": "Alkenes",
+              "los": [
+                {
+                  "code": "CHEM-20.2",
+                  "text": "Preparation, electrophilic addition, Markovnikov's rule and ozonolysis."
+                }
+              ]
+            },
+            {
+              "id": "chem-20-alkynes",
+              "name": "Alkynes",
+              "los": [
+                {
+                  "code": "CHEM-20.3",
+                  "text": "Preparation, reactions and acidity of alkynes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-21",
+          "n": 21,
+          "name": "Aromatic Hydrocarbons",
+          "books": "old Part II ch 9 · new Class 12 ch 20",
+          "topics": [
+            {
+              "id": "chem-21-benzene",
+              "name": "Structure of benzene",
+              "los": [
+                {
+                  "code": "CHEM-21.1",
+                  "text": "Structure, resonance and stability of benzene."
+                }
+              ]
+            },
+            {
+              "id": "chem-21-substitution",
+              "name": "Electrophilic substitution",
+              "los": [
+                {
+                  "code": "CHEM-21.2",
+                  "text": "Nitration, halogenation, sulphonation and Friedel–Crafts."
+                }
+              ]
+            },
+            {
+              "id": "chem-21-orientation",
+              "name": "Orientation effects",
+              "los": [
+                {
+                  "code": "CHEM-21.3",
+                  "text": "Directing groups and side-chain reactions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-22",
+          "n": 22,
+          "name": "Alkyl Halides",
+          "books": "old Part II ch 10 · new Class 12 ch 21",
+          "topics": [
+            {
+              "id": "chem-22-prep",
+              "name": "Preparation and naming",
+              "los": [
+                {
+                  "code": "CHEM-22.1",
+                  "text": "Naming and preparation of halogenoalkanes."
+                }
+              ]
+            },
+            {
+              "id": "chem-22-sn",
+              "name": "Substitution and elimination",
+              "los": [
+                {
+                  "code": "CHEM-22.2",
+                  "text": "SN1, SN2, E1 and E2 reactions."
+                }
+              ]
+            },
+            {
+              "id": "chem-22-grignard",
+              "name": "Grignard reagents",
+              "los": [
+                {
+                  "code": "CHEM-22.3",
+                  "text": "Grignard reagent and its uses."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-23",
+          "n": 23,
+          "name": "Alcohols, Phenols and Ethers",
+          "books": "old Part II ch 11 · new Class 12 ch 22",
+          "topics": [
+            {
+              "id": "chem-23-alcohols",
+              "name": "Alcohols",
+              "los": [
+                {
+                  "code": "CHEM-23.1",
+                  "text": "Classification, preparation, reactions and tests."
+                }
+              ]
+            },
+            {
+              "id": "chem-23-phenols",
+              "name": "Phenols",
+              "los": [
+                {
+                  "code": "CHEM-23.2",
+                  "text": "Acidity and reactions of phenol."
+                }
+              ]
+            },
+            {
+              "id": "chem-23-ethers",
+              "name": "Ethers",
+              "los": [
+                {
+                  "code": "CHEM-23.3",
+                  "text": "Preparation and properties of ethers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-24",
+          "n": 24,
+          "name": "Aldehydes and Ketones",
+          "books": "old Part II ch 12 · new Class 12 ch 23",
+          "topics": [
+            {
+              "id": "chem-24-prep",
+              "name": "Preparation",
+              "los": [
+                {
+                  "code": "CHEM-24.1",
+                  "text": "Preparation of aldehydes and ketones."
+                }
+              ]
+            },
+            {
+              "id": "chem-24-addition",
+              "name": "Nucleophilic addition",
+              "los": [
+                {
+                  "code": "CHEM-24.2",
+                  "text": "Nucleophilic addition, aldol and Cannizzaro reactions."
+                }
+              ]
+            },
+            {
+              "id": "chem-24-tests",
+              "name": "Oxidation, reduction and tests",
+              "los": [
+                {
+                  "code": "CHEM-24.3",
+                  "text": "Tollens', Fehling's, 2,4-DNPH and iodoform tests."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-25",
+          "n": 25,
+          "name": "Carboxylic Acids and Derivatives",
+          "books": "old Part II ch 13 · new Class 12 ch 23",
+          "topics": [
+            {
+              "id": "chem-25-acids",
+              "name": "Carboxylic acids",
+              "los": [
+                {
+                  "code": "CHEM-25.1",
+                  "text": "Preparation, reactions and relative acidity."
+                }
+              ]
+            },
+            {
+              "id": "chem-25-derivatives",
+              "name": "Acid derivatives",
+              "los": [
+                {
+                  "code": "CHEM-25.2",
+                  "text": "Esters, amides, acyl chlorides and anhydrides."
+                }
+              ]
+            },
+            {
+              "id": "chem-25-amino",
+              "name": "Amino acids and peptides",
+              "los": [
+                {
+                  "code": "CHEM-25.3",
+                  "text": "Amino acids, zwitterions and peptides."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-26",
+          "n": 26,
+          "name": "Organic Nitrogen Compounds and Synthesis",
+          "books": "new Class 12 ch 24 · new Class 12 ch 25",
+          "topics": [
+            {
+              "id": "chem-26-amines",
+              "name": "Amines, nitriles and amides",
+              "los": [
+                {
+                  "code": "CHEM-26.1",
+                  "text": "Preparation, reactions and basicity of amines; nitriles and amides."
+                }
+              ]
+            },
+            {
+              "id": "chem-26-synthesis",
+              "name": "Organic synthesis",
+              "los": [
+                {
+                  "code": "CHEM-26.2",
+                  "text": "Functional-group interconversions and retrosynthesis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-27",
+          "n": 27,
+          "name": "Macromolecules and Biochemistry",
+          "books": "old Part II ch 14 · new Class 12 ch 26 · new Class 12 ch 27",
+          "topics": [
+            {
+              "id": "chem-27-polymers",
+              "name": "Polymers",
+              "los": [
+                {
+                  "code": "CHEM-27.1",
+                  "text": "Addition and condensation polymerisation, plastics and fibres."
+                }
+              ]
+            },
+            {
+              "id": "chem-27-carbs",
+              "name": "Carbohydrates and lipids",
+              "los": [
+                {
+                  "code": "CHEM-27.2",
+                  "text": "Carbohydrates and lipids."
+                }
+              ]
+            },
+            {
+              "id": "chem-27-proteins",
+              "name": "Proteins, enzymes and nucleic acids",
+              "los": [
+                {
+                  "code": "CHEM-27.3",
+                  "text": "Proteins, enzymes and nucleic acids."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-28",
+          "n": 28,
+          "name": "Spectroscopy",
+          "books": "new Class 12 ch 29 · new Class 12 ch 30",
+          "topics": [
+            {
+              "id": "chem-28-uvir",
+              "name": "UV/visible and infrared",
+              "los": [
+                {
+                  "code": "CHEM-28.1",
+                  "text": "UV/visible and infrared spectroscopy; index of hydrogen deficiency."
+                }
+              ]
+            },
+            {
+              "id": "chem-28-ms",
+              "name": "Mass spectrometry",
+              "los": [
+                {
+                  "code": "CHEM-28.2",
+                  "text": "Mass spectra and molecular ions."
+                }
+              ]
+            },
+            {
+              "id": "chem-28-nmr",
+              "name": "NMR",
+              "los": [
+                {
+                  "code": "CHEM-28.3",
+                  "text": "¹H NMR, chemical shift and structure determination."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-29",
+          "n": 29,
+          "name": "Industrial Chemistry and Materials",
+          "books": "old Part II ch 15 · new Class 12 ch 31 · new Class 12 ch 32",
+          "topics": [
+            {
+              "id": "chem-29-fertilisers",
+              "name": "Fertilisers",
+              "los": [
+                {
+                  "code": "CHEM-29.1",
+                  "text": "Urea, ammonium nitrate and other fertilisers."
+                }
+              ]
+            },
+            {
+              "id": "chem-29-cement",
+              "name": "Cement, paper and other industries",
+              "los": [
+                {
+                  "code": "CHEM-29.2",
+                  "text": "Cement, paper and pulp and chemical industries of Pakistan."
+                }
+              ]
+            },
+            {
+              "id": "chem-29-materials",
+              "name": "Materials and energy",
+              "los": [
+                {
+                  "code": "CHEM-29.3",
+                  "text": "Fossil fuels, refining, energy density and materials."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chem-30",
+          "n": 30,
+          "name": "Environmental Chemistry",
+          "books": "old Part II ch 16 · new Class 11 ch 14 · new Class 12 ch 33",
+          "topics": [
+            {
+              "id": "chem-30-air",
+              "name": "Atmosphere and air pollution",
+              "los": [
+                {
+                  "code": "CHEM-30.1",
+                  "text": "Layers of the atmosphere, pollutants, smog and catalytic converters."
+                }
+              ]
+            },
+            {
+              "id": "chem-30-global",
+              "name": "Acid rain, ozone and the greenhouse effect",
+              "los": [
+                {
+                  "code": "CHEM-30.2",
+                  "text": "Acid rain, ozone depletion and global warming."
+                }
+              ]
+            },
+            {
+              "id": "chem-30-water",
+              "name": "Water pollution and treatment",
+              "los": [
+                {
+                  "code": "CHEM-30.3",
+                  "text": "Water quality, pollutants, treatment, BOD and DO."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "cs",
       "name": "Computer Science (ICS)",
       "mcqsInPaper": 30,
       "bankTarget": 1000,
-      "units": []
+      "units": [
+        {
+          "id": "cs-01",
+          "n": 1,
+          "name": "Computer Basics and Architecture",
+          "books": "old Part I ch 1 · old Part I ch 5",
+          "topics": [
+            {
+              "id": "cs-01-it",
+              "name": "Information technology basics",
+              "los": [
+                {
+                  "code": "CS-1.1",
+                  "text": "Hardware, software, data and the information-processing cycle."
+                }
+              ]
+            },
+            {
+              "id": "cs-01-cpu",
+              "name": "CPU and buses",
+              "los": [
+                {
+                  "code": "CS-1.2",
+                  "text": "ALU, control unit, registers, buses and the instruction cycle."
+                }
+              ]
+            },
+            {
+              "id": "cs-01-memory",
+              "name": "Memory and storage",
+              "los": [
+                {
+                  "code": "CS-1.3",
+                  "text": "RAM, ROM, cache and storage devices."
+                }
+              ]
+            },
+            {
+              "id": "cs-01-numbers",
+              "name": "Number systems",
+              "los": [
+                {
+                  "code": "CS-1.4",
+                  "text": "Binary, octal and hexadecimal conversions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-02",
+          "n": 2,
+          "name": "Networks and Data Communication",
+          "books": "old Part I ch 2 · old Part I ch 3 · old Part I ch 10 · new Class 12 ch 1",
+          "topics": [
+            {
+              "id": "cs-02-types",
+              "name": "Network types and topologies",
+              "los": [
+                {
+                  "code": "CS-2.1",
+                  "text": "LAN, WAN, MAN; topologies; client-server and peer-to-peer."
+                }
+              ]
+            },
+            {
+              "id": "cs-02-osi",
+              "name": "OSI model and protocols",
+              "los": [
+                {
+                  "code": "CS-2.2",
+                  "text": "OSI layers, TCP/IP, HTTP, FTP and DNS; IP addressing."
+                }
+              ]
+            },
+            {
+              "id": "cs-02-devices",
+              "name": "Network devices",
+              "los": [
+                {
+                  "code": "CS-2.3",
+                  "text": "NIC, switch, router, modem and access point."
+                }
+              ]
+            },
+            {
+              "id": "cs-02-comm",
+              "name": "Data communication",
+              "los": [
+                {
+                  "code": "CS-2.4",
+                  "text": "Signals, modulation, transmission modes and media."
+                }
+              ]
+            },
+            {
+              "id": "cs-02-internet",
+              "name": "The Internet",
+              "los": [
+                {
+                  "code": "CS-2.5",
+                  "text": "Internet services, browsers, search engines and ISPs."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-03",
+          "n": 3,
+          "name": "Security, Ethics and Law",
+          "books": "old Part I ch 6 · new Class 11 ch 7 · new Class 12 ch 9",
+          "topics": [
+            {
+              "id": "cs-03-threats",
+              "name": "Threats and protection",
+              "los": [
+                {
+                  "code": "CS-3.1",
+                  "text": "Viruses, malware, antivirus, passwords and encryption."
+                }
+              ]
+            },
+            {
+              "id": "cs-03-law",
+              "name": "Copyright, privacy and computer crime",
+              "los": [
+                {
+                  "code": "CS-3.2",
+                  "text": "Copyright, privacy, legal and ethical issues."
+                }
+              ]
+            },
+            {
+              "id": "cs-03-safe",
+              "name": "Safe digital practice",
+              "los": [
+                {
+                  "code": "CS-3.3",
+                  "text": "Digital divide, bias and safe collaboration."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-04",
+          "n": 4,
+          "name": "Applications and Emerging Technologies",
+          "books": "old Part I ch 4 · new Class 11 ch 6 · new Class 12 ch 8",
+          "topics": [
+            {
+              "id": "cs-04-uses",
+              "name": "Uses of computers",
+              "los": [
+                {
+                  "code": "CS-4.1",
+                  "text": "Computers in education, business, medicine, banking and industry."
+                }
+              ]
+            },
+            {
+              "id": "cs-04-cloud",
+              "name": "Cloud computing",
+              "los": [
+                {
+                  "code": "CS-4.2",
+                  "text": "Virtualisation, IaaS, PaaS, SaaS and deployment models."
+                }
+              ]
+            },
+            {
+              "id": "cs-04-emerging",
+              "name": "AI, IoT and blockchain",
+              "los": [
+                {
+                  "code": "CS-4.3",
+                  "text": "AI and machine learning, IoT and blockchain."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-05",
+          "n": 5,
+          "name": "Operating Systems and Office Software",
+          "books": "old Part I ch 7 · old Part I ch 8 · old Part I ch 9",
+          "topics": [
+            {
+              "id": "cs-05-os",
+              "name": "Operating systems and Windows",
+              "los": [
+                {
+                  "code": "CS-5.1",
+                  "text": "OS functions, files and folders, Control Panel."
+                }
+              ]
+            },
+            {
+              "id": "cs-05-word",
+              "name": "Word processing",
+              "los": [
+                {
+                  "code": "CS-5.2",
+                  "text": "Formatting, tables and mail merge."
+                }
+              ]
+            },
+            {
+              "id": "cs-05-excel",
+              "name": "Spreadsheets",
+              "los": [
+                {
+                  "code": "CS-5.3",
+                  "text": "Worksheets, formulas, functions and charts."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-06",
+          "n": 6,
+          "name": "Databases",
+          "books": "old Part II ch 1 · old Part II ch 2 · old Part II ch 3 · old Part II ch 4",
+          "topics": [
+            {
+              "id": "cs-06-files",
+              "name": "Files and data processing",
+              "los": [
+                {
+                  "code": "CS-6.1",
+                  "text": "File systems, file organisation and their limits."
+                }
+              ]
+            },
+            {
+              "id": "cs-06-terms",
+              "name": "Database concepts",
+              "los": [
+                {
+                  "code": "CS-6.2",
+                  "text": "DBMS, entities, attributes, keys and data models."
+                }
+              ]
+            },
+            {
+              "id": "cs-06-design",
+              "name": "Database design and ER modelling",
+              "los": [
+                {
+                  "code": "CS-6.3",
+                  "text": "Development life cycle, ER diagrams, relationships and cardinality."
+                }
+              ]
+            },
+            {
+              "id": "cs-06-normal",
+              "name": "Integrity and normalisation",
+              "los": [
+                {
+                  "code": "CS-6.4",
+                  "text": "Integrity constraints, anomalies, dependencies, 1NF, 2NF and 3NF."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-07",
+          "n": 7,
+          "name": "MS Access",
+          "books": "old Part II ch 5 · old Part II ch 6 · old Part II ch 7",
+          "topics": [
+            {
+              "id": "cs-07-tables",
+              "name": "Tables and relationships",
+              "los": [
+                {
+                  "code": "CS-7.1",
+                  "text": "Access objects, field types and relationships."
+                }
+              ]
+            },
+            {
+              "id": "cs-07-queries",
+              "name": "Queries",
+              "los": [
+                {
+                  "code": "CS-7.2",
+                  "text": "Select and action queries and criteria."
+                }
+              ]
+            },
+            {
+              "id": "cs-07-forms",
+              "name": "Forms and reports",
+              "los": [
+                {
+                  "code": "CS-7.3",
+                  "text": "Forms, controls and reports."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-08",
+          "n": 8,
+          "name": "C Programming Basics",
+          "books": "old Part II ch 8 · old Part II ch 9 · old Part II ch 10",
+          "topics": [
+            {
+              "id": "cs-08-structure",
+              "name": "Structure of a C program",
+              "los": [
+                {
+                  "code": "CS-8.1",
+                  "text": "Compiling, linking and preprocessor directives."
+                }
+              ]
+            },
+            {
+              "id": "cs-08-elements",
+              "name": "Data types and operators",
+              "los": [
+                {
+                  "code": "CS-8.2",
+                  "text": "Identifiers, keywords, data types, variables, constants, operators and precedence."
+                }
+              ]
+            },
+            {
+              "id": "cs-08-io",
+              "name": "Input and output",
+              "los": [
+                {
+                  "code": "CS-8.3",
+                  "text": "printf, scanf, format specifiers and escape sequences."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-09",
+          "n": 9,
+          "name": "C Control Structures and Functions",
+          "books": "old Part II ch 11 · old Part II ch 12 · old Part II ch 13 · old Part II ch 14",
+          "topics": [
+            {
+              "id": "cs-09-decisions",
+              "name": "Decision constructs",
+              "los": [
+                {
+                  "code": "CS-9.1",
+                  "text": "if, if-else, else-if, switch and the conditional operator."
+                }
+              ]
+            },
+            {
+              "id": "cs-09-loops",
+              "name": "Loops",
+              "los": [
+                {
+                  "code": "CS-9.2",
+                  "text": "while, do-while, for, nested loops, break and continue."
+                }
+              ]
+            },
+            {
+              "id": "cs-09-functions",
+              "name": "Functions",
+              "los": [
+                {
+                  "code": "CS-9.3",
+                  "text": "Prototypes, parameters, return values and variable scope."
+                }
+              ]
+            },
+            {
+              "id": "cs-09-files",
+              "name": "File handling",
+              "los": [
+                {
+                  "code": "CS-9.4",
+                  "text": "Opening, reading, writing and closing text files."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-10",
+          "n": 10,
+          "name": "Software Development",
+          "books": "new Class 11 ch 1 · new Class 12 ch 5",
+          "topics": [
+            {
+              "id": "cs-10-sdlc",
+              "name": "SDLC and methods",
+              "los": [
+                {
+                  "code": "CS-10.1",
+                  "text": "SDLC stages, Waterfall and Agile, project planning."
+                }
+              ]
+            },
+            {
+              "id": "cs-10-testing",
+              "name": "Testing and debugging",
+              "los": [
+                {
+                  "code": "CS-10.2",
+                  "text": "Syntax, runtime and logic errors; testing methods and debugging."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-11",
+          "n": 11,
+          "name": "Python Programming",
+          "books": "new Class 11 ch 2 · new Class 12 ch 3 · new Class 12 ch 4",
+          "topics": [
+            {
+              "id": "cs-11-basics",
+              "name": "Python basics",
+              "los": [
+                {
+                  "code": "CS-11.1",
+                  "text": "Syntax, variables, data types, input and output."
+                }
+              ]
+            },
+            {
+              "id": "cs-11-control",
+              "name": "Operators, decisions and loops",
+              "los": [
+                {
+                  "code": "CS-11.2",
+                  "text": "Operators, if statements and loops."
+                }
+              ]
+            },
+            {
+              "id": "cs-11-functions",
+              "name": "Functions and data structures",
+              "los": [
+                {
+                  "code": "CS-11.3",
+                  "text": "Functions, lists, tuples and dictionaries."
+                }
+              ]
+            },
+            {
+              "id": "cs-11-oop",
+              "name": "Object-oriented Python",
+              "los": [
+                {
+                  "code": "CS-11.4",
+                  "text": "Classes, objects, inheritance, encapsulation and polymorphism."
+                }
+              ]
+            },
+            {
+              "id": "cs-11-gui",
+              "name": "GUI with Tkinter",
+              "los": [
+                {
+                  "code": "CS-11.5",
+                  "text": "Windows, widgets and event-driven programs."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-12",
+          "n": 12,
+          "name": "Algorithms and Data Structures",
+          "books": "new Class 11 ch 3 · new Class 11 ch 4 · new Class 12 ch 2",
+          "topics": [
+            {
+              "id": "cs-12-algorithms",
+              "name": "Algorithms and complexity",
+              "los": [
+                {
+                  "code": "CS-12.1",
+                  "text": "Problem types, design techniques, P, NP and NP-complete."
+                }
+              ]
+            },
+            {
+              "id": "cs-12-sortsearch",
+              "name": "Sorting and searching",
+              "los": [
+                {
+                  "code": "CS-12.2",
+                  "text": "Common sorting and searching algorithms."
+                }
+              ]
+            },
+            {
+              "id": "cs-12-structures",
+              "name": "Data structures",
+              "los": [
+                {
+                  "code": "CS-12.3",
+                  "text": "Lists, stacks, queues, trees and graphs."
+                }
+              ]
+            },
+            {
+              "id": "cs-12-logic",
+              "name": "Computational thinking and logic",
+              "los": [
+                {
+                  "code": "CS-12.4",
+                  "text": "Decomposition, propositional and predicate logic."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-13",
+          "n": 13,
+          "name": "Data Analytics",
+          "books": "new Class 11 ch 5 · new Class 12 ch 6 · new Class 12 ch 7",
+          "topics": [
+            {
+              "id": "cs-13-stats",
+              "name": "Descriptive statistics and models",
+              "los": [
+                {
+                  "code": "CS-13.1",
+                  "text": "Descriptive statistics, models and evaluation."
+                }
+              ]
+            },
+            {
+              "id": "cs-13-viz",
+              "name": "Data science and visualisation",
+              "los": [
+                {
+                  "code": "CS-13.2",
+                  "text": "Data science workflow, cleaning and visualisation."
+                }
+              ]
+            },
+            {
+              "id": "cs-13-hypothesis",
+              "name": "Hypothesis testing",
+              "los": [
+                {
+                  "code": "CS-13.3",
+                  "text": "Null and alternative hypotheses and significance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs-14",
+          "n": 14,
+          "name": "Digital Literacy and Entrepreneurship",
+          "books": "new Class 11 ch 8 · new Class 11 ch 9",
+          "topics": [
+            {
+              "id": "cs-14-research",
+              "name": "Online research and digital literacy",
+              "los": [
+                {
+                  "code": "CS-14.1",
+                  "text": "Searching, evaluating sources and advanced search."
+                }
+              ]
+            },
+            {
+              "id": "cs-14-business",
+              "name": "Entrepreneurship in the digital age",
+              "los": [
+                {
+                  "code": "CS-14.2",
+                  "text": "Design thinking and business plans."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "eng",
       "name": "English",
       "mcqsInPaper": 10,
       "bankTarget": 500,
-      "units": []
+      "units": [
+        {
+          "id": "eng-01",
+          "n": 1,
+          "name": "Reading Comprehension",
+          "note": "The only English skill UET tests (FAQ 2026). Mocks use these passage questions.",
+          "topics": [
+            {
+              "id": "eng-01-main",
+              "name": "Main idea and purpose",
+              "los": [
+                {
+                  "code": "ENG-1.1",
+                  "text": "Identify the main idea, title or purpose of a passage."
+                }
+              ]
+            },
+            {
+              "id": "eng-01-detail",
+              "name": "Stated details",
+              "los": [
+                {
+                  "code": "ENG-1.2",
+                  "text": "Find facts and details stated in the passage."
+                }
+              ]
+            },
+            {
+              "id": "eng-01-infer",
+              "name": "Inference",
+              "los": [
+                {
+                  "code": "ENG-1.3",
+                  "text": "Draw conclusions the passage supports but does not state."
+                }
+              ]
+            },
+            {
+              "id": "eng-01-vocab",
+              "name": "Words in context",
+              "los": [
+                {
+                  "code": "ENG-1.4",
+                  "text": "Work out the meaning of a word or phrase from its context."
+                }
+              ]
+            },
+            {
+              "id": "eng-01-tone",
+              "name": "Tone and attitude",
+              "los": [
+                {
+                  "code": "ENG-1.5",
+                  "text": "Recognise the writer's tone, attitude and point of view."
+                }
+              ]
+            },
+            {
+              "id": "eng-01-structure",
+              "name": "Structure and reference",
+              "los": [
+                {
+                  "code": "ENG-1.6",
+                  "text": "Follow how the passage is organised and what pronouns and linking words refer to."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eng-02",
+          "n": 2,
+          "name": "Vocabulary (extra practice)",
+          "note": "Not in the official ECAT 2026 English; offered as extra practice.",
+          "topics": [
+            {
+              "id": "eng-02-syn",
+              "name": "Synonyms",
+              "los": [
+                {
+                  "code": "ENG-2.1",
+                  "text": "Choose the word closest in meaning."
+                }
+              ]
+            },
+            {
+              "id": "eng-02-ant",
+              "name": "Antonyms",
+              "los": [
+                {
+                  "code": "ENG-2.2",
+                  "text": "Choose the word most nearly opposite in meaning."
+                }
+              ]
+            },
+            {
+              "id": "eng-02-usage",
+              "name": "Word usage and confusables",
+              "los": [
+                {
+                  "code": "ENG-2.3",
+                  "text": "Use commonly confused words and phrasal verbs correctly."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eng-03",
+          "n": 3,
+          "name": "Sentence Correction (extra practice)",
+          "note": "Not in the official ECAT 2026 English; offered as extra practice.",
+          "topics": [
+            {
+              "id": "eng-03-agree",
+              "name": "Agreement and tense",
+              "los": [
+                {
+                  "code": "ENG-3.1",
+                  "text": "Correct subject-verb agreement and tense errors."
+                }
+              ]
+            },
+            {
+              "id": "eng-03-prep",
+              "name": "Prepositions and articles",
+              "los": [
+                {
+                  "code": "ENG-3.2",
+                  "text": "Choose the correct preposition or article."
+                }
+              ]
+            },
+            {
+              "id": "eng-03-struct",
+              "name": "Sentence structure",
+              "los": [
+                {
+                  "code": "ENG-3.3",
+                  "text": "Fix modifiers, parallelism, pronouns and word order."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
