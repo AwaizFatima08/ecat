@@ -1,0 +1,8 @@
+{
+  "note": "Maths practice bank targets (1,500), weighted by ECAT weight and chapter size. Shared CSCA items count toward a unit's target, capped at half of it.",
+  "math-01": 60, "math-02": 40, "math-03": 80, "math-04": 50, "math-05": 70,
+  "math-06": 90, "math-07": 30, "math-08": 70, "math-09": 70, "math-10": 60,
+  "math-11": 40, "math-12": 70, "math-13": 50, "math-14": 60, "math-15": 40,
+  "math-16": 40, "math-17": 110, "math-18": 110, "math-19": 40, "math-20": 90,
+  "math-21": 30, "math-22": 90, "math-23": 70, "math-24": 20, "math-25": 20
+}

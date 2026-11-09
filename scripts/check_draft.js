@@ -3,7 +3,7 @@
  * check_draft.js — checks one draft part file before it is merged.
  *
  * Usage: node scripts/check_draft.js <draft.json> <unitId> <firstNum> <count>
- * e.g.   node scripts/check_draft.js drafts/bio-03.a.json bio-03 1 126
+ * e.g.   node scripts/check_draft.js drafts/math/math-05.a.json math-05 1 70
  *
  * Checks: valid JSON array, exactly <count> items with ids <unitId>-<NNN>
  * running from <firstNum>, all fields, topic/LO in the unit, 4 distinct
@@ -29,7 +29,8 @@ if (!Array.isArray(items)) { console.error("must be a JSON array"); process.exit
 if (items.length !== count) errs.push(`has ${items.length} items, expected ${count}`);
 
 // "Both A and B", "option C", "(D)", "all of the above" break when options move.
-const LETTER_REF = /\b(option|options|choice|answer)\s+[A-D]\b|\b[A-D]\s+(and|or|&)\s+[A-D]\b|\([A-D]\)|\b(all|none|both) of the (above|following)\b/i;
+// Case-sensitive letters, so maths like "f(a)" or "a and b" passes; the words are matched in any case.
+const LETTER_REF = /\b([Oo]ptions?|[Cc]hoice|[Aa]nswer)\s+[A-D]\b|\b[A-D]\s+(and|or|&)\s+[A-D]\b|\([A-D]\)|\b([Aa]ll|[Nn]one|[Bb]oth) of the (above|following)\b/;
 const stems = new Set();
 const diff = { E: 0, M: 0, D: 0 };
 items.forEach((q, i) => {
@@ -46,12 +47,12 @@ items.forEach((q, i) => {
   else {
     const norm = q.o.map((o) => String(o).trim().toLowerCase());
     if (new Set(norm).size !== 4 || norm.some((o) => !o)) errs.push(`${at}: options empty or repeated`);
-    q.o.forEach((o) => { if (LETTER_REF.test(o)) errs.push(`${at}: option names a letter / "above": ${o}`); });
+    q.o.forEach((o) => { if (LETTER_REF.test(o) || /\bnone of (these|them)\b/i.test(o)) errs.push(`${at}: option names a letter / "above" / "none of these": ${o}`); });
   }
   if (!Number.isInteger(q.a) || q.a < 0 || q.a > 3) errs.push(`${at}: a must be 0-3`);
   if (String(q.q || "").trim().length < 10) errs.push(`${at}: stem too short`);
   if (String(q.x || "").trim().length < 40) errs.push(`${at}: explanation too short`);
-  if (LETTER_REF.test(q.x || "") || /\b(option|choice)\s+[A-D]\b/i.test(q.x || "")) errs.push(`${at}: explanation names a letter`);
+  if (LETTER_REF.test(q.x || "") || /\b([Oo]ption|[Cc]hoice)\s+[A-D]\b/.test(q.x || "")) errs.push(`${at}: explanation names a letter`);
   const stem = String(q.q || "").trim().toLowerCase();
   if (stems.has(stem)) errs.push(`${at}: repeated stem`);
   stems.add(stem);
@@ -59,6 +60,6 @@ items.forEach((q, i) => {
 const n = items.length || 1;
 const pct = (k) => Math.round((diff[k] / n) * 100);
 const mix = `E/M/D = ${diff.E}/${diff.M}/${diff.D} (${pct("E")}%/${pct("M")}%/${pct("D")}%)`;
-if (pct("E") > 25 || pct("D") < 8 || pct("M") < 55) errs.push(`difficulty mix off (aim 15/70/15): ${mix}`);
+if (pct("E") > 30 || pct("D") < 12 || pct("M") < 50) errs.push(`difficulty mix off (aim 20/60/20): ${mix}`);
 if (errs.length) { errs.forEach((e) => console.log("ERR " + e)); console.log(`FAIL ${file}: ${errs.length} problem(s)`); process.exit(2); }
 console.log(`PASS ${file}: ${items.length} items, ${mix}`);
