@@ -1,0 +1,9 @@
+{
+  "note": "Chemistry practice bank targets (1,000), weighted by ECAT weight and chapter size. Shared MDCAT items count toward a unit's target, capped at half of it.",
+  "chem-01": 40, "chem-02": 20, "chem-03": 40, "chem-04": 35, "chem-05": 45,
+  "chem-06": 50, "chem-07": 40, "chem-08": 40, "chem-09": 40, "chem-10": 35,
+  "chem-11": 40, "chem-12": 40, "chem-13": 35, "chem-14": 30, "chem-15": 25,
+  "chem-16": 35, "chem-17": 25, "chem-18": 35, "chem-19": 40, "chem-20": 40,
+  "chem-21": 35, "chem-22": 30, "chem-23": 35, "chem-24": 35, "chem-25": 35,
+  "chem-26": 20, "chem-27": 25, "chem-28": 15, "chem-29": 20, "chem-30": 20
+}

@@ -73,7 +73,9 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
    agreement (`docs/pipeline/`, spot-check sheet `docs/review/math-spotcheck.md`)
 6. Physics bank — done 10 Nov 2026: 1,000 MCQs (399 shared from MDCAT, 601 new), all blind re-solved in agreement
    (spot-check sheet `docs/review/phy-spotcheck.md`)
-7. Chemistry bank · 8. English bank
+7. Chemistry bank — done 10 Nov 2026: 1,000 MCQs (398 shared from MDCAT, 602 new), all blind re-solved in
+   agreement (spot-check sheet `docs/review/chem-spotcheck.md`)
+8. English bank
 9. 20 mocks' content · 10. Cheats + important topics · 11. Release (AdMob SDK + consent, icon, store listing)
 
 ## 5. Risks

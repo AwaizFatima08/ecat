@@ -22,3 +22,28 @@ Items the writers, mappers or blind check flagged, and what was done.
 - Conventions fixed in the stem: phy-20-036/037/039/040 state "Δx Δp ≈ h" (old FSc form); phy-18-030 uses the old
   FSc CE gain βR_C/r_ie; phy-06-016 gives the terminal-velocity formula with upthrust.
 - phy-10-006: blind solver noted λ/D vs 1.22 λ/D both match options; stem now states α = 1.22 λ/D.
+
+## Chemistry: shared MDCAT items (mapped 10 Nov 2026)
+1,250 MDCAT Chemistry items checked by 5 mappers: 1,218 kept, 32 skipped, no wrong MDCAT keys found. 398 imported
+(capped at half of each unit's target).
+- Skipped as outside FSc scope: chem-03-014 (mean free path), chem-14-178…180 (Lindlar's catalyst), chem-05-012 and
+  -019 (radius-ratio range table), chem-20-001…020 (adhesives and dyes).
+- Skipped for medical framing: chem-06-059 (blood buffer), chem-19-014, -017, -018, -019, -021.
+- Scope doubts for Homi (kept by the mappers; imported only if they fell inside a unit's cap):
+  - Optical isomerism (MDCAT chem-13-036…041) tagged to chem-19-isomerism: in the new PECTAA book, not in old PTB.
+  - Compressibility factor Z = PV/nRT (chem-03-088, -093).
+  - ¹⁸O label in esterification (chem-16-030, chem-18-025); bisulphite adducts only from aldehydes and methyl ketones (chem-17-036).
+  - chem-06-062: buffer pH about 9.3 with no Kb given (only option above 7).
+
+## Chemistry: new items (written 10 Nov 2026)
+602 new items in 30 units. Fixes: chem-15-018 distractor KAl(SO₄)₂ (anhydrous alum, arguable) replaced by soda
+alum; chem-23-019 stem said "Three alcohols" with four options, now "Four isomeric alcohols". A blind batch of 18
+items (chem-11/12/13) first disagreed because the solver shifted its answers by one line; re-solved, 18/18 agree.
+Scope doubts for Homi (correct chemistry, possibly beyond one of the two books):
+- chem-01-023 Cl₂ 9 : 6 : 1 molecular-ion peaks; chem-28-010 M+1 carbon count; chem-28-007 two-Cl pattern.
+- chem-02-001 Gooch crucible wording; chem-02-008 distribution law; chem-02-010 vacuum distillation; chem-03-038 Linde's method.
+- chem-04-032 NaCl unit-cell count; chem-05-037 nodal plane of 2pₓ; chem-17-021 XeF₆ sp³d³.
+- chem-07-037, -040 ΔG = ΔH − TΔS (new book); chem-08-033 inert gas at constant volume; chem-10-031 CuSO₄ heats of solution; chem-10-035 lyophilic/lyophobic.
+- chem-18-019 "hexacyanoferrate(II)" (FSc name; IUPAC 2005 says hexacyanido-); chem-19-033 metamerism (old PTB term); chem-19-034 chirality (new book).
+- chem-20-036 HgSO₄ hydration temperature; chem-20-038 alcoholic KOH for the second HBr; chem-21-018 resonance energy 152 from rounded values; chem-21-027 SO₃ as electrophile.
+- chem-25-023 ¹⁸O labelling, chem-25-034/035 electrophoresis (new book); chem-26-005 amide → nitrile with P₂O₅; chem-29-002 ammonium carbamate; chem-29-019 dioxins from PVC.
