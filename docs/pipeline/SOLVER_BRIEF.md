@@ -8,6 +8,10 @@ For each question in your input file, work it out yourself (on rough paper, by h
 your result by a second route where you can) and pick the single correct option, using standard Pakistani FSc
 textbook methods and conventions.
 
+English reading questions come after a `=== PASSAGE … ===` block and carry `[passage <id>]`: answer them from the
+passage alone, as a careful reader would, not from outside knowledge; flag a question if a second option can be
+defended from the text.
+
 Write one line per question to your output file:
 ```
 <id> <LETTER>

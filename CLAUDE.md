@@ -26,6 +26,8 @@ Re-check ecat.uet.edu.pk and the admission notice before each release.
   `merge_parts.js` into `content/questions/<subject>/<unit>.json` → `balance_answers.js` → `blind_export.js` →
   blind solver → `blind_compare.js`. Shared items: `shared_export.js` → mapper (`SHARED_MAP_BRIEF.md`) →
   `import_shared.js` (capped at half a unit's target). Flags and fixes: `docs/review-flags.md`.
+- English comprehension (eng-01): original passages in `content/passages.json` (`eng-pNNN`), 5 questions each with
+  `p`; drafts also pass `scripts/check_passages.js`. Practice sets take whole passages.
 - Numericals solvable by hand in about a minute.
 - Chapters: `tool/make_syllabus.py` writes Maths/Physics/Chemistry/CS units of `content/syllabus.json` (English is
   edited there by hand). Units are topic-based and map to old PTB and new PECTAA chapters (`docs/textbook-chapters.md`).

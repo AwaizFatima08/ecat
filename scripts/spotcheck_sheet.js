@@ -15,6 +15,10 @@ const syllabus = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "content"
 const names = {};
 for (const s of syllabus.subjects) for (const u of s.units) names[u.id] = u.name;
 const doubtSet = new Set(doubt);
+// English reading items: the passage is printed once, before its first question on the sheet.
+const pFile = path.join(__dirname, "..", "content", "passages.json");
+const passages = fs.existsSync(pFile) ? JSON.parse(fs.readFileSync(pFile, "utf8")) : {};
+const shown = new Set();
 const L = ["A", "B", "C", "D"];
 let md = `# Spot check — ${subject}\n\nGenerated ${new Date().toISOString().slice(0, 10)}. ⚠ = a writer or blind reviewer had a doubt (scope or wording); the rest is a fixed random sample. Mark anything wrong or out of syllabus, with the id.\n`;
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
@@ -27,6 +31,10 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
   const pick = flagged.concat(rest.slice(0, Math.max(0, per - flagged.length))).sort((a, b) => a.id.localeCompare(b.id));
   md += `\n## ${unit} — ${names[unit]} (${pick.length} of ${items.length})\n`;
   for (const q of pick) {
+    if (q.p != null && passages[q.p] && !shown.has(q.p)) {
+      shown.add(q.p);
+      md += `\n> **Passage ${q.p}: ${passages[q.p].title}**\n>\n` + passages[q.p].text.split(/\n\s*\n/).map((t) => `> ${t}`).join("\n>\n") + "\n";
+    }
     md += `\n**${doubtSet.has(q.id) ? "⚠ " : ""}${q.id}** · ${q.lo} · ${q.d}  \n${q.q}  \n`;
     md += q.o.map((o, i) => (i === q.a ? `**${L[i]}) ${o} ✓**` : `${L[i]}) ${o}`)).join("  \n") + "  \n";
     md += `_${q.x}_\n`;

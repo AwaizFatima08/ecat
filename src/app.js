@@ -76,12 +76,28 @@ function mistakes(){ return QUESTIONS.filter(q => progress.q[q.id] && !progress.
    ====================================================================== */
 function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function pickSet(pool, size){
+  // Reading questions come as whole passages (a set of 10 = two passages), so a passage is read once.
+  if(pool.some(q => q.p != null)) return pickPassages(pool, size);
   const unseen = [], wrong = [], rest = [];
   for(const q of pool){
     const p = progress.q[q.id];
     if(!p) unseen.push(q); else if(!p.last) wrong.push(q); else rest.push(q);
   }
   return shuffle(unseen).concat(shuffle(wrong), shuffle(rest)).slice(0, size);
+}
+// Passages with unseen questions first, then those with a last-wrong answer, then the rest.
+function pickPassages(pool, size){
+  const groups = new Map();
+  for(const q of pool){ const k = q.p != null ? q.p : q.id; if(!groups.has(k)) groups.set(k, []); groups.get(k).push(q); }
+  const rank = g => g.some(q => !progress.q[q.id]) ? 0 : g.some(q => !progress.q[q.id].last) ? 1 : 2;
+  const order = [[], [], []];
+  for(const g of groups.values()) order[rank(g)].push(g);
+  const set = [];
+  for(const g of shuffle(order[0]).concat(shuffle(order[1]), shuffle(order[2]))){
+    if(set.length >= size) break;
+    set.push(...g);
+  }
+  return set;
 }
 
 /* ======================================================================

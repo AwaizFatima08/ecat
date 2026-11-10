@@ -47,3 +47,20 @@ Scope doubts for Homi (correct chemistry, possibly beyond one of the two books):
 - chem-18-019 "hexacyanoferrate(II)" (FSc name; IUPAC 2005 says hexacyanido-); chem-19-033 metamerism (old PTB term); chem-19-034 chirality (new book).
 - chem-20-036 HgSO₄ hydration temperature; chem-20-038 alcoholic KOH for the second HBr; chem-21-018 resonance energy 152 from rounded values; chem-21-027 SO₃ as electrophile.
 - chem-25-023 ¹⁸O labelling, chem-25-034/035 electrophoresis (new book); chem-26-005 amide → nitrile with P₂O₅; chem-29-002 ammonium carbamate; chem-29-019 dioxins from PVC.
+
+## English (10 Nov 2026)
+500 MCQs: eng-01 reading comprehension 350 (70 original passages in `content/passages.json`, 5 questions each),
+eng-02 vocabulary 75 and eng-03 sentence correction 75 (extra practice; 58 shared from MDCAT). All 500 blind
+re-solved in agreement (e1 175/175, e2 175/175, e3 150/150). Sheet: `docs/review/eng-spotcheck.md` (passages printed).
+- MDCAT mapper kept 138 of 214 (no wrong keys); skipped voice, narration, punctuation, grammar terms, transition
+  meanings, literary terms and spelling. MDCAT eng-01 (one-sentence "passages" in the stem) not used: ECAT
+  comprehension here is passage-based.
+- eng-01-348: the blind solver found the distractor "historians think it is not worth doing" weakly arguable;
+  replaced with "the memories it gathers are of little value" (contradicted by the last sentence of eng-p070).
+- Writer doubts kept after review (key is the only option the passage supports; ⚠ on the sheet): eng-01-023, 048
+  (fridge against a wall: one small real-world step), 083, 093, 104, 113, 163, 173, 206, 228, 330 (paragraph
+  organisation as ENG-1.6), 340 (tone "warmly persuasive"), eng-02-074 (latter/former needs the reason clause),
+  eng-03-066 ("Walking home…, there was a rainbow" as a dangling modifier).
+- Two passages carry general outside facts no question depends on: eng-p031 (paper first developed in China),
+  eng-p039 (place value refined in South Asia, spread west through Persian and Arab scholars).
+- App: an English practice set now takes whole passages (10 = two passages × 5) so each passage is read once.
