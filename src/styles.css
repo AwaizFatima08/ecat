@@ -85,6 +85,9 @@ h3.section{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:va
 .qprog{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:12px}
 .qprog i{display:block;height:100%;background:var(--brand-2)}
 .qtext{font-size:18px;font-weight:500;margin:6px 0 16px}
+pre.code{font:14px/1.45 ui-monospace,Menlo,Consolas,monospace;background:var(--line);border-radius:8px;padding:10px 12px;
+  margin:8px 0;overflow-x:auto;white-space:pre;font-weight:400}
+code.ic{font:0.92em ui-monospace,Menlo,Consolas,monospace;background:var(--line);border-radius:4px;padding:0 4px}
 .opts{display:flex;flex-direction:column;gap:10px}
 .opt{display:flex;gap:12px;align-items:flex-start;text-align:left;padding:13px 14px;border-radius:12px;cursor:pointer;
   background:var(--card);border:1.5px solid var(--line);font-size:16px}

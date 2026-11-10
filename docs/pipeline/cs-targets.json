@@ -1,0 +1,5 @@
+{
+  "note": "Computer Science (ICS) practice bank targets (1,000), weighted by chapter size and by what both the old ICS books (C, Access, Office) and the new PECTAA books (Python, algorithms, analytics) teach. Shared NTS items count toward a unit's target, capped at half of it.",
+  "cs-01": 90, "cs-02": 100, "cs-03": 60, "cs-04": 60, "cs-05": 70, "cs-06": 80, "cs-07": 60,
+  "cs-08": 80, "cs-09": 110, "cs-10": 50, "cs-11": 110, "cs-12": 80, "cs-13": 30, "cs-14": 20
+}

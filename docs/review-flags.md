@@ -64,3 +64,66 @@ re-solved in agreement (e1 175/175, e2 175/175, e3 150/150). Sheet: `docs/review
 - Two passages carry general outside facts no question depends on: eng-p031 (paper first developed in China),
   eng-p039 (place value refined in South Asia, spread west through Persian and Arab scholars).
 - App: an English practice set now takes whole passages (10 = two passages × 5) so each passage is read once.
+
+## Computer Science (10 Nov 2026)
+1,000 MCQs over 14 units (old PTB ICS Part I/II and new PECTAA CS & Entrepreneurship 11/12); 183 shared from NTS
+Prep's computer bank, 817 new. All 1,000 blind re-solved: b1 250/250, b2 270/270, b3 190/190, b4 289/290 (see
+below); the 5 items changed afterwards re-solved again (b5). Writers ran every C item through gcc and every Python
+item through python3 as a second check. Sheet: `docs/review/cs-spotcheck.md` (code shown in fences).
+- NTS mapper kept 196 of 245 (no wrong keys; 183 used, capped at half a unit). Skipped SQL joins/GROUP BY/HAVING/
+  subqueries/views, the `%` wildcard (Access books use `*`), C arrays, pointers, recursion and static, C++, logic
+  gates, two's complement, computer generations. Two NTS items worth fixing in NTS too: ic-t0029 (calls cache the
+  fastest memory; registers are faster), ip-t0037 (integer divide by zero is undefined behaviour in C, not a
+  guaranteed runtime error).
+- Fixed after the blind pass: cs-11-035 and cs-11-087 printed grade letters "A"/"B" that clashed with option
+  letters (the solver mis-lettered one); now word grades. cs-01-008 hex digits shown as code. cs-06-035 option
+  "500" (arguable if the target record is counted) replaced. cs-01-048 duplicated cs-01-049 (assembler); now asks
+  which language the CPU runs directly. Before the blind pass: cs-10-031 duplicated cs-08-036 (missing semicolon),
+  now a divide-by-zero runtime error; cs-14-010 key was much longer than its distractors.
+- Writer doubts kept (key correct; the question is whether the book teaches it; ⚠ on the sheet):
+  - cs-11-018 f-string format spec {a:.2f}: may be beyond the new Class 11 book
+  - cs-11-048 relies on short-circuit `and` (avoids division by zero): may not be taught explicitly
+  - cs-11-076 recursion trace (factorial): recursion only implied by the Class 11 unit
+  - cs-11-096 uses isinstance: Class 12 OOP chapter contents only partly known
+  - cs-11-108 Tkinter bind("<Button-1>"): bind not confirmed in the Class 12 GUI chapter
+  - cs-11-087 three-level inheritance with super(): may go beyond the book
+  - cs-10-011 deployment stage: some books call installing/moving data/training users "implementation" (Implementation kept out of the options)
+  - cs-10-027 functional vs non-functional requirements: not named in the book lists
+  - cs-10-030 risk exposure (formula given in the stem): the term may not be in either book
+  - cs-13-014 control group, from "experimental design": exact term not confirmed in the book
+  - cs-13-015 dependent vs independent variable: exact terms not confirmed in the book
+  - cs-13-030 one-sided test written H0: mean = 10 (some texts write H0: mean <= 10, which is not an option)
+  - cs-14-007 "Authority" as a source-evaluation criterion: the book may name its criteria differently
+  - cs-14-009 SWOT: not listed explicitly for the new Class 11 unit 9
+  - cs-14-017 break-even: not listed explicitly (falls under financial projections)
+  - cs-12-014 algorithm property "finiteness": the book may word its list differently
+  - cs-12-019 linked list (last node's next is null): "lists" in the new book may mean Python lists only
+  - cs-01-050 antivirus and defragmenter as utility (system) software: a book could list antivirus as application software
+  - cs-01-069 order of fetch-step register transfers: the old book may say MBR for MDR and not teach this level of detail
+  - cs-04-031 multi-cloud vs hybrid: relies on hybrid = private + public (standard definition)
+  - cs-02-051 UDP for live video: neither book confirmed to name UDP
+  - cs-02-074 asynchronous transmission with start/stop bits: probably old Part I ch 3 only
+  - cs-02-089 counting 10 bits per character (async): probably old Part I ch 3 only
+  - cs-02-063 bridge filters by MAC address: bridge is not in the LO's device list
+  - cs-03-015 public-key encryption (recipient's private key decrypts): may go beyond the old book
+  - cs-03-018 two-factor: password + PIN is still one factor (correct but subtle)
+  - cs-03-038 copyright protects expression, not the idea: the books may not state it
+  - cs-09-031 dangling else with misleading indentation (deliberate pitfall)
+  - cs-09-032 missing brace with misleading indentation (deliberate pitfall)
+  - cs-09-045 stray ; after if (deliberate pitfall)
+  - cs-09-044 10 <= x <= 20 is legal C, evaluated left to right (deliberate pitfall)
+  - cs-09-049 a == b == c is legal C (deliberate pitfall)
+  - cs-09-051 'a' + 1 == 'b' assumes ASCII
+  - cs-09-104 ch declared int so it can hold EOF: finer point than the book may teach
+  - cs-05-024 files deleted from a USB flash drive skip the Recycle Bin: the old book may not say it
+  - cs-05-014 ? wildcard as a distractor (key *.txt is safe either way)
+  - cs-06-048 hashing collision with k mod 7: the old book may not teach hashing
+  - cs-06-039 "indexed sequential": the old book may just say "indexed"
+  - cs-06-058 ternary relationship degree: the old Part II ch 3 may not cover it
+  - cs-06-059 unary (recursive) relationship: the old Part II ch 3 may not cover it
+  - cs-06-053 to 055 life-cycle stage names differ between books ("logical design" and "planning" kept out of the options)
+  - cs-07-025 OLE Object for a photo (Attachment, Access 2007+, kept out of the options)
+  - cs-07-038 primary key joined to primary key gives one-to-one: less common textbook point
+  - cs-07-039 foreign key matching an AutoNumber is Number (Long Integer): the old book may not state it
+  - cs-08-075 scanf("%s") stops at a space: uses a char array, taught later if at all
+  - cs-08-078 %05d zero padding: may not be in the old book

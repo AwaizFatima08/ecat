@@ -78,6 +78,8 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
 8. English bank — done 10 Nov 2026: 500 MCQs = 70 original passages × 5 comprehension questions, plus vocabulary
    75 and sentence correction 75 as extra practice (58 shared from MDCAT), all blind re-solved in agreement
    (spot-check sheet `docs/review/eng-spotcheck.md`)
+8b. Computer Science bank — done 10 Nov 2026: 1,000 MCQs (183 shared from NTS Prep, 817 new), all blind re-solved
+   in agreement after 5 fixes (spot-check sheet `docs/review/cs-spotcheck.md`)
 9. 20 mocks' content · 10. Cheats + important topics · 11. Release (AdMob SDK + consent, icon, store listing)
 
 ## 5. Risks

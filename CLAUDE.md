@@ -28,6 +28,9 @@ Re-check ecat.uet.edu.pk and the admission notice before each release.
   `import_shared.js` (capped at half a unit's target). Flags and fixes: `docs/review-flags.md`.
 - English comprehension (eng-01): original passages in `content/passages.json` (`eng-pNNN`), 5 questions each with
   `p`; drafts also pass `scripts/check_passages.js`. Practice sets take whole passages.
+- Code in question text (CS): a ``` block in a stem shows as monospace with indentation kept; `x` is inline code
+  (`rich()` in `src/app.js`). `scripts/fence_code.js` fences NTS stems. Never use a bare A-D as an option or as
+  printed output (it clashes with option letters).
 - Numericals solvable by hand in about a minute.
 - Chapters: `tool/make_syllabus.py` writes Maths/Physics/Chemistry/CS units of `content/syllabus.json` (English is
   edited there by hand). Units are topic-based and map to old PTB and new PECTAA chapters (`docs/textbook-chapters.md`).

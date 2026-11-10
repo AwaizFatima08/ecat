@@ -112,6 +112,12 @@ function go(hash){ if(location.hash === hash) render(); else location.hash = has
 window.addEventListener("hashchange", render);
 
 function esc(s){ return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+// Question text: ```code``` blocks become <pre>, `x` inline code, other line breaks <br> (CS items quote code).
+function rich(s){
+  return String(s).split("```").map((part, i) => i % 2
+    ? `<pre class="code">${esc(part.replace(/^\n/, "").replace(/\n$/, ""))}</pre>`
+    : esc(part).replace(/`([^`]+)`/g, "<code class=\"ic\">$1</code>").replace(/^\n+|\n+$/g, "").replace(/\n/g, "<br>")).join("");
+}
 function bar(title, backHash){
   return `<div class="bar">${backHash!=null ? `<button class="iconbtn" data-go="${backHash}" aria-label="Back">←</button>` : ""}<h1>${esc(title)}</h1></div>`;
 }
@@ -240,16 +246,16 @@ function renderPlayer(){
     <div class="qmeta"><span>Question ${s.i+1} of ${s.items.length}</span>
       <span class="tag">${esc(q.lo)}</span><span class="tag">${DIFF_LABEL[q.d]}</span>
       <button class="iconbtn" data-bm="${q.id}" aria-label="Bookmark" style="margin-left:auto">${progress.bm[q.id] ? "★" : "☆"}</button></div>
-    ${passageHtml(q)}<div class="qtext">${esc(q.q)}</div><div class="opts">`;
+    ${passageHtml(q)}<div class="qtext">${rich(q.q)}</div><div class="opts">`;
   q.o.forEach((opt, i) => {
     let cls = "opt";
     if(answered){ cls += " locked"; if(i === q.a) cls += " correct"; else if(i === picked) cls += " wrong"; }
-    html += `<button class="${cls}" ${answered ? "" : `data-pick="${i}"`}><span class="k">${LETTERS[i]}</span><span>${esc(opt)}</span></button>`;
+    html += `<button class="${cls}" ${answered ? "" : `data-pick="${i}"`}><span class="k">${LETTERS[i]}</span><span>${rich(opt)}</span></button>`;
   });
   html += `</div>`;
   if(answered){
     const ok = picked === q.a;
-    html += `<div class="explain"><b class="${ok ? "verdict-ok" : "verdict-bad"}">${ok ? "✓ Correct" : `✗ Not quite — the answer is ${LETTERS[q.a]}`}</b>${esc(q.x)}</div>
+    html += `<div class="explain"><b class="${ok ? "verdict-ok" : "verdict-bad"}">${ok ? "✓ Correct" : `✗ Not quite — the answer is ${LETTERS[q.a]}`}</b>${rich(q.x)}</div>
       <div class="actions"><button class="btn" data-next>${s.i+1 < s.items.length ? "Next question" : "See results"}</button></div>`;
   }
   html += `<p class="note">${esc(subjectById[u.subject].name)} · Unit ${u.n}: ${esc(u.name)}</p>`;
@@ -280,10 +286,10 @@ function renderResults(){
     </div><h3 class="section">Review</h3>`;
   s.items.forEach((q, i) => {
     const ok = s.answers[i] === q.a;
-    html += `<div class="card review"><div class="q">${i+1}. ${esc(q.q)}</div>
+    html += `<div class="card review"><div class="q">${i+1}. ${rich(q.q)}</div>
       <div class="ans ${ok ? "verdict-ok" : "verdict-bad"}">${ok ? "✓" : "✗"} ${s.answers[i] != null ? `You: ${LETTERS[s.answers[i]]}. ${esc(q.o[s.answers[i]])}` : "Not answered"}</div>
-      ${ok ? "" : `<div class="ans verdict-ok">Answer: ${LETTERS[q.a]}. ${esc(q.o[q.a])}</div>`}
-      <div class="x">${esc(q.x)}</div></div>`;
+      ${ok ? "" : `<div class="ans verdict-ok">Answer: ${LETTERS[q.a]}. ${rich(q.o[q.a])}</div>`}
+      <div class="x">${rich(q.x)}</div></div>`;
   });
   app.innerHTML = html;
 }
@@ -478,9 +484,9 @@ function renderMockQ(){
     <div class="qmeta"><span class="tag" style="background:${SUBJECT_COLOR[sid]};color:#fff">${SUBJECT_ABBR[sid]}</span>
       <span>Question ${a.i+1} of ${PAPER_N}</span>
       <button class="iconbtn flagbtn${a.flag[a.i] ? " on" : ""}" data-mflag aria-label="Mark for review" style="margin-left:auto">⚑</button></div>
-    ${passageHtml(q)}<div class="qtext">${esc(q.q)}</div><div class="opts">`;
+    ${passageHtml(q)}<div class="qtext">${rich(q.q)}</div><div class="opts">`;
   q.o.forEach((opt, i) => {
-    html += `<button class="opt${picked === i ? " chosen" : ""}" data-mpick="${i}"><span class="k">${LETTERS[i]}</span><span>${esc(opt)}</span></button>`;
+    html += `<button class="opt${picked === i ? " chosen" : ""}" data-mpick="${i}"><span class="k">${LETTERS[i]}</span><span>${rich(opt)}</span></button>`;
   });
   html += `</div><div class="mnav">
       <button class="btn secondary" data-mnav="-1" ${a.i === 0 ? "disabled" : ""}>‹ Previous</button>
@@ -607,10 +613,10 @@ function renderMockResults(id, n){
     // Show a passage once, above the first of its questions in the list.
     if(q.p != null && q.p !== lastP) html += passageHtml(q).replace("<details class=\"passage\" open>", "<details class=\"passage\">");
     lastP = q.p;
-    html += `<div class="card review"><div class="q">${i+1}. ${esc(q.q)}</div>
+    html += `<div class="card review"><div class="q">${i+1}. ${rich(q.q)}</div>
       <div class="ans ${ok ? "verdict-ok" : "verdict-bad"}">${ok ? "✓" : "✗"} ${h.ans[i] != null ? `You: ${LETTERS[h.ans[i]]}. ${esc(q.o[h.ans[i]])}` : "Not answered"}</div>
-      ${ok ? "" : `<div class="ans verdict-ok">Answer: ${LETTERS[q.a]}. ${esc(q.o[q.a])}</div>`}
-      <div class="x">${esc(q.x)}</div></div>`;
+      ${ok ? "" : `<div class="ans verdict-ok">Answer: ${LETTERS[q.a]}. ${rich(q.o[q.a])}</div>`}
+      <div class="x">${rich(q.x)}</div></div>`;
   });
   if(!shown) html += `<div class="empty">Nothing in this list.</div>`;
   app.innerHTML = html + `<div class="actions"><button class="btn secondary" data-go="#/mocks">Back to mock exams</button></div>`;

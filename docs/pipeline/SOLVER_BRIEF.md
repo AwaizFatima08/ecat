@@ -12,6 +12,10 @@ English reading questions come after a `=== PASSAGE … ===` block and carry `[p
 passage alone, as a careful reader would, not from outside knowledge; flag a question if a second option can be
 defended from the text.
 
+Computer Science code (C, Python, SQL) appears in ``` blocks: trace it line by line on paper, writing each
+variable's value after each step, and answer what standard C / Python 3 / SQL gives; flag a question if the result
+depends on the compiler, is undefined, or the old and new ICS books would answer it differently.
+
 Write one line per question to your output file:
 ```
 <id> <LETTER>
