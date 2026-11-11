@@ -80,7 +80,9 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
    (spot-check sheet `docs/review/eng-spotcheck.md`)
 8b. Computer Science bank — done 10 Nov 2026: 1,000 MCQs (183 shared from NTS Prep, 817 new), all blind re-solved
    in agreement after 5 fixes (spot-check sheet `docs/review/cs-spotcheck.md`)
-9. 20 mocks' content · 10. Cheats + important topics · 11. Release (AdMob SDK + consent, icon, store listing)
+9. 20 mocks' content — done 12 Nov 2026: 2,600 new MCQs (40 new passages), all blind re-solved in agreement,
+   dealt into 20 papers of 130 (spot-check sheet `docs/review/mock-spotcheck.md`)
+10. Cheats + important topics · 11. Release (AdMob SDK + consent, icon, store listing)
 
 ## 5. Risks
 - **Syllabus drift:** new books + no official chapter list. Tag by topic; re-check the ECAT 2027 notice.

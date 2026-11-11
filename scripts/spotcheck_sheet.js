@@ -5,12 +5,14 @@
  * about first, then a fixed random sample, up to <perUnit> per unit.
  *
  * Usage: node scripts/spotcheck_sheet.js <subject> <perUnit> <out.md> [doubtful ids...]
+ * MOCKPOOL=1 reads the mock pool (content/mockpool/<subject>-*.json) instead of the practice bank.
  */
 const fs = require("fs");
 const path = require("path");
 const [subject, perArg, out, ...doubt] = process.argv.slice(2);
 const per = Number(perArg);
-const dir = path.join(__dirname, "..", "content", "questions", subject);
+const pool = process.env.MOCKPOOL === "1";
+const dir = pool ? path.join(__dirname, "..", "content", "mockpool") : path.join(__dirname, "..", "content", "questions", subject);
 const syllabus = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "content", "syllabus.json"), "utf8"));
 const names = {};
 for (const s of syllabus.subjects) for (const u of s.units) names[u.id] = u.name;
@@ -20,8 +22,8 @@ const pFile = path.join(__dirname, "..", "content", "passages.json");
 const passages = fs.existsSync(pFile) ? JSON.parse(fs.readFileSync(pFile, "utf8")) : {};
 const shown = new Set();
 const L = ["A", "B", "C", "D"];
-let md = `# Spot check — ${subject}\n\nGenerated ${new Date().toISOString().slice(0, 10)}. ⚠ = a writer or blind reviewer had a doubt (scope or wording); the rest is a fixed random sample. Mark anything wrong or out of syllabus, with the id.\n`;
-for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
+let md = `# Spot check — ${subject}${pool ? " (mock pool)" : ""}\n\nGenerated ${new Date().toISOString().slice(0, 10)}. ⚠ = a writer or blind reviewer had a doubt (scope or wording); the rest is a fixed random sample. Mark anything wrong or out of syllabus, with the id.\n`;
+for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json") && (!pool || f.startsWith(subject + "-"))).sort()) {
   const unit = f.replace(".json", "");
   const items = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
   let h = 7;

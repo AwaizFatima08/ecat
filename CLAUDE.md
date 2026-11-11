@@ -31,6 +31,9 @@ Re-check ecat.uet.edu.pk and the admission notice before each release.
 - Code in question text (CS): a ``` block in a stem shows as monospace with indentation kept; `x` is inline code
   (`rich()` in `src/app.js`). `scripts/fence_code.js` fences NTS stems. Never use a bare A-D as an option or as
   printed output (it clashes with option letters).
+- Mocks: questions live in `content/mockpool/<unit>.json` (ids `<unit>-501…`, never in practice; brief
+  `docs/pipeline/MOCK_WRITER_NOTE.md`, sizes `mock-targets.json`), and `node scripts/assemble_mocks.js` deals them into
+  `content/mocks/mock-01…20.json` (renumbered, answers balanced). Edit the pool, then re-assemble; never edit papers.
 - Numericals solvable by hand in about a minute.
 - Chapters: `tool/make_syllabus.py` writes Maths/Physics/Chemistry/CS units of `content/syllabus.json` (English is
   edited there by hand). Units are topic-based and map to old PTB and new PECTAA chapters (`docs/textbook-chapters.md`).
