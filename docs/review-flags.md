@@ -261,3 +261,22 @@ Sheet: `docs/review/mock-spotcheck.md` (3 per unit + every doubt, ⚠).
   - cs-12-508 list indexing is O(1)
   - cs-12-543 "Abstraction" as a computational-thinking skill
   - cs-13-506 "overfitting"
+
+## Memory cheats and important topics (14 Nov 2026)
+284 cheat cards (`content/cheats/<subject>.json`: Maths 70, Physics 73, Chemistry 91, CS 40, English 10; every unit
+2-4 cards) and all 97 units ranked in `content/topics.json` (Must-know / Important / Quick wins; "our estimate, not
+official UET weightage" on every page). Format as in MDCAT Prep. Every card was fact-checked by a second agent
+(`docs/pipeline/CHEAT_CHECK_BRIEF.md`; C and Python run, conversions and antiderivatives re-checked).
+- Errors found and fixed: math-10-c02 (k² = 4 gives k = ±2), phy-10-c02 (fibre critical angle is
+  sin C = n(cladding)/n(core); 1/n only against air), chem-28-c02 (M⁺ is not the largest m/z when M+2 isotope peaks
+  exist).
+- Doubts fixed: math-04-c02 (top-heavy limit → ±∞), math-22-c04 (h² vs ab only for a real non-degenerate conic),
+  phy-05-c04 (apparent weight "accelerating" up/down), phy-07-c03 (soldiers break step to avoid resonance),
+  phy-09-c01 (normal incidence), phy-22-c02 (activity written ΔN/Δt, not A), chem-07-c02 (ΔHf = 0 in standard
+  state), chem-09-c03 (acidic and basic buffer action), chem-21-c01 (old PTB resonance energy ≈ 150),
+  cs-06-c03 (a DBMS reduces redundancy), cs-07-c02 (Access ANSI-89 % wording), eng-03-c02 (prefer to do X rather
+  than Y); topics math-06, math-19, math-22, phy-25 (why/focus).
+- For Homi: OSI mnemonic changed to "Please Do Not Throw Samosas, Pakoras Away"; new mnemonics written by us:
+  "Lazy Boys Play Billiards Professionally" (spectral series), "The Strong Man Thinks" (atmosphere layers),
+  "Every Designer Imagines, Prototypes, Tests". Industrial conditions, carbon percentages and similar book-dependent
+  numbers are given as "about" or as ranges.

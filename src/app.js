@@ -103,6 +103,7 @@ function pickPassages(pool, size){
 /* ======================================================================
    ROUTER — hash based so Android back / browser back work.
    #/  #/s/math  #/u/math-01  #/play  #/results  #/mistakes  #/soon/<name>
+   #/cheats  #/cheats/<subject>  #/cheat/<card id>  #/topics  #/topics/<subject>
    ====================================================================== */
 const app = document.getElementById("app");
 let session = null;   // current practice set: { title, back, items:[q], i, answers:[idx|null] }
@@ -144,6 +145,9 @@ function render(){
   if(parts[0] === "results" && session) return renderResults();
   if(parts[0] === "mistakes") return renderMistakes();
   if(parts[0] === "guide") return parts[1] ? renderGuideSection(parts[1]) : renderGuide();
+  if(parts[0] === "cheats") return subjectById[parts[1]] ? renderCheatSubject(parts[1]) : renderCheats();
+  if(parts[0] === "cheat" && cheatById[parts[1]]) return renderCheat(parts[1]);
+  if(parts[0] === "topics") return subjectById[parts[1]] ? renderTopicSubject(parts[1]) : renderTopics();
   if(parts[0] === "soon") return renderSoon(decodeURIComponent(parts[1] || ""));
   return renderHome();
 }
@@ -179,8 +183,8 @@ function renderHome(){
     <button class="tile" data-go="#/mistakes"><div class="ic">🔁</div><div class="title">Review mistakes</div><div class="sub">${nMistakes} question${nMistakes===1?"":"s"}</div></button>
     <button class="tile" data-go="#/mocks"><div class="ic">⏱️</div><div class="title">Mock exams</div><div class="sub">${progress.mock.active ? "paper in progress" : MOCKS.length ? `${MOCKS.length} full paper${MOCKS.length===1?"":"s"}` : "coming soon"}</div></button>
     <button class="tile" data-go="#/guide"><div class="ic">📋</div><div class="title">Rules &amp; guidelines</div><div class="sub">format, groups, merit</div></button>
-    <button class="tile" data-go="#/soon/Memory%20cheats"><div class="ic">🧠</div><div class="title">Memory cheats</div><div class="sub">coming soon</div></button>
-    <button class="tile" data-go="#/soon/Important%20topics"><div class="ic">⭐</div><div class="title">Important topics</div><div class="sub">coming soon</div></button>
+    <button class="tile" data-go="#/cheats"><div class="ic">🧠</div><div class="title">Memory cheats</div><div class="sub">${CHEATS.length ? `${CHEATS.length} quick cards` : "coming soon"}</div></button>
+    <button class="tile" data-go="#/topics"><div class="ic">⭐</div><div class="title">Important topics</div><div class="sub">${TOPICS.length ? "ranked by unit" : "coming soon"}</div></button>
   </div>`;
   app.innerHTML = html;
 }
@@ -333,6 +337,8 @@ function guideBlock(b){
     case "h": return `<h4>${esc(b.text)}</h4>`;
     case "tip": return `<div class="callout tip">💡 ${esc(b.text)}</div>`;
     case "warn": return `<div class="callout warn">⚠️ ${esc(b.text)}</div>`;
+    case "mn": return `<div class="mn"><div class="phrase">${esc(b.text)}</div><ul>${b.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>`;
+    case "code": return `<pre class="code">${esc(b.text)}</pre>`;
     case "list": return `<ul>${b.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>`;
     case "table": return `<table><thead><tr>${b.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
       <tbody>${b.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
@@ -629,6 +635,101 @@ function updateAgg(){
   const f = parseFloat(progress.fsc), mt = parseFloat(progress.matric), e = parseFloat(out.dataset.ecat);
   const ok = v => !isNaN(v) && v >= 0 && v <= 100;
   out.textContent = ok(f) && ok(mt) ? `Estimated aggregate: ${(0.33*e + 0.5*f + 0.17*mt).toFixed(2)}%` : "Enter your FSc Part I and Matric percentages to see an estimate.";
+}
+
+/* ----- memory cheats: short revision cards, subject → unit → card ----- */
+const CHEAT_ICON = { mnemonic:"🧩", table:"📊", formula:"📐", map:"🗺️", rule:"📏", trick:"🎯" };
+const cheatById = {};
+CHEATS.forEach((c, i) => { cheatById[c.id] = { ...c, i }; });
+
+function renderCheats(){
+  let html = bar("Memory cheats", "#/") + `<p class="note">Short cards to revise in a minute each: mnemonics, tables, formula sheets, reaction maps, rules and tricks.</p><div class="list">`;
+  for(const s of SYLLABUS.subjects){
+    const n = CHEATS.filter(c => unitById[c.unit].subject === s.id).length;
+    html += `<button class="row${n ? "" : " disabled"}" ${n ? `data-go="#/cheats/${s.id}"` : ""}>
+      <span class="badge" style="background:${SUBJECT_COLOR[s.id]}">${SUBJECT_ABBR[s.id]}</span>
+      <span class="main"><span class="title">${esc(s.name)}</span><div class="sub">${n ? `${n} card${n===1?"":"s"}` : "coming soon"}</div></span>
+      ${n ? `<span class="chev">›</span>` : ""}</button>`;
+  }
+  app.innerHTML = html + `</div>`;
+}
+
+function renderCheatSubject(sid){
+  const s = subjectById[sid];
+  let html = bar(`${s.name} cheats`, "#/cheats");
+  for(const u of s.units){
+    const cards = CHEATS.filter(c => c.unit === u.id);
+    if(!cards.length) continue;
+    html += `<h3 class="section">${u.n}. ${esc(u.name)}</h3><div class="list">` + cards.map(c =>
+      `<button class="row" data-go="#/cheat/${c.id}"><span class="badge" style="background:var(--brand-soft);font-size:20px">${CHEAT_ICON[c.kind]}</span>
+        <span class="main"><span class="title">${esc(c.title)}</span><div class="sub">${c.kind}</div></span><span class="chev">›</span></button>`).join("") + `</div>`;
+  }
+  app.innerHTML = html;
+}
+
+// Prev/Next stay inside the subject; cards are in syllabus order from the build.
+function renderCheat(id){
+  const c = cheatById[id], u = unitById[c.unit];
+  const prev = CHEATS[c.i-1], next = CHEATS[c.i+1];
+  const same = x => x && unitById[x.unit].subject === u.subject;
+  app.innerHTML = bar(c.title, `#/cheats/${u.subject}`) +
+    `<p class="note">${CHEAT_ICON[c.kind]} ${c.kind} · ${SUBJECT_ABBR[u.subject]} unit ${u.n}: ${esc(u.name)}</p>
+    <article class="card guide cheat">${c.blocks.map(guideBlock).join("")}</article>
+    <div class="cnav">
+      <button class="btn secondary" ${same(prev) ? `data-go="#/cheat/${prev.id}"` : "disabled"}>‹ Prev</button>
+      ${(qByUnit[c.unit] || []).length ? `<button class="btn" data-start="unit:${c.unit}">Practise unit ${u.n}</button>` : ""}
+      <button class="btn secondary" ${same(next) ? `data-go="#/cheat/${next.id}"` : "disabled"}>Next ›</button>
+    </div>`;
+}
+
+/* ----- important topics: every unit in a tier, best first, with focus LOs ----- */
+const TIER = { 1:["Must-know","Big share of the syllabus or asked in most papers. Start here."],
+  2:["Important","A solid share and regularly asked."],
+  3:["Quick wins","Small units: quick to learn, still worth marks."] };
+const TOPICS_NOTE = "Our estimate, not official UET weightage. UET sets marks per subject only and publishes no chapter list; we rank units by chapter size in the FSc books and by what ECAT papers usually stress.";
+const loByCode = {};
+for(const u of Object.values(unitById)) for(const t of u.topics) for(const lo of t.los) loByCode[lo.code] = lo;
+function loCount(u){ return u.topics.reduce((n, t) => n + t.los.length, 0); }
+
+function renderTopics(){
+  let html = bar("Important topics", "#/") + `<p class="note">${esc(TOPICS_NOTE)}</p><div class="list">`;
+  for(const s of SYLLABUS.subjects){
+    const mine = TOPICS.filter(e => unitById[e.unit].subject === s.id);
+    const must = mine.filter(e => e.tier === 1).length;
+    html += `<button class="row${mine.length ? "" : " disabled"}" ${mine.length ? `data-go="#/topics/${s.id}"` : ""}>
+      <span class="badge" style="background:${SUBJECT_COLOR[s.id]}">${SUBJECT_ABBR[s.id]}</span>
+      <span class="main"><span class="title">${esc(s.name)}</span><div class="sub">${mine.length ? `${must} must-know of ${mine.length} units · ${s.mcqsInPaper} MCQs in paper` : "coming soon"}</div></span>
+      ${mine.length ? `<span class="chev">›</span>` : ""}</button>`;
+  }
+  app.innerHTML = html + `</div>`;
+}
+
+function renderTopicSubject(sid){
+  const s = subjectById[sid];
+  const totalLos = s.units.reduce((n, u) => n + loCount(u), 0);
+  let html = bar(`${s.name}: important topics`, "#/topics") + `<p class="note">${esc(TOPICS_NOTE)}</p>`;
+  for(const tier of [1, 2, 3]){
+    const list = TOPICS.filter(e => e.tier === tier && unitById[e.unit].subject === sid);
+    if(!list.length) continue;
+    html += `<h3 class="section">${TIER[tier][0]}</h3><p class="note tnote">${TIER[tier][1]}</p>`;
+    for(const e of list){
+      const u = unitById[e.unit], st = stats(qByUnit[u.id]);
+      const weak = st.done >= 10 && st.pct < 60;
+      html += `<div class="card topic">
+        <div class="thead"><span class="badge" style="background:${SUBJECT_COLOR[sid]}">${u.n}</span>
+          <span class="main"><span class="title">${esc(u.name)}</span><div class="sub">${loCount(u)} of ${totalLos} topics</div></span></div>
+        <p class="why">${esc(e.why)}</p>
+        <div class="flabel">Focus on</div>
+        <ul class="lo">${e.focus.map(c => `<li><code>${esc(c)}</code>${esc(loByCode[c].text)}</li>`).join("")}</ul>
+        <div class="sub mine">${st.done ? `You: ${st.done}/${st.total} practised · ${st.pct}% right` : "You haven't practised this unit yet"}${weak ? ` <span class="tag fail">needs work</span>` : ""}</div>
+        <div class="tbtns">
+          ${st.total ? `<button class="btn" data-start="unit:${u.id}">Practise</button>` : ""}
+          <button class="btn secondary" data-go="#/u/${u.id}">Open unit</button>
+        </div>
+      </div>`;
+    }
+  }
+  app.innerHTML = html;
 }
 
 function renderSoon(name){

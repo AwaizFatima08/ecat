@@ -13,6 +13,8 @@
  */
 const fs = require("fs");
 const path = require("path");
+const { checkCard } = require("./cheats");
+const { checkTopics } = require("./topics");
 
 const ROOT = path.join(__dirname, "..");
 const CONTENT_DIR = path.join(ROOT, "content");
@@ -156,6 +158,40 @@ function loadMocks(units, ids, stems, passages) {
   return mocks;
 }
 
+// Memory cheats: content/cheats/<subject>.json. Once a subject has a file,
+// every one of its units must have at least one card.
+function loadCheats(syllabus, units) {
+  const dir = path.join(CONTENT_DIR, "cheats");
+  const cards = [];
+  if (!fs.existsSync(dir)) return cards;
+  const ids = new Set();
+  for (const f of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
+    const sid = f.replace(/\.json$/, "");
+    const subject = syllabus.subjects.find((s) => s.id === sid);
+    if (!subject) throw new Error(`cheats/${f}: "${sid}" is not a subject id`);
+    const items = readJson(path.join(dir, f));
+    if (!Array.isArray(items)) throw new Error(`cheats/${f} must be a JSON array`);
+    items.forEach((c, i) => {
+      const at = `cheats/${f} item ${i} (${c.id || "no id"})`;
+      checkCard(c, at, (u) => units.get(u)?.subject, ids);
+      if (units.get(c.unit).subject !== sid) throw new Error(`${at}: unit ${c.unit} is not a ${sid} unit`);
+      cards.push({ id: c.id, unit: c.unit, kind: c.kind, title: c.title, blocks: c.blocks });
+    });
+    const missing = subject.units.filter((u) => !items.some((c) => c.unit === u.id)).map((u) => u.id);
+    if (missing.length) throw new Error(`cheats/${f}: no cards for ${missing.join(", ")}`);
+  }
+  // Keep syllabus order so Prev/Next walks unit by unit.
+  const order = [...units.keys()];
+  return cards.sort((a, b) => order.indexOf(a.unit) - order.indexOf(b.unit) || a.id.localeCompare(b.id));
+}
+
+// Important topics: content/topics.json, every unit ranked into a tier.
+function loadTopics(syllabus) {
+  const f = path.join(CONTENT_DIR, "topics.json");
+  if (!fs.existsSync(f)) return [];
+  return checkTopics(readJson(f), syllabus).map(({ unit, tier, why, focus }) => ({ unit, tier, why, focus }));
+}
+
 // Warns (does not fail) when answers bunch on one letter in a unit.
 function answerSpreadReport(questions) {
   const byUnit = {};
@@ -216,6 +252,10 @@ function main() {
   for (const q of questions) bySubject[q.subject] = (bySubject[q.subject] || 0) + 1;
   console.log(`  ${units.size} units, ${questions.length} practice MCQs`, bySubject);
   answerSpreadReport(questions);
+  const cheats = loadCheats(syllabus, units);
+  console.log(`  ${cheats.length} memory-cheat card(s)`);
+  const topics = loadTopics(syllabus);
+  console.log(`  ${topics.length} ranked unit(s) in important topics`);
 
   // Strip build-only fields to keep the shipped file small.
   const shipped = questions.map(SHIP);
@@ -229,7 +269,9 @@ function main() {
     `const QUESTIONS = ${JSON.stringify(shipped)};\n` +
     `const GUIDE = ${JSON.stringify(guide)};\n` +
     `const PASSAGES = ${JSON.stringify(passages)};\n` +
-    `const MOCKS = ${JSON.stringify(mocks)};\n`;
+    `const MOCKS = ${JSON.stringify(mocks)};\n` +
+    `const CHEATS = ${JSON.stringify(cheats)};\n` +
+    `const TOPICS = ${JSON.stringify(topics)};\n`;
 
   const finalJs = appJs.replace("/* __CONTENT_INJECTION_POINT__ */", contentJs);
   if (finalJs === appJs) throw new Error("Content injection point missing from src/app.js");

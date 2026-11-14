@@ -159,3 +159,24 @@ code.ic{font:0.92em ui-monospace,Menlo,Consolas,monospace;background:var(--line)
 .passage{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;margin:12px 0;font-size:15px;line-height:1.55}
 .passage summary{font-weight:600;cursor:pointer;color:var(--brand)}
 .passage p{margin:8px 0 0}
+
+/* memory cheats */
+.cheat{margin-top:8px}
+.cheat table{font-size:13.5px}
+.cheat th,.cheat td{overflow-wrap:anywhere;hyphens:auto;padding:8px 4px}
+.mn{background:var(--brand-soft);border-radius:10px;padding:12px 14px;margin:12px 0}
+.mn .phrase{font-weight:700;font-size:16px;color:var(--brand)}
+.mn ul{margin:8px 0 0}
+.cnav{display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:8px;margin:14px 0}
+.cnav .btn{padding:12px 6px;font-size:14px;margin:0}
+.tnote{margin:-4px 0 10px}
+.topic{padding:14px;margin-bottom:12px}
+.topic .thead{display:flex;align-items:center;gap:12px}
+.topic .thead .main{flex:1;min-width:0}
+.topic .thead .title{font-weight:600}
+.topic .sub{font-size:13px;color:var(--muted)}
+.topic .why{margin:10px 0 6px;font-size:14.5px}
+.topic .flabel{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:8px}
+.topic .mine{margin-top:10px}
+.tbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.tbtns .btn{padding:11px 6px;font-size:14px;margin:0}

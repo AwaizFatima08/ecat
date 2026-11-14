@@ -82,7 +82,8 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
    in agreement after 5 fixes (spot-check sheet `docs/review/cs-spotcheck.md`)
 9. 20 mocks' content — done 12 Nov 2026: 2,600 new MCQs (40 new passages), all blind re-solved in agreement,
    dealt into 20 papers of 130 (spot-check sheet `docs/review/mock-spotcheck.md`)
-10. Cheats + important topics · 11. Release (AdMob SDK + consent, icon, store listing)
+10. Cheats + important topics — done 14 Nov 2026: 284 fact-checked cheat cards, 97 units ranked in 3 tiers
+11. Release (AdMob SDK + consent, icon, store listing)
 
 ## 5. Risks
 - **Syllabus drift:** new books + no official chapter list. Tag by topic; re-check the ECAT 2027 notice.
