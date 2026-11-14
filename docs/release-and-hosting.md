@@ -124,3 +124,22 @@ unit, driven over WebView debugging:
 - **Live ads**: served only after the Play store link and AdMob review.
 - **The consent form**: appears only for EEA/UK users once the AdMob message is published.
 - **A real phone**: the Tab was locked during the test.
+
+## Play Console (15 Nov 2026)
+- **App created:** account Homilabs (9161588402757830740), app ID 4973003549111594829, package `com.homilabs.ecatprep`
+  (Homi ticked the creation declarations and the IARC terms). Dashboard:
+  https://play.google.com/console/u/0/developers/9161588402757830740/app/4973003549111594829/app-dashboard
+- **App content:** privacy policy URL; Ads yes; sign-in none; Advertising ID yes (Advertising or marketing; the APK
+  carries `AD_ID`); Government no; Financial none; Health none; target age 16-17 and 18+; content rating ESRB
+  Everyone / PEGI 3 / IARC 3+.
+- **Data safety** (follows Google's disclosure guidance for the Mobile Ads SDK, so it lists more than MDCAT's):
+  Approximate location, App interactions, Diagnostics, Device or other IDs; each collected and shared, not
+  ephemeral, required; purposes Analytics, Advertising or marketing, Fraud prevention/security/compliance;
+  encrypted in transit; no accounts; deletion-request question left blank (optional).
+- **Store settings:** Education; email homilabs.smc@gmail.com; website ecat.homilabs.org. Default listing text as
+  above; icon, feature graphic and 7 screenshots uploaded by Homi.
+- **Release:** production 1.0.0 (1), all 178 countries / regions (Homi's choice), full rollout, managed publishing
+  off. Only warning: no deobfuscation file (none needed; not obfuscated). **Sent for review 15 Nov 2026** (11
+  changes); Google says reviews usually finish within 7 days, and it publishes as soon as approved.
+- **Still to do after approval:** AdMob → Add store (Play URL) and the "ECAT Prep consent" message; the Play link on
+  ecat.homilabs.org; list the app on homilabs.org.
