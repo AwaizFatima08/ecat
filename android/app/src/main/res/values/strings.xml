@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ECAT Prep</string>
+    <string name="title_activity_main">ECAT Prep</string>
+    <string name="package_name">com.homilabs.ecatprep</string>
+    <string name="custom_url_scheme">com.homilabs.ecatprep</string>
+</resources>

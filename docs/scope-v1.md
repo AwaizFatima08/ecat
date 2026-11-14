@@ -83,7 +83,9 @@ sheets / quick cheats, important topics, progress, mistakes, bookmarks.
 9. 20 mocks' content — done 12 Nov 2026: 2,600 new MCQs (40 new passages), all blind re-solved in agreement,
    dealt into 20 papers of 130 (spot-check sheet `docs/review/mock-spotcheck.md`)
 10. Cheats + important topics — done 14 Nov 2026: 284 fact-checked cheat cards, 97 units ranked in 3 tiers
-11. Release (AdMob SDK + consent, icon, store listing)
+11. Release kit — prepared 14 Nov 2026: Capacitor Android `com.homilabs.ecatprep`, AdMob between sessions with UMP consent,
+   About screen, icon/splash/feature graphic, upload keystore, signed `releases/1.0.0-1/` .aab + .apk, screenshots,
+   listing and Homi's upload steps in `docs/release-and-hosting.md`; Homi uploads
 
 ## 5. Risks
 - **Syllabus drift:** new books + no official chapter list. Tag by topic; re-check the ECAT 2027 notice.

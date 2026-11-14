@@ -37,6 +37,8 @@ Re-check ecat.uet.edu.pk and the admission notice before each release.
 - Cheats `content/cheats/<subject>.json` (brief `CHEATS_BRIEF.md`, check `scripts/check_cheats.js`; `code` block for
   CS) and `content/topics.json` (`TOPICS_BRIEF.md`, `scripts/check_topics.js`); the build checks both. Fact-check
   new cards with `CHEAT_CHECK_BRIEF.md`.
+- Release: `bash scripts/release.sh` (signed .aab/.apk in `releases/`, live ad unit only there); kit, listing and
+  Homi's steps in `docs/release-and-hosting.md`. Upload key in `.secrets/` (never git). Emulator AVD `ecat_api35`.
 - Numericals solvable by hand in about a minute.
 - Chapters: `tool/make_syllabus.py` writes Maths/Physics/Chemistry/CS units of `content/syllabus.json` (English is
   edited there by hand). Units are topic-based and map to old PTB and new PECTAA chapters (`docs/textbook-chapters.md`).

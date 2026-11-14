@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500" width="1024" height="500">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2c5296"/><stop offset="1" stop-color="#1f3a68"/></linearGradient></defs>
+  <rect width="1024" height="500" fill="url(#g)"/>
+  <g transform="translate(205 250) scale(7.2) translate(-32 -32)">
+    <path d="M32 12a20 20 0 1 0 20 20h-6a14 14 0 1 1-14-14z" fill="#e5762b"/>
+    <path d="M22 34h20M32 24v20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g font-family="Lato" fill="#ffffff">
+    <text x="420" y="200" font-size="78" font-weight="900">ECAT Prep</text>
+    <text x="422" y="258" font-size="30" font-weight="500" fill="#d9e3f3">UET entry test · Pre-Eng &amp; ICS</text>
+    <text x="422" y="330" font-size="27" font-weight="700">5,000 MCQs · 20 full mocks</text>
+    <text x="422" y="372" font-size="27" font-weight="700">Memory cheats · Important topics</text>
+    <text x="422" y="414" font-size="24" font-weight="500" fill="#d9e3f3">Free · works offline</text>
+  </g>
+</svg>
