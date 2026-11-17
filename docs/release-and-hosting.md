@@ -152,5 +152,5 @@ unit, driven over WebView debugging:
 - **Consent message:** "ECAT Prep consent" under Privacy & messaging, European regulations, published 17 Nov 2026.
   It covers this app only and is in English. Privacy URL https://ecat.homilabs.org/privacy.html. User choices:
   Consent, Manage options, and Do not consent (on for every country); Close is off.
-- **Still to do:** put the Play link on ecat.homilabs.org in place of "Coming soon on Google Play", and list the app
-  on homilabs.org.
+- **Website:** the "Get it on Google Play" link replaced "Coming soon" on 17 Nov 2026. Still to do: list the app on
+  homilabs.org.
