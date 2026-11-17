@@ -16,3 +16,6 @@ These IDs are not secrets: they ship inside the APK.
 
 ## Wired in (14 Nov 2026)
 SDK in the Android app (`@capacitor-community/admob` 8.3.0); app id in `AndroidManifest.xml`; live unit only in the release build (`scripts/release.sh`); test-ad flow verified on the emulator. Details and the listing in `docs/release-and-hosting.md`.
+
+## Linked and consent (17 Nov 2026)
+Linked to the Play listing (approval "Getting ready"); "ECAT Prep consent" European-regulations message published with the privacy URL and a Do not consent button. Details in `docs/release-and-hosting.md`.

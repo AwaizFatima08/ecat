@@ -143,3 +143,14 @@ unit, driven over WebView debugging:
   changes); Google says reviews usually finish within 7 days, and it publishes as soon as approved.
 - **Still to do after approval:** AdMob → Add store (Play URL) and the "ECAT Prep consent" message; the Play link on
   ecat.homilabs.org; list the app on homilabs.org.
+
+## Live and AdMob linked (17 Nov 2026)
+- **Live on Google Play:** https://play.google.com/store/apps/details?id=com.homilabs.ecatprep
+- **AdMob:** app ca-app-pub-2087846699268567~8802091734 is linked to the Play listing; it is renamed "ECAT Prep:
+  MCQs & Mock Tests", verified, and approval status is "Getting ready". Google says review takes 2-3 days, with ad
+  serving limited until then.
+- **Consent message:** "ECAT Prep consent" under Privacy & messaging, European regulations, published 17 Nov 2026.
+  It covers this app only and is in English. Privacy URL https://ecat.homilabs.org/privacy.html. User choices:
+  Consent, Manage options, and Do not consent (on for every country); Close is off.
+- **Still to do:** put the Play link on ecat.homilabs.org in place of "Coming soon on Google Play", and list the app
+  on homilabs.org.
